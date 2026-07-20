@@ -1,0 +1,11 @@
+# Secrets
+.env
+**/.env
+
+# 9router operational data
+9router/data/
+9router/data.zip
+
+# OS
+.DS_Store
+Thumbs.db
