@@ -115,6 +115,26 @@ ln -s /path/to/agents-dotfile/skills ~/.hermes/profiles/gintary/skills
 hermes profile reload gintary
 ```
 
+### Link Skills into Universal Agent Folder
+
+```bash
+scripts/setup-universal-skills.sh
+```
+
+Default target: `~/.agents/skills`
+
+Override target dir:
+
+```bash
+AGENTS_SKILLS_DIR=~/.copilot/skills scripts/setup-universal-skills.sh
+```
+
+Preview links without writing:
+
+```bash
+scripts/setup-universal-skills.sh list
+```
+
 ### Load a Skill
 
 ```bash
