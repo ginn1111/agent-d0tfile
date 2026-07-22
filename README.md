@@ -118,7 +118,7 @@ hermes profile reload gintary
 ### Link Skills into Universal Agent Folder
 
 ```bash
-scripts/setup-universal-skills.sh
+make universal-skills
 ```
 
 Default target: `~/.agents/skills`
@@ -126,13 +126,19 @@ Default target: `~/.agents/skills`
 Override target dir:
 
 ```bash
-AGENTS_SKILLS_DIR=~/.copilot/skills scripts/setup-universal-skills.sh
+make universal-skills AGENTS_SKILLS_DIR=~/.copilot/skills
 ```
 
 Preview links without writing:
 
 ```bash
-scripts/setup-universal-skills.sh list
+make universal-skills-list
+```
+
+Raw script still available:
+
+```bash
+scripts/setup-universal-skills.sh
 ```
 
 ### Load a Skill
