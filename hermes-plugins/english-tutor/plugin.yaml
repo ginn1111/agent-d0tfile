@@ -1,0 +1,5 @@
+name: english-tutor
+version: 1.0.0
+description: English tutor - Capture user prompt for daily English tutor review
+provides_hooks:
+  - pre_llm_call

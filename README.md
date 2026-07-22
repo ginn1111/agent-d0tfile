@@ -132,13 +132,69 @@ make universal-skills AGENTS_SKILLS_DIR=~/.copilot/skills
 Preview links without writing:
 
 ```bash
-make universal-skills-list
+make us-dry-run
+# or
+make universal-skills-dry-run
 ```
 
 Raw script still available:
 
 ```bash
 scripts/setup-universal-skills.sh
+```
+
+### Create Cron Jobs via Hermes CLI
+
+Use Hermes CLI for user-facing cron creation.
+
+```bash
+hermes --profile gintary cron create "every 2h" "Check server status"
+hermes --profile gintary cron create "every 1h" "Summarize new feed items" --skill blogwatcher
+hermes --profile gintary cron create "every 1h" "Use both skills and combine the result" \
+  --skill blogwatcher \
+  --skill maps \
+  --name "Skill combo"
+```
+
+Use explicit `--profile <profile>` and keep examples aligned with real available profiles.
+
+If you keep cron jobs as JSON templates under `hermes-cron/`, use helper script to convert supported JSON fields into equivalent `hermes cron create ...` commands.
+
+Interactive mode asks for profile first, then cron config name from JSON filenames, with `all` option:
+
+```bash
+scripts/add-hermes-cron.sh
+```
+
+If JSON `script` points to repo/local file and file is not already under Hermes scripts dir, helper script copies basename into `$HERMES_HOME/profiles/<profile>/scripts/` and keeps cron config on basename-only `--script <name>`.
+
+Non-interactive examples:
+
+```bash
+HERMES_PROFILE_NAME=gintary CRON_SELECTION=english-tutor-review scripts/add-hermes-cron.sh list
+HERMES_PROFILE_NAME=gintary CRON_SELECTION=all scripts/add-hermes-cron.sh add
+```
+
+### Link english-tutor Plugin into Profile
+
+Use helper script when plugin should be symlinked into one Hermes profile. Behavior mirrors cron helper shape, but action is symlink creation, not cron creation.
+
+```bash
+make letp-dry-run HERMES_PROFILE_NAME=gintary
+make letp HERMES_PROFILE_NAME=gintary
+```
+
+Direct script form:
+
+```bash
+HERMES_PROFILE_NAME=gintary scripts/link-hermes-plugin.sh list
+HERMES_PROFILE_NAME=gintary scripts/link-hermes-plugin.sh link
+```
+
+Resulting symlink:
+
+```text
+~/.hermes/profiles/<profile>/plugins/english-tutor -> <repo>/hermes-plugins/english-tutor
 ```
 
 ### Load a Skill
@@ -193,8 +249,13 @@ git commit -m "skill: add my-skill"
 mkdir -p hermes-plugins/my-plugin
 # Create plugin.yaml + __init__.py
 # Symlink into profile
-ln -s ~/agents-dotfile/hermes-plugins/my-plugin ~/.hermes/profiles/gintary/plugins/my-plugin
-hermes plugin reload
+HERMES_PROFILE_NAME=gintary PLUGIN_NAME=my-plugin scripts/link-hermes-plugin.sh link
+```
+
+For english-tutor shortcut:
+
+```bash
+make letp HERMES_PROFILE_NAME=gintary
 ```
 
 ---

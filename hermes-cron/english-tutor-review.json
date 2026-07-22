@@ -1,0 +1,33 @@
+{
+  "name": "english-tutor-daily-review",
+  "prompt": "Run daily English tutor review: read captured prompts, generate Vietnamese feedback, deliver via Telegram",
+  "skills": [],
+  "skill": null,
+  "model": null,
+  "provider": null,
+  "provider_snapshot": "custom",
+  "model_snapshot": "coder",
+  "base_url": null,
+  "script": "./daily_review.py",
+  "no_agent": false,
+  "context_from": null,
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 18 * * *",
+    "display": "0 18 * * *"
+  },
+  "schedule_display": "0 18 * * *",
+  "repeat": {
+    "times": null,
+    "completed": 2
+  },
+  "enabled": true,
+  "state": "scheduled",
+  "paused_at": null,
+  "paused_reason": null,
+  "deliver": "telegram",
+  "origin": null,
+  "enabled_toolsets": null,
+  "workdir": null,
+  "fire_claim": null
+}
