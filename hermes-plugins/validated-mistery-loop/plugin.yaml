@@ -1,0 +1,5 @@
+name: validated-mistery-loop
+version: 1.0.0
+description: Validate and manage file-based VML workflows
+provides_hooks:
+  - pre_llm_call

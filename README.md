@@ -97,6 +97,7 @@ agents-dotfile/
 | Plugin | Description |
 |--------|-------------|
 | `herdr-agent-state` | Persist agent state across sessions (Hermes plugin) |
+| `validated-mistery-loop` | File-based VML checker/reviewer/starter/validator/stress coach |
 
 ---
 
@@ -175,26 +176,41 @@ HERMES_PROFILE_NAME=gintary CRON_SELECTION=english-tutor-review scripts/add-herm
 HERMES_PROFILE_NAME=gintary CRON_SELECTION=all scripts/add-hermes-cron.sh add
 ```
 
-### Link english-tutor Plugin into Profile
+### Link Plugin into Profile
 
-Use helper script when plugin should be symlinked into one Hermes profile. Behavior mirrors cron helper shape, but action is symlink creation, not cron creation.
+Use helper script when plugin should be symlinked into one Hermes profile. Behavior mirrors cron helper shape: if profile or plugin not passed, script shows picker list and lets user choose.
 
 ```bash
-make letp-dry-run HERMES_PROFILE_NAME=gintary
-make letp HERMES_PROFILE_NAME=gintary
+make letp-dry-run HERMES_PROFILE_NAME=gintary PLUGIN_NAME=english-tutor
+make letp HERMES_PROFILE_NAME=gintary PLUGIN_NAME=english-tutor
+make letp-dry-run HERMES_PROFILE_NAME=gintary PLUGIN_NAME=validated-mistery-loop
+make letp HERMES_PROFILE_NAME=gintary PLUGIN_NAME=validated-mistery-loop
+make lvmlp-dry-run HERMES_PROFILE_NAME=gintary
+make lvmlp HERMES_PROFILE_NAME=gintary
+```
+
+Interactive form:
+
+```bash
+make letp-dry-run
+make letp
 ```
 
 Direct script form:
 
 ```bash
-HERMES_PROFILE_NAME=gintary scripts/link-hermes-plugin.sh list
-HERMES_PROFILE_NAME=gintary scripts/link-hermes-plugin.sh link
+HERMES_PROFILE_NAME=gintary PLUGIN_NAME=english-tutor scripts/link-hermes-plugin.sh list
+HERMES_PROFILE_NAME=gintary PLUGIN_NAME=english-tutor scripts/link-hermes-plugin.sh link
+HERMES_PROFILE_NAME=gintary PLUGIN_NAME=validated-mistery-loop scripts/link-hermes-plugin.sh list
+HERMES_PROFILE_NAME=gintary PLUGIN_NAME=validated-mistery-loop scripts/link-hermes-plugin.sh link
+scripts/link-hermes-plugin.sh list
+scripts/link-hermes-plugin.sh link
 ```
 
 Resulting symlink:
 
 ```text
-~/.hermes/profiles/<profile>/plugins/english-tutor -> <repo>/hermes-plugins/english-tutor
+~/.hermes/profiles/<profile>/plugins/<plugin-name> -> <repo>/hermes-plugins/<plugin-name>
 ```
 
 ### Load a Skill
@@ -250,12 +266,16 @@ mkdir -p hermes-plugins/my-plugin
 # Create plugin.yaml + __init__.py
 # Symlink into profile
 HERMES_PROFILE_NAME=gintary PLUGIN_NAME=my-plugin scripts/link-hermes-plugin.sh link
+# Example: VML plugin
+HERMES_PROFILE_NAME=gintary PLUGIN_NAME=validated-mistery-loop scripts/link-hermes-plugin.sh link
+# Or use picker
+scripts/link-hermes-plugin.sh link
 ```
 
-For english-tutor shortcut:
+For make shortcut:
 
 ```bash
-make letp HERMES_PROFILE_NAME=gintary
+make letp HERMES_PROFILE_NAME=gintary PLUGIN_NAME=my-plugin
 ```
 
 ---
