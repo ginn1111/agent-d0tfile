@@ -61,8 +61,7 @@ def generate_feedback(prompts):
     combined = "\n---\n".join(prompt_texts)
 
     # Use hermes to generate feedback
-    prompt = f"{PROMPT}\n\n--- PROMPTS HÔM NAY ({len(prompts)} câu) ---\n{
-        combined}\n\n--- PHẢN HỒI ---"
+    prompt = f"{PROMPT}\n\n--- PROMPTS HÔM NAY ({len(prompts)} câu) ---\n{combined}\n\n--- PHẢN HỒI ---"
 
     try:
         result = subprocess.run(
