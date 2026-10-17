@@ -1,0 +1,28 @@
+{
+  "features": [
+    {
+      "id": "feat-001",
+      "name": "Agent harness",
+      "description": "AGENTS.md startup/done/session rules, feature_list.json, progress.md, session-handoff.md, init.sh verification entrypoint",
+      "dependencies": [],
+      "status": "done",
+      "evidence": "./init.sh passes; validate-harness.mjs score recorded in progress.md"
+    },
+    {
+      "id": "feat-002",
+      "name": "Validated-mistery-loop plugin",
+      "description": "VML workflow plugin in hermes-plugins/ with link Make targets (lvmlp, lvmlp-dry-run)",
+      "dependencies": [],
+      "status": "done",
+      "evidence": "commit b0df5d2; tests/test_validated_mistery_loop_plugin.py passes"
+    },
+    {
+      "id": "feat-003",
+      "name": "Reconcile working tree",
+      "description": "Sort 157 modified / 59 untracked files (hermes/ deletions, skills/mattcopock moves) into intended commits or reverts; no unrelated rewrites",
+      "dependencies": ["feat-001"],
+      "status": "not-started",
+      "evidence": ""
+    }
+  ]
+}
