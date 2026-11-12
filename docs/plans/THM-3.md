@@ -1,5 +1,5 @@
 ---
-status: approved
+status: completed
 scope: plan Task 12: sketches cleanup (approved: delete)
 owner: cindy
 ---
