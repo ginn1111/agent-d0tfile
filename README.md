@@ -9,11 +9,10 @@ Batteries-included agent stack for AI-assisted development.
 
 A portable, version-controlled Hermes profile containing:
 
-- **Skills** — Reusable, versioned procedures for recurring dev tasks (code review, codebase understanding, debugging, codegen, task planning, code review, debugging, skill authoring, etc.)
-- **Plugins** — Hermes plugins extending agent capabilities (agent state persistence, etc.)
-- **Profile config** — Portable `profile.yaml`, `config.yaml`, `dist.yaml` + symlinked plugins/skills
-- **Rituals** — Daily focus rituals (morning focus, end-of-day shutdown)
-- **Project docs** — Ephemeral project docs (hiring, issues, product) gitignored
+- **Skills** — Reusable procedures for recurring dev tasks (planning, TDD, debugging, code review, skill authoring)
+- **Plugins** — Hermes plugins extending agent capabilities
+- **Profile config** — Hermes skins + helper Make targets
+- **Cron templates** — JSON cron job templates under `hermes-cron/`
 
 ---
 
@@ -21,74 +20,56 @@ A portable, version-controlled Hermes profile containing:
 
 ```
 agents-dotfile/
-├── .gitignore                 # gitignore (secrets, 9router data, OS files)
-├── hermes/                    # Hermes profile config (profile.yaml, config.yaml, dist.yaml)
+├── AGENTS.md                  # Agent startup/done/session workflow
+├── init.sh                    # Read-only verification entrypoint
+├── feature_list.json          # Feature tracker
+├── progress.md                # Session progress log
+├── session-handoff.md         # Restartable handoff
+├── hermes/                    # Hermes skins + cf-tunnel Make target
+├── hermes-cron/               # Cron job JSON templates
 ├── hermes-plugins/            # Hermes plugins (symlinked into profile at runtime)
-│   └── herdr-agent-state/     # Agent state persistence plugin
+│   ├── english-tutor/
+│   └── validated-mistery-loop/
 ├── skills/                    # Skills (procedural memory) — symlinked into profile
-│   ├── ritual/                # Daily focus ritual (morning focus, EOD shutdown)
-│   ├── understand-anything/   # Codebase understanding engine (graph-based)
-│   │   ├── understand/        # Core: scan, fingerprint, graph, tour
-│   │   ├── understand-chat/   # Chat over codebase graph
-      │   ├── understand-dashboard/ # Web dashboard for graph viz
-      │   ├── understand-diff/      # Git diff analysis via graph
-      │   ├── understand-domain/    # Domain knowledge extraction
-      │   ├── understand-explain/   # Deep-dive explanations
-      │   ├── understand-figma/     # Figma file analysis
-      │   ├── understand-knowledge/ # Knowledge graph merge/parse
-      │   └── understand-onboard/   # Onboarding guide generation
-│   ├── mattcopock/            # Third-party skills (wizard, prototype, code-reviewer, ...)
-│   └── ...                    # (more skills symlinked from ~/.hermes/profiles/gintary/skills)
-├── 9router/                   # (gitignored) 9router operational data
-├── paperclip/                 # Scratchpad / scratchpad tooling
-└── scripts/                   # Helper scripts (gitignored)
+│   ├── mattcopock/            # Matt Pocock skills (tdd, grilling, to-spec, wayfinder, ...)
+│   └── superpowers/           # Superpowers skills (brainstorming, executing-plans, ...)
+├── scripts/                   # Helper scripts (link plugins/skills, add cron)
+├── tests/                     # unittest suite (run via init.sh)
+└── 9router/                   # (gitignored) 9router operational data
 ```
 
 ---
 
-## Skills Catalog (Trendy AI Agent Toolkit)
+## Skills Catalog
 
 | Skill | Category | Description |
 |-------|----------|-------------|
-| `ritual` | **Rituals** | Daily focus ritual (morning focus, EOD shutdown) |
-| `understand-anything:understand` | **Codebase Understanding** | Graph-based codebase scanner: fingerprints, import graph, framework detection, guided tours |
-| `understand-anything:understand-chat` | **Codebase Understanding** | Chat over codebase knowledge graph |
-| `understand-anything:understand-dashboard` | **Codebase Understanding** | Interactive web dashboard for graph visualization |
-| `understand-anything:understand-diff` | **Codebase Understanding** | Analyze git diffs via knowledge graph |
-| `understand-anything:understand-domain` | **Codebase Understanding** | Extract domain knowledge from codebase |
-| `understand-anything:understand-explain` | **Codebase Understanding** | Deep-dive explanations of code regions |
-| `understand-anything:understand-figma` | **Codebase Understanding** | Analyze Figma files via REST API |
-| `understand-anything:understand-knowledge` | **Codebase Understanding** | Merge/parse Karpathy-pattern knowledge bases |
-| `understand-anything:understand-onboard` | **Codebase Understanding** | Generate onboarding guides from graph |
-| `mattcopock:wizard` | **DevOps / Setup** | Project setup wizard (env, docker, CI, secrets) |
-| `mattcopock:prototype` | **DevOps / Setup** | Logic prototyping discipline |
-| `mattcopock:code-reviewer` | **Code Quality** | Code review with security scan, quality gates, auto-fix |
-| `requesting-code-review` | **Code Quality** | Pre-commit review: security scan, quality gates, auto-fix |
-| `simplify-code` | **Code Quality** | Parallel 3-agent cleanup of recent changes |
-| `spike` | **Exploration** | Throwaway experiments to validate ideas |
-| `systematic-debugging` | **Debugging** | 4-phase root cause debugging |
-| `test-driven-development` | **Code Quality** | TDD: RED-GREEN-REFACTOR enforcement |
-| `plan` | **Planning** | Write actionable markdown plans to `.hermes/plans/` |
+| `mattcopock:ask-matt` | **Router** | Pick which skill/flow fits the situation |
+| `mattcopock:code-review` | **Code Quality** | Review changes since a fixed point |
+| `mattcopock:codebase-design` | **Design** | Vocabulary for designing deep modules |
+| `mattcopock:diagnosing-bugs` | **Debugging** | Diagnosis loop for hard bugs / perf regressions |
+| `mattcopock:domain-modeling` | **Design** | Build and sharpen a domain model |
+| `mattcopock:grill-me` / `grill-with-docs` / `grilling` | **Planning** | Relentless interview to sharpen a plan |
+| `mattcopock:handoff` | **Session** | Compact conversation into a handoff doc |
+| `mattcopock:prototype` | **Exploration** | Throwaway prototype for a design question |
+| `mattcopock:research` | **Research** | Investigate against primary sources |
+| `mattcopock:resolving-merge-conflicts` | **Git** | Resolve in-progress merge conflicts |
+| `mattcopock:tdd` | **Code Quality** | Test-driven development loop |
+| `mattcopock:teach` | **Learning** | Teach a concept within the codebase |
+| `mattcopock:to-questionnaire` | **Planning** | Turn open decision into questionnaire |
+| `mattcopock:to-spec` | **Planning** | Turn conversation into a spec |
+| `mattcopock:triage` | **Issues** | Move issues/PRs through a state machine |
+| `mattcopock:wayfinder` | **Planning** | Plan multi-session work |
+| `mattcopock:wizard` | **DevOps / Setup** | Generate interactive bash wizard |
+| `brainstorming` | **Superpowers** | Structured brainstorming before creative work |
 | `dispatching-parallel-agents` | **Superpowers** | Parallel subagents for independent tasks |
 | `executing-plans` | **Superpowers** | Execute written plans |
 | `finishing-a-development-branch` | **Superpowers** | Complete branch: tests pass, review done, merge ready |
 | `receiving-code-review` | **Superpowers** | Process code review feedback |
 | `using-git-worktrees` | **Superpowers** | Isolated feature work via git worktrees |
-| `verification-before-completion` | **Superpowers** | Verify before claiming done |
 | `using-superpowers` | **Superpowers** | Meta-skill: how to use superpowers |
-| `brainstorming` | **Superpowers** | Structured brainstorming before creative work |
-| `writing-skills` | **Meta** | Author new skills |
-| `hermes-agent-skill-authoring` | **Meta** | Author in-repo SKILL.md with validator |
-| `understand` | **Codebase Understanding** | Analyze codebase → interactive knowledge graph |
-| `understand-chat` | **Codebase Understanding** | Ask questions about codebase |
-| `understand-dashboard` | **Codebase Understanding** | Launch interactive web dashboard |
-| `understand-diff` | **Codebase Understanding** | Analyze git diffs / PRs |
-| `understand-domain` | **Codebase Understanding** | Extract business domain knowledge |
-| `understand-explain` | **Codebase Understanding** | Deep-dive explanation of specific feature |
-| `understand-figma` | **Codebase Understanding** | Analyze Figma file via REST API |
-| `understand-knowledge` | **Codebase Understanding** | Analyze Karpathy-pattern LLM wiki KB |
-| `understand-onboard` | **Codebase Understanding** | Generate onboarding guide |
-| `ritual` | **Rituals** | Daily focus ritual (morning focus, EOD shutdown) |
+| `verification-before-completion` | **Superpowers** | Verify before claiming done |
+| `writing-skills` | **Superpowers** | Author new skills |
 
 ---
 
@@ -96,7 +77,7 @@ agents-dotfile/
 
 | Plugin | Description |
 |--------|-------------|
-| `herdr-agent-state` | Persist agent state across sessions (Hermes plugin) |
+| `english-tutor` | English tutor plugin |
 | `validated-mistery-loop` | File-based VML checker/reviewer/starter/validator/stress coach |
 
 ---
@@ -216,15 +197,8 @@ Resulting symlink:
 ### Load a Skill
 
 ```bash
-hermes skill load ritual
-hermes skill load understand-anything:understand
-hermes skill load mattcopock:code-reviewer
-```
-
-### Run a Ritual
-
-```bash
-hermes skill run ritual
+hermes skill load mattcopock:tdd
+hermes skill load mattcopock:code-review
 ```
 
 ---
@@ -233,7 +207,7 @@ hermes skill run ritual
 
 | Layer | Purpose | Location |
 |-------|---------|----------|
-| **Profile config** | Model, tools, permissions, toolsets, hooks | `hermes/profile.yaml`, `config.yaml`, `dist.yaml` |
+| **Profile config** | Skins, tunnel helper | `hermes/skins/*.yaml`, `hermes/Makefile` |
 | **Plugins** | Extend agent runtime (Python/JS) | `hermes-plugins/*` → symlinked to `~/.hermes/profiles/gintary/plugins/` |
 | **Skills** | Procedural memory (markdown + scripts) | `skills/*` → symlinked to `~/.hermes/profiles/gintary/skills/` |
 
@@ -299,15 +273,14 @@ make letp HERMES_PROFILE_NAME=gintary PLUGIN_NAME=my-plugin
 
 ## Git Hygiene
 
-- **Track**: `profile.yaml`, `config.yaml`, `dist.yaml`, `hermes-plugins/**`, `skills/**`, `scripts/**`, `README.md`
-- **Ignore**: `.git/objects` (git objects), `__pycache__`, `node_modules`, `.env`, `9router/data`, `.hermes/profiles/gintary/{cron,memories,audio_cache,scripts}`, `*.pyc`, `.DS_Store`
+- **Track**: `hermes/skins/**`, `hermes-cron/**`, `hermes-plugins/**`, `skills/**`, `scripts/**`, `tests/**`, harness files, `README.md`
+- **Ignore**: `.git/objects` (git objects), `__pycache__`, `node_modules`, `.env`, `.make/` (generated caches), `9router/data`, `.hermes/profiles/gintary/{cron,memories,audio_cache,scripts}`, `*.pyc`, `.DS_Store`
 - **Never commit**: secrets, API keys, local DBs, cron output, memory DBs
 
 ```bash
 # Typical commit
-git add hermes-plugins/herdr-agent-state skills/ritual
-git commit -m "plugin: add herdr-agent-state agent state plugin"
-git commit -m "skill: add ritual daily focus skill"
+git add skills/mattcopock/tdd
+git commit -m "skill: update tdd skill"
 ```
 
 ---

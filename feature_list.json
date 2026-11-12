@@ -19,8 +19,36 @@
     {
       "id": "feat-003",
       "name": "Reconcile working tree",
-      "description": "Sort 157 modified / 59 untracked files (hermes/ deletions, skills/mattcopock moves) into intended commits or reverts; no unrelated rewrites",
-      "dependencies": ["feat-001"],
+      "description": "Commit tracked cleanup: drop unused plugins (herdr-agent-state, model-providers), skills (ritual, understand-anything, retired mattcopock), paperclip/, orphaned Make targets; untrack token-bearing hermes/.make cache",
+      "dependencies": [
+        "feat-001"
+      ],
+      "status": "done",
+      "evidence": "./init.sh exit 0 (12 tests OK); make help, make -C hermes help, make us-dry-run, HERMES_HOME=~/.hermes make lvmlp-dry-run HERMES_PROFILE_NAME=gintary all exit 0"
+    },
+    {
+      "id": "feat-004",
+      "name": "Rotate leaked Hermes API tokens",
+      "description": "hermes/.make/hermes-profiles.mk (3 profile tokens) was committed since 64fe741 and pushed to origin/main; untracked now but still in history. Rotate API_SERVER_KEY for gindev/ginreview/gintary.",
+      "dependencies": [],
+      "status": "not-started",
+      "evidence": ""
+    },
+    {
+      "id": "feat-005",
+      "name": "Triage untracked files",
+      "description": "41 untracked paths (new skills atlas*/ginflow/harness-creator/..., themes/, INTAKE.md, scripts/audit-harness.sh, absolute symlinks hermes-plugins/config.toml + skills/terminal-browser): commit or ignore",
+      "dependencies": [
+        "feat-003"
+      ],
+      "status": "not-started",
+      "evidence": ""
+    },
+    {
+      "id": "feat-006",
+      "name": "Missing RULES.md",
+      "description": "AGENTS.md points to RULES.md, which does not exist in repo",
+      "dependencies": [],
       "status": "not-started",
       "evidence": ""
     }
