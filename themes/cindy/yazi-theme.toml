@@ -1,0 +1,157 @@
+#:schema https://yazi-rs.github.io/schemas/theme.json
+
+# Cindy Black & Ruby palette (themes/cindy/black-ruby.palette).
+# Generated once from the Solarized Osaka yazi theme by hex mapping.
+
+[app]
+overall = { fg = "#bec6d0", bg = "reset" }
+
+[mgr]
+cwd = { fg = "#c62f52", bold = true }
+find_keyword = { fg = "#c7910c", bold = true, italic = true, underline = true }
+find_position = { fg = "#38c7bd", bg = "#1a0f14", bold = true }
+symlink_target = { fg = "#38c7bd", italic = true }
+
+marker_copied = { fg = "#111418", bg = "#00a884", bold = true }
+marker_cut = { fg = "#111418", bg = "#e35535", bold = true }
+marker_marked = { fg = "#111418", bg = "#d46ec0", bold = true }
+marker_selected = { fg = "#111418", bg = "#c62f52", bold = true }
+marker_symbol = "│"
+
+count_copied = { fg = "#111418", bg = "#00a884", bold = true }
+count_cut = { fg = "#bec6d0", bg = "#e35535", bold = true }
+count_selected = { fg = "#111418", bg = "#c62f52", bold = true }
+
+border_symbol = "│"
+border_style = { fg = "#1c2027" }
+syntect_theme = ""
+
+[tabs]
+active = { fg = "#111418", bg = "#c62f52", bold = true }
+inactive = { fg = "#6b7686", bg = "#1a0f14" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "#111418", bg = "#c62f52", bold = true }
+normal_alt = { fg = "#c62f52", bg = "#1c2027" }
+select_main = { fg = "#111418", bg = "#d46ec0", bold = true }
+select_alt = { fg = "#d46ec0", bg = "#1c2027" }
+unset_main = { fg = "#111418", bg = "#a85ff1", bold = true }
+unset_alt = { fg = "#a85ff1", bg = "#1c2027" }
+
+[indicator]
+parent = { fg = "#38c7bd", bg = "#1c2027" }
+current = { fg = "#bec6d0", bg = "#1c2027", bold = true }
+preview = { fg = "#c62f52", underline = true }
+padding = { open = "", close = "" }
+
+[status]
+overall = { fg = "#bec6d0", bg = "#1a0f14" }
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+perm_sep = { fg = "#6b7686" }
+perm_type = { fg = "#c62f52" }
+perm_read = { fg = "#c7910c" }
+perm_write = { fg = "#e35535" }
+perm_exec = { fg = "#00a884", bold = true }
+progress_label = { fg = "#c62f52", bold = true }
+progress_normal = { fg = "#6b7686", bg = "reset" }
+progress_error = { fg = "#bec6d0", bg = "#e35535", bold = true }
+
+[which]
+cols = 3
+mask = { bg = "#1a0f14" }
+cand = { fg = "#38c7bd", bold = true }
+rest = { fg = "#6b7686" }
+desc = { fg = "#bec6d0" }
+separator = "  "
+separator_style = { fg = "#1c2027" }
+
+[confirm]
+border = { fg = "#c62f52" }
+title = { fg = "#c7910c", bold = true }
+body = { fg = "#bec6d0" }
+list = { fg = "#38c7bd" }
+btn_yes = { fg = "#111418", bg = "#c62f52", bold = true }
+btn_no = { fg = "#bec6d0", bg = "#e35535", bold = true }
+btn_labels = ["  [Y]es  ", "  (N)o  "]
+
+[spot]
+border = { fg = "#1c2027" }
+title = { fg = "#c62f52", bold = true }
+tbl_col = { fg = "#38c7bd" }
+tbl_cell = { fg = "#111418", bg = "#c62f52", bold = true }
+
+[notify]
+title_info = { fg = "#c62f52", bold = true }
+title_warn = { fg = "#c7910c", bold = true }
+title_error = { fg = "#e35535", bold = true }
+
+[pick]
+border = { fg = "#1c2027" }
+active = { fg = "#bec6d0", bg = "#3a1a26", bold = true }
+inactive = { fg = "#6b7686" }
+
+[input]
+border = { fg = "#c62f52" }
+title = { fg = "#c62f52", bold = true }
+value = { fg = "#bec6d0" }
+selected = { fg = "#bec6d0", bg = "#3a1a26", bold = true }
+
+[cmp]
+border = { fg = "#c62f52" }
+active = { fg = "#bec6d0", bg = "#3a1a26", bold = true }
+inactive = { fg = "#6b7686" }
+
+[tasks]
+border = { fg = "#1c2027" }
+title = { fg = "#c62f52", bold = true }
+hovered = { fg = "#bec6d0", bg = "#3a1a26", bold = true }
+
+[help]
+on = { fg = "#00a884", bold = true }
+run = { fg = "#d46ec0" }
+desc = { fg = "#bec6d0" }
+hovered = { fg = "#bec6d0", bg = "#1a0f14", bold = true }
+footer = { fg = "#111418", bg = "#38c7bd", bold = true }
+
+[icon]
+prepend_conds = [
+  # Folder icons use Osaka blue.
+  { if = "dir", text = "󰉋", fg = "#11b7d4" },
+  # Open folder icon
+  { if = "dir", is_open = true, text = "󰝰", fg = "#11b7d4" },
+]
+
+[filetype]
+rules = [
+  # Directories: blue (nvim Directory/Function)
+  { url = "*/", fg = "#11b7d4", bold = true },
+
+  # Symbolic links: cyan, italic
+  { url = "*", is_link = true, fg = "#38c7bd", italic = true },
+
+  # Executables: green (upstream Osaka yazi)
+  { url = "*", is_exec = true, fg = "#00a884", bold = true },
+
+  # Broken and dummy files: error red on DiffDelete bg
+  { url = "*", is = "orphan", fg = "#e35535", bg = "#2a0f12", bold = true },
+  { url = "*", is = "dummy", fg = "#e35535", bg = "#2a0f12", bold = true },
+
+  { url = "*", is = "link", fg = "#38c7bd", italic = true },
+  { url = "*", is = "exec", fg = "#00a884", bold = true },
+  # Archives: orange (not red, so archives do not look like errors)
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#d4770c", bold = true },
+  { mime = "{audio,video}/*", fg = "#d46ec0" },
+  { mime = "image/*", fg = "#c7910c" },
+  { mime = "application/{pdf,doc,rtf}", fg = "#38c7bd" },
+  { mime = "text/*", fg = "#bec6d0" },
+
+  # Hidden files: comment gray
+  { url = "*/.*", fg = "#6b7686", dim = true },
+
+  # Fallbacks
+  { url = "*/", fg = "#11b7d4", bold = true },
+  { url = "*", fg = "#bec6d0" },
+]

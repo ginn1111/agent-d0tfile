@@ -1,0 +1,74 @@
+# Bearded Black & Ruby skin for cindy (004-hybrid: ruby-tinted pane + bars).
+# Palette: themes/cindy/black-ruby.palette
+name: black-ruby-cindy
+description: Bearded Black & Ruby secretary skin for Cindy
+
+colors:
+  background: "#130e11"
+  ui_accent: "#c62f52"
+  ui_label: "#a0acbb"
+  banner_accent: "#c62f52"
+  banner_title: "#c62f52"
+  banner_text: "#bec6d0"
+  banner_dim: "#6b7686"
+  banner_border: "#3a1a26"
+  ui_text: "#bec6d0"
+  ui_border: "#3a1a26"
+  ui_ok: "#00a884"
+  ui_warn: "#d4770c"
+  ui_error: "#e35535"
+  prompt: "#c62f52"
+  input_rule: "#3a1a26"
+  response_border: "#c62f52"
+  status_bar_bg: "#1a0f14"
+  status_bar_text: "#a0acbb"
+  status_bar_strong: "#c62f52"
+  status_bar_dim: "#6b7686"
+  status_bar_good: "#00a884"
+  status_bar_warn: "#c7910c"
+  status_bar_bad: "#d4770c"
+  status_bar_critical: "#e35535"
+  session_label: "#c62f52"
+  session_border: "#3a1a26"
+  shell_dollar: "#c62f52"
+  voice_status_bg: "#1a0f14"
+  selection_bg: "#3a1a26"
+  completion_menu_bg: "#1a0f14"
+  completion_menu_current_bg: "#3a1a26"
+  completion_menu_meta_bg: "#1c2027"
+  completion_menu_meta_current_bg: "#3a1a26"
+  diff_added: "#0f2a24"
+  diff_removed: "#2a0f12"
+  diff_added_word: "#00a884"
+  diff_removed_word: "#e35535"
+  syntax_string: "#00a884"
+  syntax_number: "#a85ff1"
+  syntax_keyword: "#c7910c"
+  syntax_comment: "#6b7686"
+
+branding:
+  agent_name: Cindy
+  response_label: " ◇ Cindy "
+  prompt_symbol: "◇"
+  help_header: "◇ Cindy Command Palette"
+  welcome: "Cindy secretary ready. Type /help for commands."
+  goodbye: "Cindy offline."
+
+spinner:
+  waiting_faces: ["◇", "◈", "◆"]
+  thinking_faces: ["◇", "◈", "◆"]
+  thinking_verbs:
+    - organizing
+    - triaging
+    - drafting
+    - scheduling
+
+tool_prefix: "│"
+
+banner_logo: |
+  [bold #e35535] ██████╗██╗███╗   ██╗██████╗ ██╗   ██╗[/]
+  [bold #c62f52]██╔════╝██║████╗  ██║██╔══██╗╚██╗ ██╔╝[/]
+  [bold #c62f52]██║     ██║██╔██╗ ██║██║  ██║ ╚████╔╝ [/]
+  [bold #c62f52]██║     ██║██║╚██╗██║██║  ██║  ╚██╔╝  [/]
+  [bold #c62f52]╚██████╗██║██║ ╚████║██████╔╝   ██║   [/]
+  [#475262] ╚═════╝╚═╝╚═╝  ╚═══╝╚═════╝    ╚═╝   [/]

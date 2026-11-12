@@ -1,0 +1,15 @@
+# Cindy Black & Ruby (themes/cindy/black-ruby.palette); installed by `make theme-cindy`.
+gui:
+  theme:
+    activeBorderColor: ["#c62f52", bold]
+    inactiveBorderColor: ["#475262"]
+    searchingActiveBorderColor: ["#c7910c", bold]
+    optionsTextColor: ["#11b7d4"]
+    selectedLineBgColor: ["#3a1a26"]
+    inactiveViewSelectedLineBgColor: ["#1c2027"]
+    cherryPickedCommitFgColor: ["#a85ff1"]
+    cherryPickedCommitBgColor: ["#1c2027"]
+    markedBaseCommitFgColor: ["#11b7d4"]
+    markedBaseCommitBgColor: ["#c7910c"]
+    unstagedChangesColor: ["#e35535"]
+    defaultFgColor: ["#bec6d0"]

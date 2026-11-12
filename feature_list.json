@@ -51,6 +51,14 @@
       "dependencies": [],
       "status": "not-started",
       "evidence": ""
+    },
+    {
+      "id": "feat-007",
+      "name": "Cindy Black & Ruby theme",
+      "description": "Static Black & Ruby (004-hybrid) theme files in themes/cindy/ + scripts/install_theme_cindy.py + make theme-cindy{,-dry-run,-restore,-restore-dry-run}. Design: docs/plans/2026-11-12-cindy-black-ruby-theme-design.md",
+      "dependencies": [],
+      "status": "in-progress",
+      "evidence": "THM-1: theme files + tests/test_theme_cindy_palette.py pass; installer pending (THM-2+)"
     }
   ]
 }

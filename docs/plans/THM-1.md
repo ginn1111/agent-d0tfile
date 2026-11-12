@@ -1,5 +1,5 @@
 ---
-status: approved
+status: completed
 scope: plan Tasks 0-7: feat-007 entry, palette test, theme files
 owner: cindy
 ---
