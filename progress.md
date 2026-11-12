@@ -3,7 +3,7 @@
 ## Current State
 
 **Last Updated:** 2026-11-12
-**Active Feature:** feat-007 Cindy theme (in-progress; installer + make + docs done, real install pending)
+**Active Feature:** none (feat-007 done)
 
 ## Status
 
@@ -11,12 +11,13 @@
 - [x] feat-001 Agent harness.
 - [x] feat-002 Validated-mistery-loop plugin.
 - [x] feat-003 Reconcile working tree: tracked cleanup committed.
+- [x] feat-007 Cindy Black & Ruby theme: files, installer, make targets, real install, herdr focus colors.
 
 ### What's In Progress
-- [ ] feat-007 Cindy theme: THM-1 theme files + THM-2 installer/make/docs done; real install pending
+- [ ] none
 
 ### What's Next
-0. feat-007: run `make theme-cindy-dry-run`, then real install after Gin approval (Task 13).
+0. d0t_file: `starship.toml` theme edit uncommitted (depends on Gin's uncommitted starship rewrite); Gin decides.
 1. feat-004 Rotate leaked Hermes API tokens (was in `hermes/.make/hermes-profiles.mk`, pushed).
 2. feat-005 Triage untracked files.
 3. feat-006 Restore or drop `RULES.md` reference in `AGENTS.md`.
@@ -29,6 +30,8 @@
 - **`hermes/Makefile` uses `-include .env`**: `make help` no longer fails without `.env`.
 - **`init.sh` drops `-t .`**: `tests/` has no `__init__.py`; discovery failed with "Start directory is not importable".
 - **`.make/` gitignored**: generated cache holds tokens.
+- **Installer ignores `HERMES_HOME`**: profile sessions set it to a profile dir; target fixed at `~/.hermes/profiles/cindy`.
+- **herdr focus**: `active_row_bg=#1a0f14`, `selection_bg=#3a1a26`; `accent` keeps pane border ruby.
 
 ## Files Modified This Session
 - `Makefile`, `hermes/Makefile`, `init.sh`, `.gitignore`, `README.md`

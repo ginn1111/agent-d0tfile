@@ -57,8 +57,8 @@
       "name": "Cindy Black & Ruby theme",
       "description": "Static Black & Ruby (004-hybrid) theme files in themes/cindy/ + scripts/install_theme_cindy.py + make theme-cindy{,-dry-run,-restore,-restore-dry-run}. Design: docs/plans/2026-11-12-cindy-black-ruby-theme-design.md",
       "dependencies": [],
-      "status": "in-progress",
-      "evidence": "./init.sh OK (17 tests); python3 -m unittest tests.test_install_theme_cindy tests.test_theme_cindy_palette OK; make theme-cindy-dry-run OK (would/ok/missing lines only); make theme-cindy-restore-dry-run rc=0; make help lists 4 theme-cindy lines"
+      "status": "done",
+      "evidence": "./init.sh OK (17 tests); python3 -m unittest tests.test_install_theme_cindy tests.test_theme_cindy_palette OK; make theme-cindy-dry-run OK (would/ok/missing lines only); make theme-cindy-restore-dry-run rc=0; make help lists 4 theme-cindy lines; make theme-cindy installed 2026-11-12 (backups .pre-cindy.20261112-164309); herdr focus colors 12f686f, herdr config check ok + reload applied; nvim colors_name=bearded, bearded primary=#c62f52; kitty config loads; yazi/starship toml parse; d0t_file a4c519f (theme) + 15166ba (*.pre-cindy.* ignored); visual check: Gin ok"
     }
   ]
 }

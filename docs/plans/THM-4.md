@@ -1,5 +1,5 @@
 ---
-status: approved
+status: completed
 scope: plan Task 13: real install (gated on Gin approval of dry-run output)
 owner: cindy
 ---
