@@ -1,5 +1,5 @@
 ---
-status: approved
+status: completed
 scope: plan Tasks 8-11: installer, make targets, docs, harness state
 owner: cindy
 ---

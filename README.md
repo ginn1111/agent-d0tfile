@@ -119,6 +119,15 @@ make us-dry-run
 make universal-skills-dry-run
 ```
 
+Cindy Black & Ruby theme (`scripts/install_theme_cindy.py`):
+
+```bash
+make theme-cindy                 # link cindy Black & Ruby theme into ~/.config + cindy profile (backs up originals)
+make theme-cindy-dry-run         # preview theme links/edits without writing
+make theme-cindy-restore         # restore pre-cindy originals, remove theme links
+make theme-cindy-restore-dry-run # preview restore without writing
+```
+
 Raw script still available:
 
 ```bash

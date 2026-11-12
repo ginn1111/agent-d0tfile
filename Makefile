@@ -7,6 +7,7 @@ AGENTS_SKILLS_DIR ?= $(HOME)/.agents/skills
 SETUP_UNIVERSAL_SKILLS := scripts/setup-universal-skills.sh
 LINK_HERMES_PLUGIN := scripts/link-hermes-plugin.sh
 ADD_HERMES_CRON := scripts/add-hermes-cron.sh
+INSTALL_THEME_CINDY := scripts/install_theme_cindy.py
 HERMES_PROFILE_NAME ?=
 PLUGIN_NAME ?=
 
@@ -14,7 +15,8 @@ PLUGIN_NAME ?=
 	universal-skills universal-skills-dry-run us us-dry-run \
 	link-english-tutor-plugin link-english-tutor-plugin-dry-run letp letp-dry-run \
 	link-validated-mistery-loop-plugin link-validated-mistery-loop-plugin-dry-run lvmlp lvmlp-dry-run \
-	add-hermes-cron add-hermes-cron-dry-run ahc ahc-dry-run
+	add-hermes-cron add-hermes-cron-dry-run ahc ahc-dry-run \
+	theme-cindy theme-cindy-dry-run theme-cindy-restore theme-cindy-restore-dry-run
 
 help:
 	@printf '%s\n' \
@@ -27,6 +29,10 @@ help:
 	  '  make lvmlp-dry-run              # preview validated-mistery-loop plugin symlink without writing' \
 	  '  make ahc / add-hermes-cron      # add repo cron jobs into Hermes profile cron/jobs.json' \
 	  '  make ahc-dry-run                # preview cron job files without writing' \
+	  '  make theme-cindy                # link cindy Black & Ruby theme into ~/.config + cindy profile (backs up originals)' \
+	  '  make theme-cindy-dry-run        # preview theme links/edits without writing' \
+	  '  make theme-cindy-restore        # restore pre-cindy originals, remove theme links' \
+	  '  make theme-cindy-restore-dry-run # preview restore without writing' \
 	  '' \
 	  'Vars:' \
 	  '  AGENTS_SKILLS_DIR=$(HOME)/.agents/skills' \
@@ -72,3 +78,15 @@ add-hermes-cron-dry-run:
 
 ahc-dry-run: add-hermes-cron-dry-run
 
+
+theme-cindy:
+	@python3 '$(INSTALL_THEME_CINDY)'
+
+theme-cindy-dry-run:
+	@python3 '$(INSTALL_THEME_CINDY)' --dry-run
+
+theme-cindy-restore:
+	@python3 '$(INSTALL_THEME_CINDY)' --restore
+
+theme-cindy-restore-dry-run:
+	@python3 '$(INSTALL_THEME_CINDY)' --restore --dry-run

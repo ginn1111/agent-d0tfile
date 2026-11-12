@@ -2,8 +2,8 @@
 
 ## Current Objective
 
-- Goal: commit repo cleanup + matching docs.
-- Current status: feat-003 done. Next: feat-004 rotate leaked tokens.
+- Goal: feat-007 Cindy Black & Ruby theme installer (THM-2).
+- Current status: feat-007 in-progress; installer, make targets, docs done. Real install not run.
 - Branch / commit: `main` (see `git log -1`).
 
 ## Completed This Session
@@ -18,7 +18,8 @@
 
 | Check | Command | Result | Notes |
 |---|---|---|---|
-| Tests + static | `./init.sh` | exit 0, 12 tests OK | failed before `-t .` fix |
+| Tests + static | `./init.sh` | exit 0, 17 tests OK | incl. 4 installer tests |
+| Installer | `make theme-cindy-dry-run`, `make theme-cindy-restore-dry-run` | exit 0 | would/ok/missing lines only |
 | Root Make | `make help`, `make us-dry-run` | exit 0 | |
 | Plugin link | `HERMES_HOME=~/.hermes make lvmlp-dry-run HERMES_PROFILE_NAME=gintary` | exit 0 | |
 | Hermes Make | `make -C hermes help` | exit 0 | failed before `-include .env` |

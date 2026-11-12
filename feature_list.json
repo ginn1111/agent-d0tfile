@@ -58,7 +58,7 @@
       "description": "Static Black & Ruby (004-hybrid) theme files in themes/cindy/ + scripts/install_theme_cindy.py + make theme-cindy{,-dry-run,-restore,-restore-dry-run}. Design: docs/plans/2026-11-12-cindy-black-ruby-theme-design.md",
       "dependencies": [],
       "status": "in-progress",
-      "evidence": "THM-1: theme files + tests/test_theme_cindy_palette.py pass; installer pending (THM-2+)"
+      "evidence": "./init.sh OK (17 tests); python3 -m unittest tests.test_install_theme_cindy tests.test_theme_cindy_palette OK; make theme-cindy-dry-run OK (would/ok/missing lines only); make theme-cindy-restore-dry-run rc=0; make help lists 4 theme-cindy lines"
     }
   ]
 }

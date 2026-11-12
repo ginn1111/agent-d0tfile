@@ -3,7 +3,7 @@
 ## Current State
 
 **Last Updated:** 2026-11-12
-**Active Feature:** none (feat-003 done)
+**Active Feature:** feat-007 Cindy theme (in-progress; installer + make + docs done, real install pending)
 
 ## Status
 
@@ -13,9 +13,10 @@
 - [x] feat-003 Reconcile working tree: tracked cleanup committed.
 
 ### What's In Progress
-- [ ] none
+- [ ] feat-007 Cindy theme: THM-1 theme files + THM-2 installer/make/docs done; real install pending
 
 ### What's Next
+0. feat-007: run `make theme-cindy-dry-run`, then real install after Gin approval (Task 13).
 1. feat-004 Rotate leaked Hermes API tokens (was in `hermes/.make/hermes-profiles.mk`, pushed).
 2. feat-005 Triage untracked files.
 3. feat-006 Restore or drop `RULES.md` reference in `AGENTS.md`.
@@ -35,7 +36,7 @@
 - Cleanup (by Gin): plugins, `paperclip/`, `hermes/scripts/hermes_profile_map.py`, skills
 
 ## Evidence of Completion
-- [x] `./init.sh` exit 0, 12 tests OK
+- [x] `./init.sh` exit 0, 17 tests OK; `make theme-cindy-dry-run`, `theme-cindy-restore-dry-run` exit 0
 - [x] `make help`, `make -C hermes help`, `make us-dry-run`, `make lvmlp-dry-run` exit 0
 
 ## Notes for Next Session
