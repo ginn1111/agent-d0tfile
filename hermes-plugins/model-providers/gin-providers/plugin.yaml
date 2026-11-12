@@ -1,5 +1,0 @@
-name: gin-inference
-kind: model-provider
-version: 1.0.0
-description: Gin Interface — OpenAI-compatible direct API
-author: gin

@@ -1,6 +1,0 @@
-services:
-  cloudflared_paperclip:
-    container_name: cloudflared_paperclip
-    image: cloudflare/cloudflared
-    command: tunnel --no-autoupdate run --token ${CF_TOKEN}
-    network_mode: host
