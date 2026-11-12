@@ -1,3 +1,9 @@
+---
+status: completed
+scope: feat-007 cindy black & ruby theme design (locked 004-hybrid)
+owner: cindy
+---
+
 # Cindy Black & Ruby theme — design
 
 Source: BeardedBear `src/variations/black.ts` `blackAndRuby` (same values in
