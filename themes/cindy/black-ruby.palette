@@ -25,3 +25,7 @@ turquoise=#38c7bd
 green_alt=#3585bb
 diff_add=#0f2a24
 diff_del=#2a0f12
+# ginb worker variant: same base, turquoise accent on teal-tinted pane/bars
+bg_ginb=#0e1314
+bar_ginb=#0f1a1a
+rule_ginb=#1a3a37

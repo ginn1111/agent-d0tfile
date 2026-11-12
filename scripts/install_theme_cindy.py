@@ -16,7 +16,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 SRC = REPO / "themes" / "cindy"
 CFG = Path.home() / ".config"
-PROFILE = Path.home() / ".hermes" / "profiles" / "cindy"  # ponytail: fixed root; HERMES_HOME is profile-scoped in sessions
+PROFILE = Path.home() / ".hermes" / "profiles" / "cindy"
+GINB = PROFILE.parent / "ginb"  # ponytail: fixed root; HERMES_HOME is profile-scoped in sessions
 TAG = ".pre-cindy."
 STAMP = time.strftime("%Y%m%d-%H%M%S")
 BEGIN, END = "# >>> cindy theme", "# <<< cindy theme"
@@ -28,6 +29,7 @@ LINKS = [  # (repo source, target)
     (SRC / "nvim" / "bearded.lua", CFG / "nvim" / "lua" / "plugins" / "bearded.lua"),
     (SRC / "nvim" / "lualine.lua", CFG / "nvim" / "lua" / "plugins" / "lualine.lua"),
     (SRC / "hermes-skin.yaml", PROFILE / "skins" / "black-ruby-cindy.yaml"),
+    (SRC / "hermes-skin-ginb.yaml", GINB / "skins" / "black-ruby-ginb.yaml"),
 ]
 RETIRE = [CFG / "nvim" / "lua" / "plugins" / "solarized.lua"]
 
@@ -60,6 +62,8 @@ EDITS = [  # (target, text -> text)
      lambda t: swap(sub_line(r"^palette = .*$", 'palette = "black_ruby"', t), "[palettes.solarized]", frag("starship-palette.toml"))),
     (PROFILE / "config.yaml",
      lambda t: sub_line(r"^([ \t]*skin:[ \t]*).*$", r"\g<1>black-ruby-cindy", t)),
+    (GINB / "config.yaml",
+     lambda t: sub_line(r"^([ \t]*skin:[ \t]*).*$", r"\g<1>black-ruby-ginb", t)),
 ]
 
 

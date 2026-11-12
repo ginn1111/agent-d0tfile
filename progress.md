@@ -31,6 +31,7 @@
 - **`init.sh` drops `-t .`**: `tests/` has no `__init__.py`; discovery failed with "Start directory is not importable".
 - **`.make/` gitignored**: generated cache holds tokens.
 - **Installer ignores `HERMES_HOME`**: profile sessions set it to a profile dir; target fixed at `~/.hermes/profiles/cindy`.
+- **ginb skin**: `black-ruby-ginb` = cindy base, turquoise `#38c7bd` accent, teal-tinted pane `#0e1314`/bars `#0f1a1a`, ▸ branding, ruby G on banner.
 - **herdr focus**: `active_row_bg=#1a0f14`, `selection_bg=#3a1a26`; `accent` keeps pane border ruby.
 
 ## Files Modified This Session

@@ -1,0 +1,74 @@
+# Bearded Black & Ruby skin for ginb worker: cindy base, turquoise accent on teal-tinted pane + bars.
+# Palette: themes/cindy/black-ruby.palette
+name: black-ruby-ginb
+description: Bearded Black & Ruby builder skin for Ginb (worker)
+
+colors:
+  background: "#0e1314"
+  ui_accent: "#38c7bd"
+  ui_label: "#00a884"
+  banner_accent: "#38c7bd"
+  banner_title: "#38c7bd"
+  banner_text: "#bec6d0"
+  banner_dim: "#6b7686"
+  banner_border: "#1a3a37"
+  ui_text: "#bec6d0"
+  ui_border: "#1a3a37"
+  ui_ok: "#00a884"
+  ui_warn: "#d4770c"
+  ui_error: "#e35535"
+  prompt: "#38c7bd"
+  input_rule: "#1a3a37"
+  response_border: "#38c7bd"
+  status_bar_bg: "#0f1a1a"
+  status_bar_text: "#a0acbb"
+  status_bar_strong: "#38c7bd"
+  status_bar_dim: "#6b7686"
+  status_bar_good: "#00a884"
+  status_bar_warn: "#c7910c"
+  status_bar_bad: "#d4770c"
+  status_bar_critical: "#e35535"
+  session_label: "#38c7bd"
+  session_border: "#1a3a37"
+  shell_dollar: "#00a884"
+  voice_status_bg: "#0f1a1a"
+  selection_bg: "#1a3a37"
+  completion_menu_bg: "#0f1a1a"
+  completion_menu_current_bg: "#1a3a37"
+  completion_menu_meta_bg: "#1c2027"
+  completion_menu_meta_current_bg: "#1a3a37"
+  diff_added: "#0f2a24"
+  diff_removed: "#2a0f12"
+  diff_added_word: "#00a884"
+  diff_removed_word: "#e35535"
+  syntax_string: "#00a884"
+  syntax_number: "#a85ff1"
+  syntax_keyword: "#38c7bd"
+  syntax_comment: "#6b7686"
+
+branding:
+  agent_name: Ginb
+  response_label: " ▸ Ginb "
+  prompt_symbol: "▸"
+  help_header: "▸ Ginb Build Commands"
+  welcome: "Ginb builder ready. Type /help for commands."
+  goodbye: "Ginb build session closed."
+
+spinner:
+  waiting_faces: ["▹", "▸", "◆"]
+  thinking_faces: ["▹", "▸", "◆"]
+  thinking_verbs:
+    - inspecting code
+    - building change
+    - running checks
+    - verifying delivery
+
+tool_prefix: "│"
+
+banner_logo: |
+  [bold #c62f52] ██████╗ ██╗███╗   ██╗██████╗ [/]
+  [bold #38c7bd]██╔════╝ ██║████╗  ██║██╔══██╗[/]
+  [bold #38c7bd]██║  ███╗██║██╔██╗ ██║██████╔╝[/]
+  [bold #38c7bd]██║   ██║██║██║╚██╗██║██╔══██╗[/]
+  [bold #38c7bd]╚██████╔╝██║██║ ╚████║██████╔╝[/]
+  [#475262] ╚═════╝ ╚═╝╚═╝  ╚═══╝╚═════╝ [/]

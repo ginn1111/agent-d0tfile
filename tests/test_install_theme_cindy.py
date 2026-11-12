@@ -20,6 +20,8 @@ FIXTURES = {
     "dotfiles/starship.toml": 'palette = "solarized"\n\n[palettes.solarized]\ngreen = "#859900"\n\n[character]\nsuccess_symbol = "[>](green)"\n',
     ".hermes/profiles/cindy/config.yaml": "display:\n  skin: solarized-osaka-cindy\n  language: en\n",
     ".hermes/profiles/cindy/skins/solarized-osaka-cindy.yaml": "name: x\n",
+    ".hermes/profiles/ginb/config.yaml": "display:\n  skin: solarized-osaka-ginb\n",
+    ".hermes/profiles/ginb/skins/solarized-osaka-ginb.yaml": "name: y\n",
 }
 
 LINKS = {
@@ -29,6 +31,7 @@ LINKS = {
     ".config/nvim/lua/plugins/bearded.lua": "nvim/bearded.lua",
     ".config/nvim/lua/plugins/lualine.lua": "nvim/lualine.lua",
     ".hermes/profiles/cindy/skins/black-ruby-cindy.yaml": "hermes-skin.yaml",
+    ".hermes/profiles/ginb/skins/black-ruby-ginb.yaml": "hermes-skin-ginb.yaml",
 }
 
 
@@ -92,6 +95,7 @@ class InstallThemeCindyTest(unittest.TestCase):
         self.assertEqual(star["palette"], "black_ruby")
         self.assertEqual(set(star["palettes"]), {"black_ruby"})
         self.assertIn("  skin: black-ruby-cindy\n", (self.home / ".hermes/profiles/cindy/config.yaml").read_text())
+        self.assertIn("  skin: black-ruby-ginb\n", (self.home / ".hermes/profiles/ginb/config.yaml").read_text())
 
     def test_second_run_is_noop(self):
         self.run_script()
