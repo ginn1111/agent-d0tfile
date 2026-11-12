@@ -211,6 +211,18 @@ Resulting symlink:
 ~/.hermes/profiles/<profile>/plugins/<plugin-name> -> <repo>/hermes-plugins/<plugin-name>
 ```
 
+### Install Tool Theme
+
+Installs `agent-tool-themes/<name>/` into `~/.config`: symlinks yazi, starship, nvim lualine/solarized; swaps `[theme]` tables in herdr `config.toml`. Existing targets get `.bak-tooltheme-<timestamp>` backups.
+
+```bash
+make itt-dry-run TOOL_THEME=cindy   # preview, writes nothing
+make itt                            # prompts for theme
+make itt TOOL_THEME=cindy
+```
+
+Restore: move the `.bak-tooltheme-*` file back over the target.
+
 ### Load a Skill
 
 ```bash

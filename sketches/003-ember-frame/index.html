@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Cindy · ember-frame</title>
+<link rel="stylesheet" href="../themes/base.css">
+<style>
+:root { --bg:#001419; --text:#9eabac; --text-bright:#adb7b7; --dim:#576d74; --brand:#db302d;
+  --accent:#db302d; --accent2:#ede7d3; --err:#f55350;
+  --chrome-bg:#380605; --side-bg:#001419; --border:#570f0e;
+  --tab-on-bg:#570f0e; --tab-on-fg:#f55350; --focus:#b7211f; --focus-glow:transparent;
+  --sel-bg:#380605; --cursorline:#002c38; --nr-cur:#db302d; --search-bg:#063540;
+  --mode-n:#db302d; --mode-i:#ede7d3; --mode-v:#b7211f; --mode-c:#637981; --mode:var(--mode-n); --fname:#adb7b7;
+  --cwd:#adb7b7; --dir:#adb7b7; --hov-bg:#380605; --marker:#db302d; --ymode-bg:#570f0e; --ymode-sel:#b7211f; --prompt:#db302d; }
+body.ysel { --ymode-bg: var(--ymode-sel); }
+.lualine,.yazi .status{background:#002c38} .yazi .ymode2{background:#063540}
+.shell .prompt-dir{color:#adb7b7}
+.c-green{color:#b7211f}.c-blue{color:#adb7b7}.c-cyan{color:#ede7d3}.c-orange{color:#9eabac}.c-yellow{color:#637981}.code .hit{color:#ede7d3;outline:1px solid #637981}.yazi .ymode{color:#f55350}.lualine,.yazi .status{background:#380605}.yazi .ymode2{background:#570f0e;color:#ede7d3}
+.sig-ok{color:#849900!important} .sig-warn{color:#b28500!important}
+</style></head>
+<body><script src="../themes/mock.js"></script>
+<script>
+document.querySelectorAll('.agents .row span, .status span, .lualine span').forEach(e => {
+  const t = e.textContent.trim();
+  if (/^(idle|● 3 agents|\+12)$/.test(t)) e.classList.add('sig-ok');
+  if (/^(run|▲ 1 warn|W2|~3)$/.test(t)) e.classList.add('sig-warn');
+});
+</script></body></html>

@@ -6,7 +6,7 @@
 - Current status: feat-007 done; installed live. Next: feat-004 token rotation.
 - Branch / commit: `main` (see `git log -1`).
 
-## Completed This Session
+## Current State
 
 - [x] Committed tracked cleanup (plugins, skills, `paperclip/`, profile-map script).
 - [x] Removed orphaned Make targets (`hermes-profiles-config`, `hermes-health*`, `lmp*`) + `scripts/link-model-providers.sh`.

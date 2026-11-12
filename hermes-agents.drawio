@@ -1,0 +1,40 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="uq2qvB4eQwqUj0iV4dqc">
+    <mxGraphModel dx="58367" dy="42546" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="edge-skills" edge="1" parent="1" source="ginb-root" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" target="ginb-skills">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-tools" edge="1" parent="1" source="ginb-root" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" target="ginb-tools">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-mcps" edge="1" parent="1" source="ginb-root" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" target="ginb-mcps">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-plugins" edge="1" parent="1" source="ginb-root" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" target="ginb-plugins">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="ginb profile" vertex="1">
+          <mxGeometry height="60" width="140" x="-56400" y="-41130" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-description" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;ginb hermes profile&lt;/h1&gt;&lt;p&gt;Development, architecture, planning, management, testing, and deployment.&lt;/p&gt;&lt;p style=&quot;font-size:10px&quot;&gt;Model: gpt-5.6-luna · Provider: openai-codex&lt;br&gt;Timezone: Asia/Bangkok&lt;/p&gt;" vertex="1">
+          <mxGeometry height="145" width="280" x="-56570" y="-41300" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-skills" parent="1" style="whiteSpace=wrap;html=1;rounded=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="&lt;b&gt;Skills catalog · 112 skills&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;apple (4) · autonomous-ai-agents (4)&lt;br&gt;computer-use (1) · creative (16)&lt;br&gt;data-science (1) · dogfood (1) · email (1)&lt;br&gt;github (6) · hermes-desktop-plugins (1)&lt;br&gt;hermes-themes (1) · html-diagram (1)&lt;br&gt;mattpocock (13) · media (4) · mlops (7)&lt;br&gt;note-taking (1) · productivity (13)&lt;br&gt;research (5) · smart-home (1)&lt;br&gt;social-media (1) · software-development (29)&lt;br&gt;yuanbao (1)&lt;br&gt;&lt;br&gt;Sources:&lt;br&gt;${HOME}/.agents/skills&lt;br&gt;/home/aioz/personal/gin-harness/skills&lt;br&gt;/Users/gin/dev/gin-harness/skills&lt;/font&gt;" vertex="1">
+          <mxGeometry height="300" width="330" x="-56800" y="-40950" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-tools" parent="1" style="whiteSpace=wrap;html=1;rounded=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="&lt;b&gt;Tools catalog&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;CLI:&lt;br&gt;browser · clarify · code_execution&lt;br&gt;context_engine · cronjob · delegation&lt;br&gt;file · kanban · mcp-codegraph&lt;br&gt;memory · session_search · skills&lt;br&gt;terminal · todo · vision · web&lt;br&gt;&lt;br&gt;Telegram:&lt;br&gt;browser · clarify · code_execution&lt;br&gt;cronjob · delegation · file · image_gen&lt;br&gt;memory · session_search · skills · terminal&lt;br&gt;todo · tts · vision · web&lt;br&gt;&lt;br&gt;Plugin toolset: spotify&lt;/font&gt;" vertex="1">
+          <mxGeometry height="300" width="330" x="-56420" y="-40950" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-mcps" parent="1" style="whiteSpace=wrap;html=1;rounded=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="&lt;b&gt;MCP catalog&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;codegraph · enabled&lt;br&gt;command: codegraph serve --mcp&lt;br&gt;timeout: 120s · connect: 60s&lt;br&gt;&lt;br&gt;drawio · enabled&lt;br&gt;command: npx @drawio/mcp&lt;br&gt;timeout: 120s · connect: 60s&lt;/font&gt;" vertex="1">
+          <mxGeometry height="220" width="300" x="-56040" y="-40950" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-plugins" parent="1" style="whiteSpace=wrap;html=1;rounded=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="&lt;b&gt;Plugin catalog&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Enabled:&lt;br&gt;english-tutor&lt;br&gt;gin-inference&lt;br&gt;&lt;br&gt;Disabled:&lt;br&gt;ginflow-gate&lt;br&gt;ginflow-routing&lt;br&gt;herdr-agent-state&lt;/font&gt;" vertex="1">
+          <mxGeometry height="220" width="300" x="-55690" y="-40950" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

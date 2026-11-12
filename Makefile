@@ -47,7 +47,8 @@ help:
 	  '' \
 	  'Vars:' \
 	  '  AGENTS_SKILLS_DIR=$(HOME)/.agents/skills' \
-	  '  HERMES_PROFILE_NAME=<profile>'
+	  '  HERMES_PROFILE_NAME=<profile>' \
+	  '  TOOL_THEME=<theme>'
 
 universal-skills:
 	@AGENTS_SKILLS_DIR='$(AGENTS_SKILLS_DIR)' '$(SETUP_UNIVERSAL_SKILLS)'

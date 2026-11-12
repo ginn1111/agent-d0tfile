@@ -1,0 +1,2017 @@
+<mxfile host="Electron" pages="21">
+  <diagram id="catalog-apple" name="Catalog: apple">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="apple catalog (4)" vertex="1">
+          <mxGeometry height="176" width="988" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="apple · KEEP 0 / REMOVE 4" vertex="1">
+          <mxGeometry height="50" width="200" x="394" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — apple-notes" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-1" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — apple-reminders" vertex="1">
+          <mxGeometry height="48" width="220" x="264" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-2" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — findmy" vertex="1">
+          <mxGeometry height="48" width="220" x="504" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-3" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — imessage" vertex="1">
+          <mxGeometry height="48" width="220" x="744" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;apple catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="390" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="70" />
+              <mxPoint x="500" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="130" />
+              <mxPoint x="140" y="130" />
+              <mxPoint x="140" y="130" />
+              <mxPoint x="140" y="130" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="160" />
+              <mxPoint x="440" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="160" />
+              <mxPoint x="550" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-autonomous-ai-agents" name="Catalog: autonomous-ai-agents">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="autonomous-ai-agents catalog (4)" vertex="1">
+          <mxGeometry height="176" width="988" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="autonomous-ai-agents · KEEP 4 / REMOVE 0" vertex="1">
+          <mxGeometry height="50" width="200" x="394" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — claude-code" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-1" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — codex" vertex="1">
+          <mxGeometry height="48" width="220" x="264" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-2" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — hermes-agent" vertex="1">
+          <mxGeometry height="48" width="220" x="504" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-3" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — opencode" vertex="1">
+          <mxGeometry height="48" width="220" x="744" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;autonomous-ai-agents catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="390" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="70" />
+              <mxPoint x="500" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="130" />
+              <mxPoint x="140" y="130" />
+              <mxPoint x="140" y="130" />
+              <mxPoint x="140" y="130" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="160" />
+              <mxPoint x="440" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="160" />
+              <mxPoint x="550" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-computer-use" name="Catalog: computer-use">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="computer-use catalog (1)" vertex="1">
+          <mxGeometry height="176" width="268" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="computer-use · KEEP 0 / REMOVE 1" vertex="1">
+          <mxGeometry height="50" width="200" x="34" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — computer-use" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;computer-use catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="70" />
+              <mxPoint x="140" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="160" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-creative" name="Catalog: creative">
+    <mxGraphModel dx="1013" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="creative catalog (16)" vertex="1">
+          <mxGeometry height="176" width="3838" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="creative · KEEP 6 / REMOVE 10" vertex="1">
+          <mxGeometry height="50" width="200" x="1824" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — architecture-diagram" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-1" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — ascii-art" vertex="1">
+          <mxGeometry height="48" width="220" x="264" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-2" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — ascii-video" vertex="1">
+          <mxGeometry height="48" width="220" x="504" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-3" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — baoyu-infographic" vertex="1">
+          <mxGeometry height="48" width="220" x="744" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-4" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — claude-design" vertex="1">
+          <mxGeometry height="48" width="220" x="974" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-5" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — comfyui" vertex="1">
+          <mxGeometry height="48" width="220" x="1214" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-6" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — design-md" vertex="1">
+          <mxGeometry height="48" width="220" x="1454" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-7" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — excalidraw" vertex="1">
+          <mxGeometry height="48" width="220" x="1694" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-8" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — humanizer" vertex="1">
+          <mxGeometry height="48" width="220" x="1934" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-9" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — manim-video" vertex="1">
+          <mxGeometry height="48" width="220" x="2164" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-10" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — p5js" vertex="1">
+          <mxGeometry height="48" width="220" x="2404" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-11" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — popular-web-designs" vertex="1">
+          <mxGeometry height="48" width="220" x="2644" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-12" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — pretext" vertex="1">
+          <mxGeometry height="48" width="220" x="2884" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-13" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — sketch" vertex="1">
+          <mxGeometry height="48" width="220" x="3124" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-14" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — songwriting-and-ai-music" vertex="1">
+          <mxGeometry height="48" width="220" x="3354" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-15" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — touchdesigner-mcp" vertex="1">
+          <mxGeometry height="48" width="220" x="3594" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;creative catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="1820" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1930" y="70" />
+              <mxPoint x="1930" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1450" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1480" y="120" />
+              <mxPoint x="380" y="120" />
+              <mxPoint x="380" y="120" />
+              <mxPoint x="380" y="120" />
+              <mxPoint x="380" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1520" y="120" />
+              <mxPoint x="620" y="120" />
+              <mxPoint x="620" y="120" />
+              <mxPoint x="620" y="120" />
+              <mxPoint x="620" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1560" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1600" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1660" y="140" />
+              <mxPoint x="1330" y="140" />
+              <mxPoint x="1330" y="140" />
+              <mxPoint x="1330" y="140" />
+              <mxPoint x="1330" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1720" y="150" />
+              <mxPoint x="1570" y="150" />
+              <mxPoint x="1570" y="150" />
+              <mxPoint x="1570" y="150" />
+              <mxPoint x="1570" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1870" y="160" />
+              <mxPoint x="1870" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1980" y="160" />
+              <mxPoint x="1980" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2130" y="150" />
+              <mxPoint x="2280" y="150" />
+              <mxPoint x="2280" y="150" />
+              <mxPoint x="2280" y="150" />
+              <mxPoint x="2280" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2200" y="140" />
+              <mxPoint x="2520" y="140" />
+              <mxPoint x="2520" y="140" />
+              <mxPoint x="2520" y="140" />
+              <mxPoint x="2520" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-11" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2250" y="140" />
+              <mxPoint x="2760" y="140" />
+              <mxPoint x="2760" y="140" />
+              <mxPoint x="2760" y="140" />
+              <mxPoint x="2760" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2290" y="130" />
+              <mxPoint x="3000" y="130" />
+              <mxPoint x="3000" y="130" />
+              <mxPoint x="3000" y="130" />
+              <mxPoint x="3000" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-13" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2330" y="120" />
+              <mxPoint x="3240" y="120" />
+              <mxPoint x="3240" y="120" />
+              <mxPoint x="3240" y="120" />
+              <mxPoint x="3240" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-14" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2370" y="120" />
+              <mxPoint x="3470" y="120" />
+              <mxPoint x="3470" y="120" />
+              <mxPoint x="3470" y="120" />
+              <mxPoint x="3470" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-15" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2400" y="110" />
+              <mxPoint x="3710" y="110" />
+              <mxPoint x="3710" y="110" />
+              <mxPoint x="3710" y="110" />
+              <mxPoint x="3710" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-data-science" name="Catalog: data-science">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="data-science catalog (1)" vertex="1">
+          <mxGeometry height="176" width="268" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="data-science · KEEP 0 / REMOVE 1" vertex="1">
+          <mxGeometry height="50" width="200" x="34" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — jupyter-live-kernel" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;data-science catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="70" />
+              <mxPoint x="140" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="160" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-dogfood" name="Catalog: dogfood">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="dogfood catalog (1)" vertex="1">
+          <mxGeometry height="176" width="268" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="dogfood · KEEP 1 / REMOVE 0" vertex="1">
+          <mxGeometry height="50" width="200" x="34" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — dogfood" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;dogfood catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="70" />
+              <mxPoint x="140" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="160" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-email" name="Catalog: email">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="email catalog (1)" vertex="1">
+          <mxGeometry height="176" width="268" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="email · KEEP 0 / REMOVE 1" vertex="1">
+          <mxGeometry height="50" width="200" x="34" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — himalaya" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;email catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="70" />
+              <mxPoint x="140" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="160" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-github" name="Catalog: github">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="github catalog (6)" vertex="1">
+          <mxGeometry height="176" width="1458" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="github · KEEP 6 / REMOVE 0" vertex="1">
+          <mxGeometry height="50" width="200" x="634" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — codebase-inspection" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-1" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — github-auth" vertex="1">
+          <mxGeometry height="48" width="220" x="264" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-2" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — github-code-review" vertex="1">
+          <mxGeometry height="48" width="220" x="504" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-3" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — github-issues" vertex="1">
+          <mxGeometry height="48" width="220" x="744" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-4" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — github-pr-workflow" vertex="1">
+          <mxGeometry height="48" width="220" x="974" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-5" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — github-repo-management" vertex="1">
+          <mxGeometry height="48" width="220" x="1214" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;github catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="630" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="70" />
+              <mxPoint x="740" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="120" />
+              <mxPoint x="140" y="120" />
+              <mxPoint x="140" y="120" />
+              <mxPoint x="140" y="120" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="140" />
+              <mxPoint x="380" y="140" />
+              <mxPoint x="380" y="140" />
+              <mxPoint x="380" y="140" />
+              <mxPoint x="380" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="160" />
+              <mxPoint x="680" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="160" />
+              <mxPoint x="790" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="940" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1010" y="120" />
+              <mxPoint x="1330" y="120" />
+              <mxPoint x="1330" y="120" />
+              <mxPoint x="1330" y="120" />
+              <mxPoint x="1330" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-hermes-desktop-plugins" name="Catalog: hermes-desktop-plugins">
+    <mxGraphModel dx="1232" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="hermes-desktop-plugins catalog (1)" vertex="1">
+          <mxGeometry height="176" width="268" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="hermes-desktop-plugins · KEEP 1 / REMOVE 0" vertex="1">
+          <mxGeometry height="50" width="200" x="34" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — hermes-desktop-plugins" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;hermes-desktop-plugins catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="70" />
+              <mxPoint x="140" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="160" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-hermes-themes" name="Catalog: hermes-themes">
+    <mxGraphModel dx="970" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="hermes-themes catalog (1)" vertex="1">
+          <mxGeometry height="176" width="268" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="hermes-themes · KEEP 1 / REMOVE 0" vertex="1">
+          <mxGeometry height="50" width="200" x="34" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — hermes-themes" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;hermes-themes catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="70" />
+              <mxPoint x="140" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="160" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-html-diagram" name="Catalog: html-diagram">
+    <mxGraphModel dx="701" dy="368" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="html-diagram catalog (1)" vertex="1">
+          <mxGeometry height="176" width="268" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="html-diagram · KEEP 1 / REMOVE 0" vertex="1">
+          <mxGeometry height="50" width="200" x="34" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — html-diagram" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;html-diagram catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="70" />
+              <mxPoint x="140" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="160" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-mattpocock" name="Catalog: mattpocock">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="mattpocock catalog (13)" vertex="1">
+          <mxGeometry height="176" width="3128" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="mattpocock · KEEP 13 / REMOVE 0" vertex="1">
+          <mxGeometry height="50" width="200" x="1464" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — engineering/codebase-design" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-1" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — engineering/diagnosing-bugs" vertex="1">
+          <mxGeometry height="48" width="220" x="264" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-2" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — engineering/domain-modeling" vertex="1">
+          <mxGeometry height="48" width="220" x="504" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-3" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — engineering/implement" vertex="1">
+          <mxGeometry height="48" width="220" x="744" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-4" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — engineering/prototype" vertex="1">
+          <mxGeometry height="48" width="220" x="974" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-5" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — engineering/resolving-merge-conflicts" vertex="1">
+          <mxGeometry height="48" width="220" x="1214" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-6" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — engineering/setup-matt-pocock-skills" vertex="1">
+          <mxGeometry height="48" width="220" x="1454" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-7" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — engineering/tdd" vertex="1">
+          <mxGeometry height="48" width="220" x="1694" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-8" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — in-progress/claude-handoff" vertex="1">
+          <mxGeometry height="48" width="220" x="1934" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-9" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — misc/git-guardrails-claude-code" vertex="1">
+          <mxGeometry height="48" width="220" x="2164" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-10" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — misc/setup-pre-commit" vertex="1">
+          <mxGeometry height="48" width="220" x="2404" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-11" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — productivity/handoff" vertex="1">
+          <mxGeometry height="48" width="220" x="2644" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-12" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — productivity/writing-great-skills" vertex="1">
+          <mxGeometry height="48" width="220" x="2884" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;mattpocock catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="1460" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1570" y="70" />
+              <mxPoint x="1570" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1140" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="120" />
+              <mxPoint x="380" y="120" />
+              <mxPoint x="380" y="120" />
+              <mxPoint x="380" y="120" />
+              <mxPoint x="380" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1230" y="130" />
+              <mxPoint x="620" y="130" />
+              <mxPoint x="620" y="130" />
+              <mxPoint x="620" y="130" />
+              <mxPoint x="620" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1270" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1330" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1400" y="150" />
+              <mxPoint x="1330" y="150" />
+              <mxPoint x="1330" y="150" />
+              <mxPoint x="1330" y="150" />
+              <mxPoint x="1330" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1570" y="160" />
+              <mxPoint x="1570" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1740" y="150" />
+              <mxPoint x="1810" y="150" />
+              <mxPoint x="1810" y="150" />
+              <mxPoint x="1810" y="150" />
+              <mxPoint x="1810" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1810" y="140" />
+              <mxPoint x="2050" y="140" />
+              <mxPoint x="2050" y="140" />
+              <mxPoint x="2050" y="140" />
+              <mxPoint x="2050" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1870" y="130" />
+              <mxPoint x="2280" y="130" />
+              <mxPoint x="2280" y="130" />
+              <mxPoint x="2280" y="130" />
+              <mxPoint x="2280" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1910" y="130" />
+              <mxPoint x="2520" y="130" />
+              <mxPoint x="2520" y="130" />
+              <mxPoint x="2520" y="130" />
+              <mxPoint x="2520" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-11" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1960" y="120" />
+              <mxPoint x="2760" y="120" />
+              <mxPoint x="2760" y="120" />
+              <mxPoint x="2760" y="120" />
+              <mxPoint x="2760" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2000" y="110" />
+              <mxPoint x="3000" y="110" />
+              <mxPoint x="3000" y="110" />
+              <mxPoint x="3000" y="110" />
+              <mxPoint x="3000" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-media" name="Catalog: media">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="media catalog (4)" vertex="1">
+          <mxGeometry height="176" width="988" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="media · KEEP 0 / REMOVE 4" vertex="1">
+          <mxGeometry height="50" width="200" x="394" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — gif-search" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-1" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — heartmula" vertex="1">
+          <mxGeometry height="48" width="220" x="264" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-2" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — songsee" vertex="1">
+          <mxGeometry height="48" width="220" x="504" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-3" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — youtube-content" vertex="1">
+          <mxGeometry height="48" width="220" x="744" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;media catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="390" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="70" />
+              <mxPoint x="500" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="130" />
+              <mxPoint x="140" y="130" />
+              <mxPoint x="140" y="130" />
+              <mxPoint x="140" y="130" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="160" />
+              <mxPoint x="440" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="160" />
+              <mxPoint x="550" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-mlops" name="Catalog: mlops">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="mlops catalog (7)" vertex="1">
+          <mxGeometry height="176" width="1698" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="mlops · KEEP 0 / REMOVE 7" vertex="1">
+          <mxGeometry height="50" width="200" x="754" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — evaluation/lm-evaluation-harness" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-1" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — evaluation/weights-and-biases" vertex="1">
+          <mxGeometry height="48" width="220" x="264" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-2" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — huggingface-hub" vertex="1">
+          <mxGeometry height="48" width="220" x="504" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-3" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — inference/llama-cpp" vertex="1">
+          <mxGeometry height="48" width="220" x="744" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-4" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — inference/vllm" vertex="1">
+          <mxGeometry height="48" width="220" x="974" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-5" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — models/audiocraft" vertex="1">
+          <mxGeometry height="48" width="220" x="1214" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-6" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — models/segment-anything" vertex="1">
+          <mxGeometry height="48" width="220" x="1454" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;mlops catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="750" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="70" />
+              <mxPoint x="860" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="120" />
+              <mxPoint x="140" y="120" />
+              <mxPoint x="140" y="120" />
+              <mxPoint x="140" y="120" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="130" />
+              <mxPoint x="380" y="130" />
+              <mxPoint x="380" y="130" />
+              <mxPoint x="380" y="130" />
+              <mxPoint x="380" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="140" />
+              <mxPoint x="620" y="140" />
+              <mxPoint x="620" y="140" />
+              <mxPoint x="620" y="140" />
+              <mxPoint x="620" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="160" />
+              <mxPoint x="860" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="130" />
+              <mxPoint x="1330" y="130" />
+              <mxPoint x="1330" y="130" />
+              <mxPoint x="1330" y="130" />
+              <mxPoint x="1330" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1150" y="120" />
+              <mxPoint x="1570" y="120" />
+              <mxPoint x="1570" y="120" />
+              <mxPoint x="1570" y="120" />
+              <mxPoint x="1570" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-note-taking" name="Catalog: note-taking">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="note-taking catalog (1)" vertex="1">
+          <mxGeometry height="176" width="268" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="note-taking · KEEP 1 / REMOVE 0" vertex="1">
+          <mxGeometry height="50" width="200" x="34" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — obsidian" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;note-taking catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="70" />
+              <mxPoint x="140" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="160" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-productivity" name="Catalog: productivity">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="productivity catalog (13)" vertex="1">
+          <mxGeometry height="176" width="3128" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="productivity · KEEP 3 / REMOVE 10" vertex="1">
+          <mxGeometry height="50" width="200" x="1464" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — airtable" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-1" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — docx" vertex="1">
+          <mxGeometry height="48" width="220" x="264" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-2" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — google-workspace" vertex="1">
+          <mxGeometry height="48" width="220" x="504" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-3" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — maps" vertex="1">
+          <mxGeometry height="48" width="220" x="744" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-4" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — nano-pdf" vertex="1">
+          <mxGeometry height="48" width="220" x="974" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-5" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — notion" vertex="1">
+          <mxGeometry height="48" width="220" x="1214" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-6" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — ocr-and-documents" vertex="1">
+          <mxGeometry height="48" width="220" x="1454" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-7" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — pdf" vertex="1">
+          <mxGeometry height="48" width="220" x="1694" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-8" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — petdex" vertex="1">
+          <mxGeometry height="48" width="220" x="1934" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-9" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — powerpoint" vertex="1">
+          <mxGeometry height="48" width="220" x="2164" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-10" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — teams-meeting-pipeline" vertex="1">
+          <mxGeometry height="48" width="220" x="2404" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-11" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — tui-widgets" vertex="1">
+          <mxGeometry height="48" width="220" x="2644" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-12" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — xlsx" vertex="1">
+          <mxGeometry height="48" width="220" x="2884" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;productivity catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="1460" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1570" y="70" />
+              <mxPoint x="1570" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1140" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="120" />
+              <mxPoint x="380" y="120" />
+              <mxPoint x="380" y="120" />
+              <mxPoint x="380" y="120" />
+              <mxPoint x="380" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1230" y="130" />
+              <mxPoint x="620" y="130" />
+              <mxPoint x="620" y="130" />
+              <mxPoint x="620" y="130" />
+              <mxPoint x="620" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1270" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="130" />
+              <mxPoint x="860" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1330" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="140" />
+              <mxPoint x="1090" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1400" y="150" />
+              <mxPoint x="1330" y="150" />
+              <mxPoint x="1330" y="150" />
+              <mxPoint x="1330" y="150" />
+              <mxPoint x="1330" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1570" y="160" />
+              <mxPoint x="1570" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1740" y="150" />
+              <mxPoint x="1810" y="150" />
+              <mxPoint x="1810" y="150" />
+              <mxPoint x="1810" y="150" />
+              <mxPoint x="1810" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1810" y="140" />
+              <mxPoint x="2050" y="140" />
+              <mxPoint x="2050" y="140" />
+              <mxPoint x="2050" y="140" />
+              <mxPoint x="2050" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1870" y="130" />
+              <mxPoint x="2280" y="130" />
+              <mxPoint x="2280" y="130" />
+              <mxPoint x="2280" y="130" />
+              <mxPoint x="2280" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1910" y="130" />
+              <mxPoint x="2520" y="130" />
+              <mxPoint x="2520" y="130" />
+              <mxPoint x="2520" y="130" />
+              <mxPoint x="2520" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-11" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1960" y="120" />
+              <mxPoint x="2760" y="120" />
+              <mxPoint x="2760" y="120" />
+              <mxPoint x="2760" y="120" />
+              <mxPoint x="2760" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2000" y="110" />
+              <mxPoint x="3000" y="110" />
+              <mxPoint x="3000" y="110" />
+              <mxPoint x="3000" y="110" />
+              <mxPoint x="3000" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-research" name="Catalog: research">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="research catalog (5)" vertex="1">
+          <mxGeometry height="176" width="1218" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="research · KEEP 4 / REMOVE 1" vertex="1">
+          <mxGeometry height="50" width="200" x="514" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — arxiv" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-1" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — blogwatcher" vertex="1">
+          <mxGeometry height="48" width="220" x="264" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-2" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — llm-wiki" vertex="1">
+          <mxGeometry height="48" width="220" x="504" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-3" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — polymarket" vertex="1">
+          <mxGeometry height="48" width="220" x="744" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-4" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — research-paper-writing" vertex="1">
+          <mxGeometry height="48" width="220" x="974" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;research catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="510" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="70" />
+              <mxPoint x="620" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="120" />
+              <mxPoint x="140" y="120" />
+              <mxPoint x="140" y="120" />
+              <mxPoint x="140" y="120" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="140" />
+              <mxPoint x="380" y="140" />
+              <mxPoint x="380" y="140" />
+              <mxPoint x="380" y="140" />
+              <mxPoint x="380" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="160" />
+              <mxPoint x="620" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="780" y="140" />
+              <mxPoint x="860" y="140" />
+              <mxPoint x="860" y="140" />
+              <mxPoint x="860" y="140" />
+              <mxPoint x="860" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="120" />
+              <mxPoint x="1090" y="120" />
+              <mxPoint x="1090" y="120" />
+              <mxPoint x="1090" y="120" />
+              <mxPoint x="1090" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-smart-home" name="Catalog: smart-home">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="smart-home catalog (1)" vertex="1">
+          <mxGeometry height="176" width="268" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="smart-home · KEEP 0 / REMOVE 1" vertex="1">
+          <mxGeometry height="50" width="200" x="34" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — openhue" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;smart-home catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="70" />
+              <mxPoint x="140" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="160" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-social-media" name="Catalog: social-media">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="social-media catalog (1)" vertex="1">
+          <mxGeometry height="176" width="268" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="social-media · KEEP 0 / REMOVE 1" vertex="1">
+          <mxGeometry height="50" width="200" x="34" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — xurl" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;social-media catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="70" />
+              <mxPoint x="140" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="160" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-software-development" name="Catalog: software-development">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="software-development catalog (29)" vertex="1">
+          <mxGeometry height="176" width="6938" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="software-development · KEEP 29 / REMOVE 0" vertex="1">
+          <mxGeometry height="50" width="200" x="3364" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — aioz-map-layer" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-1" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — aioz-wallet-mobile-ui-v2-widget-porting" vertex="1">
+          <mxGeometry height="48" width="220" x="264" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-2" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — browser-extension-react-fast-refresh" vertex="1">
+          <mxGeometry height="48" width="220" x="504" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-3" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — canvas-map-overlay" vertex="1">
+          <mxGeometry height="48" width="220" x="744" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-4" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — data-driven-file-generation" vertex="1">
+          <mxGeometry height="48" width="220" x="974" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-5" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — delivery-verification-in-monorepos" vertex="1">
+          <mxGeometry height="48" width="220" x="1214" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-6" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — design-md-theme-implementation" vertex="1">
+          <mxGeometry height="48" width="220" x="1454" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-7" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — form-state-sync-and-restoration" vertex="1">
+          <mxGeometry height="48" width="220" x="1694" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-8" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — hermes-agent-skill-authoring" vertex="1">
+          <mxGeometry height="48" width="220" x="1934" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-9" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — keplr-wallet-hooks" vertex="1">
+          <mxGeometry height="48" width="220" x="2164" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-10" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — local-storage-session-management" vertex="1">
+          <mxGeometry height="48" width="220" x="2404" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-11" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — map-gl-overlay-integration" vertex="1">
+          <mxGeometry height="48" width="220" x="2644" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-12" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — map-layer-migration" vertex="1">
+          <mxGeometry height="48" width="220" x="2884" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-13" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — map-layer-query-filters" vertex="1">
+          <mxGeometry height="48" width="220" x="3124" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-14" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — map-layer-temporal-filters" vertex="1">
+          <mxGeometry height="48" width="220" x="3354" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-15" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — map-overlay-unification" vertex="1">
+          <mxGeometry height="48" width="220" x="3594" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-16" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — monorepo-targeted-test-verification" vertex="1">
+          <mxGeometry height="48" width="220" x="3834" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-17" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — network-graph-visualization" vertex="1">
+          <mxGeometry height="48" width="220" x="4074" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-18" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — node-inspect-debugger" vertex="1">
+          <mxGeometry height="48" width="220" x="4314" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-19" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — plan" vertex="1">
+          <mxGeometry height="48" width="220" x="4544" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-20" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — python-debugpy" vertex="1">
+          <mxGeometry height="48" width="220" x="4784" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-21" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — requesting-code-review" vertex="1">
+          <mxGeometry height="48" width="220" x="5024" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-22" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — simplify-code" vertex="1">
+          <mxGeometry height="48" width="220" x="5264" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-23" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — spike" vertex="1">
+          <mxGeometry height="48" width="220" x="5504" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-24" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — systematic-debugging" vertex="1">
+          <mxGeometry height="48" width="220" x="5734" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-25" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — test-driven-development" vertex="1">
+          <mxGeometry height="48" width="220" x="5974" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-26" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — token-amount-formatting" vertex="1">
+          <mxGeometry height="48" width="220" x="6214" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-27" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — token-and-network-picker-ordering" vertex="1">
+          <mxGeometry height="48" width="220" x="6454" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-28" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="KEEP — ui-v2-component-integration" vertex="1">
+          <mxGeometry height="48" width="220" x="6694" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;software-development catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="3360" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3470" y="70" />
+              <mxPoint x="3470" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2820" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="110" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2840" y="110" />
+              <mxPoint x="380" y="110" />
+              <mxPoint x="380" y="110" />
+              <mxPoint x="380" y="110" />
+              <mxPoint x="380" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2870" y="120" />
+              <mxPoint x="620" y="120" />
+              <mxPoint x="620" y="120" />
+              <mxPoint x="620" y="120" />
+              <mxPoint x="620" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2890" y="120" />
+              <mxPoint x="860" y="120" />
+              <mxPoint x="860" y="120" />
+              <mxPoint x="860" y="120" />
+              <mxPoint x="860" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2920" y="120" />
+              <mxPoint x="1090" y="120" />
+              <mxPoint x="1090" y="120" />
+              <mxPoint x="1090" y="120" />
+              <mxPoint x="1090" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2950" y="130" />
+              <mxPoint x="1330" y="130" />
+              <mxPoint x="1330" y="130" />
+              <mxPoint x="1330" y="130" />
+              <mxPoint x="1330" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2980" y="130" />
+              <mxPoint x="1570" y="130" />
+              <mxPoint x="1570" y="130" />
+              <mxPoint x="1570" y="130" />
+              <mxPoint x="1570" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3010" y="130" />
+              <mxPoint x="1810" y="130" />
+              <mxPoint x="1810" y="130" />
+              <mxPoint x="1810" y="130" />
+              <mxPoint x="1810" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3050" y="140" />
+              <mxPoint x="2050" y="140" />
+              <mxPoint x="2050" y="140" />
+              <mxPoint x="2050" y="140" />
+              <mxPoint x="2050" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3090" y="140" />
+              <mxPoint x="2280" y="140" />
+              <mxPoint x="2280" y="140" />
+              <mxPoint x="2280" y="140" />
+              <mxPoint x="2280" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3130" y="140" />
+              <mxPoint x="2520" y="140" />
+              <mxPoint x="2520" y="140" />
+              <mxPoint x="2520" y="140" />
+              <mxPoint x="2520" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-11" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3180" y="150" />
+              <mxPoint x="2760" y="150" />
+              <mxPoint x="2760" y="150" />
+              <mxPoint x="2760" y="150" />
+              <mxPoint x="2760" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3230" y="150" />
+              <mxPoint x="3000" y="150" />
+              <mxPoint x="3000" y="150" />
+              <mxPoint x="3000" y="150" />
+              <mxPoint x="3000" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-13" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3310" y="150" />
+              <mxPoint x="3240" y="150" />
+              <mxPoint x="3240" y="150" />
+              <mxPoint x="3240" y="150" />
+              <mxPoint x="3240" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-14" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3470" y="160" />
+              <mxPoint x="3470" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-15" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3640" y="150" />
+              <mxPoint x="3710" y="150" />
+              <mxPoint x="3710" y="150" />
+              <mxPoint x="3710" y="150" />
+              <mxPoint x="3710" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-16" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3710" y="150" />
+              <mxPoint x="3950" y="150" />
+              <mxPoint x="3950" y="150" />
+              <mxPoint x="3950" y="150" />
+              <mxPoint x="3950" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-17" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3770" y="150" />
+              <mxPoint x="4190" y="150" />
+              <mxPoint x="4190" y="150" />
+              <mxPoint x="4190" y="150" />
+              <mxPoint x="4190" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-18" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3820" y="140" />
+              <mxPoint x="4430" y="140" />
+              <mxPoint x="4430" y="140" />
+              <mxPoint x="4430" y="140" />
+              <mxPoint x="4430" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-19" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3860" y="140" />
+              <mxPoint x="4660" y="140" />
+              <mxPoint x="4660" y="140" />
+              <mxPoint x="4660" y="140" />
+              <mxPoint x="4660" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-20" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3900" y="140" />
+              <mxPoint x="4900" y="140" />
+              <mxPoint x="4900" y="140" />
+              <mxPoint x="4900" y="140" />
+              <mxPoint x="4900" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-21" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3930" y="130" />
+              <mxPoint x="5140" y="130" />
+              <mxPoint x="5140" y="130" />
+              <mxPoint x="5140" y="130" />
+              <mxPoint x="5140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-22" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3970" y="130" />
+              <mxPoint x="5380" y="130" />
+              <mxPoint x="5380" y="130" />
+              <mxPoint x="5380" y="130" />
+              <mxPoint x="5380" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e24" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-23" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4000" y="130" />
+              <mxPoint x="5620" y="130" />
+              <mxPoint x="5620" y="130" />
+              <mxPoint x="5620" y="130" />
+              <mxPoint x="5620" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-24" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4030" y="120" />
+              <mxPoint x="5850" y="120" />
+              <mxPoint x="5850" y="120" />
+              <mxPoint x="5850" y="120" />
+              <mxPoint x="5850" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-25" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4050" y="120" />
+              <mxPoint x="6090" y="120" />
+              <mxPoint x="6090" y="120" />
+              <mxPoint x="6090" y="120" />
+              <mxPoint x="6090" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-26" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4080" y="120" />
+              <mxPoint x="6330" y="120" />
+              <mxPoint x="6330" y="120" />
+              <mxPoint x="6330" y="120" />
+              <mxPoint x="6330" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e28" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-27" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4110" y="110" />
+              <mxPoint x="6570" y="110" />
+              <mxPoint x="6570" y="110" />
+              <mxPoint x="6570" y="110" />
+              <mxPoint x="6570" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e29" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-28" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4130" y="110" />
+              <mxPoint x="6810" y="110" />
+              <mxPoint x="6810" y="110" />
+              <mxPoint x="6810" y="110" />
+              <mxPoint x="6810" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog-yuanbao" name="Catalog: yuanbao">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;fontColor=#6c8ebf;verticalAlign=top;fontStyle=2;dashed=1;" value="yuanbao catalog (1)" vertex="1">
+          <mxGeometry height="176" width="268" x="6" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="yuanbao · KEEP 0 / REMOVE 1" vertex="1">
+          <mxGeometry height="50" width="200" x="34" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="skill-0" parent="group_0" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="REMOVE — yuanbao" vertex="1">
+          <mxGeometry height="48" width="220" x="24" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="ginb-root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSize=10;" value="ginb Hermes profile&#10;yuanbao catalog" vertex="1">
+          <mxGeometry height="70" width="220" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="ginb-root" style="html=1;rounded=0;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="70" />
+              <mxPoint x="140" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="catalog" style="html=1;rounded=0;" target="skill-0" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="160" />
+              <mxPoint x="140" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

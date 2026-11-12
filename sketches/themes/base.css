@@ -1,0 +1,70 @@
+/* Shared layout for 001 sketches. Variants set colours via role variables only. */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font: 13px/1.45 "JetBrains Mono", "SF Mono", Menlo, monospace;
+  background: var(--bg); color: var(--text);
+  height: 100vh; display: flex; flex-direction: column; overflow: hidden;
+}
+.c-dim { color: var(--dim); } .c-green { color: #849900; } .c-yellow { color: #b28500; }
+.c-blue { color: #268bd3; } .c-cyan { color: #29a298; } .c-orange { color: #c94c16; }
+.c-err { color: var(--err); } .c-acc { color: var(--accent); } .c-acc2 { color: var(--accent2); }
+
+/* herdr tabs */
+.tabs { display: flex; gap: 2px; background: var(--chrome-bg); padding: 4px 8px; border-bottom: 1px solid var(--border); }
+.tab { padding: 2px 12px; color: var(--dim); cursor: pointer; }
+.tab:hover { color: var(--text); }
+.tab.on { background: var(--tab-on-bg); color: var(--tab-on-fg); font-weight: 700; }
+.tabs .brand { margin-left: auto; color: var(--brand); }
+
+.main { flex: 1; display: grid; grid-template-columns: 190px 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; padding: 4px; min-height: 0; }
+.pane { border: 1px solid var(--border); background: var(--bg); display: flex; flex-direction: column; min-height: 0; cursor: pointer; position: relative; }
+.pane.focus { border-color: var(--focus); box-shadow: 0 0 0 1px var(--focus-glow); }
+.pane > .label { position: absolute; top: -9px; left: 8px; padding: 0 4px; background: var(--bg); font-size: 11px; color: var(--dim); }
+.pane.focus > .label { color: var(--focus); }
+.agents { grid-row: span 2; padding: 10px 8px; background: var(--side-bg); }
+.agents .row { padding: 3px 6px; display: flex; justify-content: space-between; }
+.agents .row.cur { background: var(--sel-bg); color: var(--text-bright); }
+.nvim { grid-row: span 2; }
+.code { flex: 1; padding: 8px 0; overflow: hidden; white-space: pre; }
+.code .ln { display: inline-block; width: 34px; text-align: right; padding-right: 10px; color: var(--dim); }
+.code .cur-line { background: var(--cursorline); }
+.code .cur-line .ln { color: var(--nr-cur); font-weight: 700; }
+.code .hit { background: var(--search-bg); color: #001419; }
+
+/* lualine (eviline) */
+.lualine { display: flex; gap: 10px; align-items: center; background: #002c38; padding: 1px 0; white-space: nowrap; }
+.lualine .bar { color: var(--mode); }
+.lualine .mode { color: var(--mode); font-weight: 700; }
+.lualine .fname { color: var(--fname); font-weight: 700; }
+.lualine .spacer { flex: 1; }
+.modes { display: flex; gap: 4px; padding: 4px 8px; border-top: 1px solid var(--border); font-size: 11px; }
+.modes button, .shell button { font: inherit; background: none; border: 1px solid var(--border); color: var(--dim); padding: 0 6px; cursor: pointer; }
+.modes button:hover, .shell button:hover { color: var(--text); border-color: var(--dim); }
+
+/* yazi */
+.yazi { display: grid; grid-template-rows: auto 1fr auto; }
+.yazi .head { padding: 4px 8px; }
+.yazi .cwd { color: var(--cwd); font-weight: 700; }
+.yazi .cols { display: grid; grid-template-columns: 1fr 1.4fr 1.2fr; min-height: 0; }
+.yazi .col { border-right: 1px solid var(--border); padding: 2px 0; overflow: hidden; }
+.yazi .f { padding: 0 8px; white-space: nowrap; }
+.yazi .f.dir { color: var(--dir); font-weight: 700; }
+.yazi .f.hov { background: var(--hov-bg); color: var(--text-bright); font-weight: 700; }
+.yazi .f.sel { box-shadow: inset 3px 0 0 var(--marker); }
+.yazi .status { display: flex; background: #002c38; white-space: nowrap; overflow: hidden; }
+.yazi .f, .yazi .col div { overflow: hidden; text-overflow: ellipsis; }
+.yazi .ymode { background: var(--ymode-bg); color: #001419; font-weight: 700; padding: 0 8px; }
+.yazi .ymode2 { color: var(--ymode-bg); background: #063540; padding: 0 8px; }
+
+/* shell + starship */
+.shell { padding: 8px; overflow: hidden; }
+.shell .prompt-dir { color: #268bd3; font-weight: 700; }
+.shell .sym { color: var(--prompt); font-weight: 700; }
+.shell .sym.bad { color: var(--err); }
+.shell .actions { margin-top: 8px; display: flex; gap: 6px; }
+
+/* herdr status bar */
+.status { display: flex; gap: 14px; background: var(--chrome-bg); padding: 2px 10px; border-top: 1px solid var(--border); color: var(--dim); }
+.status .strong { color: var(--accent); font-weight: 700; }
+.toast { position: fixed; right: 16px; bottom: 30px; border: 1px solid var(--focus); background: var(--side-bg); padding: 6px 12px; opacity: 0; transition: opacity .2s; }
+.toast.show { opacity: 1; }
