@@ -10,3 +10,6 @@
 .DS_Store
 Thumbs.db
 __pycache__
+
+# Generated make caches (may hold tokens)
+.make/

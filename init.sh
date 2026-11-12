@@ -4,7 +4,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 echo "=== Tests ==="
-python3 -m unittest discover -s tests -t .
+python3 -m unittest discover -s tests
 
 echo "=== Static checks: shell syntax ==="
 for f in scripts/*.sh init.sh; do bash -n "$f"; done
