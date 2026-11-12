@@ -5,9 +5,8 @@ Usage: install_theme_cindy.py [--dry-run] [--restore]
   (none)     link/retire/edit; replaced files saved as <file>.pre-cindy.<stamp>
   --dry-run  print what would happen, write nothing
   --restore  put back the oldest .pre-cindy.* backups, remove created links
-Env: HOME, HERMES_HOME (default ~/.hermes).
+Env: HOME. HERMES_HOME is ignored: inside a profile session it already points at a profile dir.
 """
-import os
 import re
 import shutil
 import sys
@@ -17,7 +16,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 SRC = REPO / "themes" / "cindy"
 CFG = Path.home() / ".config"
-PROFILE = Path(os.environ.get("HERMES_HOME", Path.home() / ".hermes")) / "profiles" / "cindy"
+PROFILE = Path.home() / ".hermes" / "profiles" / "cindy"  # ponytail: fixed root; HERMES_HOME is profile-scoped in sessions
 TAG = ".pre-cindy."
 STAMP = time.strftime("%Y%m%d-%H%M%S")
 BEGIN, END = "# >>> cindy theme", "# <<< cindy theme"

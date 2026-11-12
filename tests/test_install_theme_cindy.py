@@ -61,7 +61,8 @@ class InstallThemeCindyTest(unittest.TestCase):
         self.tmp.cleanup()
 
     def run_script(self, *args):
-        env = {**os.environ, "HOME": str(self.home), "HERMES_HOME": str(self.home / ".hermes")}
+        # Profile sessions export HERMES_HOME=<root>/profiles/<name>; the script must not nest under it.
+        env = {**os.environ, "HOME": str(self.home), "HERMES_HOME": str(self.home / ".hermes/profiles/cindy")}
         r = subprocess.run([sys.executable, str(SCRIPT), *args], env=env, capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         return r.stdout
