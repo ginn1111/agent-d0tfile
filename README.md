@@ -80,6 +80,14 @@ agents-dotfile/
 | `english-tutor` | English tutor plugin |
 | `validated-mistery-loop` | File-based VML checker/reviewer/starter/validator/stress coach |
 
+Herdr plugin: [`hermes-kanban`](herdr-plugins/hermes-kanban/README.md) shows a live,
+read-only task graph and Kanban lanes in a terminal popup. Build with `make hkb`, link with
+`herdr plugin link "$PWD/herdr-plugins/hermes-kanban"`, then invoke
+`herdr plugin action invoke open --plugin gin.hermes-kanban`. Press `b` to switch
+boards, `v` for layouts, `F` for combined filters, `/` to search, `d` to show done
+(hidden by default), Enter for details, and `q` to close. Requires Rust to build and Python 3.9+
+at runtime. `make hkb-dry-run` previews the build command.
+
 ---
 
 ## Quick Start

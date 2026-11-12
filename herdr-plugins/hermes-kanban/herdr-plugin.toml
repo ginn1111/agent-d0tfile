@@ -1,0 +1,24 @@
+id = "gin.hermes-kanban"
+name = "Hermes Kanban"
+version = "0.3.0"
+description = "Live read-only Hermes task graph and Kanban lanes in a terminal popup."
+platforms = ["macos", "linux"]
+min_herdr_version = "0.9.5"
+
+[[build]]
+command = ["cargo", "build", "--release", "--locked"]
+
+[[panes]]
+id = "board"
+title = "Hermes Kanban"
+placement = "popup"
+width = "90%"
+height = "85%"
+command = ["bash", "herdr/board.sh"]
+
+[[actions]]
+id = "open"
+title = "Hermes Kanban: open dashboard"
+description = "Explore live cards, dependencies, blockers and review requests."
+contexts = ["pane", "workspace"]
+command = ["bash", "herdr/open.sh"]

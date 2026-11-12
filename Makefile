@@ -1,6 +1,15 @@
 SHELL := /usr/bin/env bash
 .DEFAULT_GOAL := help
 
+KANBAN_TUI_MANIFEST := herdr-plugins/hermes-kanban/Cargo.toml
+.PHONY: herdr-kanban-build hkb herdr-kanban-build-dry-run hkb-dry-run
+herdr-kanban-build:
+	@cargo build --release --locked --manifest-path '$(KANBAN_TUI_MANIFEST)'
+hkb: herdr-kanban-build
+herdr-kanban-build-dry-run:
+	@printf '%s\n' 'cargo build --release --locked --manifest-path $(KANBAN_TUI_MANIFEST)'
+hkb-dry-run: herdr-kanban-build-dry-run
+
 # Repo helper targets for linking skills/plugins and creating cron jobs in Hermes profiles.
 
 AGENTS_SKILLS_DIR ?= $(HOME)/.agents/skills
@@ -21,6 +30,8 @@ PLUGIN_NAME ?=
 help:
 	@printf '%s\n' \
 	  'Targets:' \
+	  '  make hkb / herdr-kanban-build   # build native Herdr Kanban TUI (requires Rust)' \
+	  '  make hkb-dry-run               # preview build command' \
 	  '  make us / universal-skills      # link repo skills into universal agents skills folder' \
 	  '  make us-dry-run                 # preview universal skill links without writing' \
 	  '  make letp / link-english-tutor-plugin # link plugin into specific Hermes profile (defaults to picker)' \
