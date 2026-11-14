@@ -50,27 +50,27 @@ Then run `herdr server reload-config`. Remove plugin registration with
 
 ## Controls
 
-| Key / gesture | Action |
-| --- | --- |
-| v | Switch task graph / Kanban lanes |
-| F | Filters: arrows move, Space toggles, Enter/Esc closes |
-| / | Search live; Enter keeps query, Esc restores previous query |
-| d | Show/hide done cards (hidden by default) |
-| x | Reset all filters, hiding done again |
-| Tab / Shift-Tab, arrows | Select card; lanes use left/right for status, up/down for card |
-| Enter / click card | Open details |
-| j/k or PgUp/PgDn in details | Scroll description, reason, results, recent comments |
-| h/j/k/l or drag empty canvas | Pan graph; hjkl navigates lanes |
-| + / - or mouse wheel | Zoom |
-| o / 0 | Fit graph |
-| c | Center selected card |
-| n | Next card needing attention, at readable zoom |
-| f | Toggle following status changes; navigation pauses follow |
-| b | Board picker; arrows/j/k and Enter select |
-| r | Refresh now |
-| ? | Help |
-| Escape | Close internal panel, then popup |
-| q / Ctrl-C | Exit |
+| Key / gesture                | Action                                                         |
+| ---------------------------- | -------------------------------------------------------------- |
+| v                            | Switch task graph / Kanban lanes                               |
+| F                            | Filters: arrows move, Space toggles, Enter/Esc closes          |
+| /                            | Search live; Enter keeps query, Esc restores previous query    |
+| d                            | Show/hide done cards (hidden by default)                       |
+| x                            | Reset all filters, hiding done again                           |
+| Tab / Shift-Tab, arrows      | Select card; lanes use left/right for status, up/down for card |
+| Enter / click card           | Open details                                                   |
+| j/k or PgUp/PgDn in details  | Scroll description, reason, results, recent comments           |
+| h/j/k/l or drag empty canvas | Pan graph; hjkl navigates lanes                                |
+| + / - or mouse wheel         | Zoom                                                           |
+| o / 0                        | Fit graph                                                      |
+| c                            | Center selected card                                           |
+| n                            | Next card needing attention, at readable zoom                  |
+| f                            | Toggle following status changes; navigation pauses follow      |
+| b                            | Board picker; arrows/j/k and Enter select                      |
+| r                            | Refresh now                                                    |
+| ?                            | Help                                                           |
+| Escape                       | Close internal panel, then popup                               |
+| q / Ctrl-C                   | Exit                                                           |
 
 First view fits the graph and selects a card needing attention when available.
 Refresh runs every three seconds while open, preserving selection, positions,
