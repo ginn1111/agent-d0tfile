@@ -41,9 +41,10 @@ colors:
   diff_removed: "#2a0f12"
   diff_added_word: "#00a884"
   diff_removed_word: "#e35535"
-  syntax_string: "#00a884"
-  syntax_number: "#a85ff1"
-  syntax_keyword: "#c7910c"
+  # Muted markdown/code: ruby keywords, grey ladder for the rest.
+  syntax_string: "#a0acbb"
+  syntax_number: "#bec6d0"
+  syntax_keyword: "#c62f52"
   syntax_comment: "#6b7686"
 
 branding:
