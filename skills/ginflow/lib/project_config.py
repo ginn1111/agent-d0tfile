@@ -16,7 +16,6 @@ except ImportError:  # pragma: no cover - exercised when PyYAML is absent
 _PARSE_ERRORS = (OSError, ValueError) + ((yaml.YAMLError,) if yaml else ())
 
 CONFIG_RELATIVE_PATH = Path(".ginflow.yaml")
-CONFIG_VERSION = 1
 WORKER_FIELDS = ("profile", "provider", "model")
 
 
@@ -105,8 +104,11 @@ def context_error(workspace: Path) -> str | None:
         data = _loads(path.read_text(encoding="utf-8"))
     except _PARSE_ERRORS as exc:
         return f"project config is malformed: {exc}"
-    if not isinstance(data, dict) or data.get("version") != CONFIG_VERSION:
-        return f"project config must declare version: {CONFIG_VERSION}"
+    if not isinstance(data, dict):
+        return "project config must be a mapping"
+    unknown = set(data) - {"ginflow"}
+    if unknown:
+        return "project config has unknown top-level keys: " + ", ".join(sorted(unknown))
     context = data.get("ginflow")
     if not isinstance(context, dict):
         return "project config is missing the ginflow mapping"
@@ -287,6 +289,46 @@ def configured_reviewer(workspace: Path) -> str | None:
     return value.strip() if isinstance(value, str) and value.strip() else None
 
 
+PUBLISH_FIELDS = {"provider", "target", "remote", "draft", "host"}
+
+
+def publish_error(workspace: Path) -> str | None:
+    """Validate optional ginflow.publish; None when absent or valid."""
+    context = load_config(workspace).get("ginflow")
+    block = context.get("publish") if isinstance(context, dict) else None
+    if block is None:
+        return None
+    if not isinstance(block, dict):
+        return "ginflow.publish must be a mapping"
+    unknown = set(block) - PUBLISH_FIELDS
+    if unknown:
+        return "ginflow.publish has unknown fields: " + ", ".join(sorted(unknown))
+    if block.get("provider") not in ("github", "gitlab"):
+        return "ginflow.publish.provider must be github or gitlab"
+    for name in ("target", "remote"):
+        value = block.get(name, "origin" if name == "remote" else None)
+        if not isinstance(value, str) or not value.strip() or value.startswith("-"):
+            return f"ginflow.publish.{name} must be a non-empty branch/remote name"
+    host = block.get("host")
+    if host is not None and (not isinstance(host, str) or not host.strip() or host.startswith("-")):
+        return "ginflow.publish.host must be a non-empty hostname"
+    if not isinstance(block.get("draft", False), bool):
+        return "ginflow.publish.draft must be a boolean"
+    return None
+
+
+def configured_publish(workspace: Path) -> dict[str, Any] | None:
+    """Validated publish settings with defaults, or None when absent/invalid."""
+    if publish_error(workspace):
+        return None
+    block = load_config(workspace).get("ginflow", {}).get("publish")
+    if not isinstance(block, dict):
+        return None
+    return {"provider": block["provider"], "target": block["target"].strip(),
+            "remote": block.get("remote", "origin").strip(), "draft": block.get("draft", False),
+            "host": (block.get("host") or "").strip() or None}
+
+
 def reviewer_error(workspace: Path, installed_profiles: Iterable[str]) -> str | None:
     """Validate optional ginflow.reviewer.profile; None when absent or valid."""
     block = _reviewer_block(workspace)
@@ -313,11 +355,11 @@ def installed_profiles() -> list[str]:
 
 def hermes_default_reviewer() -> str | None:
     home = os.environ.get("HERMES_HOME")
-    if not home or yaml is None:
+    if not home:
         return None
     try:
-        data = yaml.safe_load((Path(home) / "config.yaml").read_text(encoding="utf-8"))
-    except (OSError, yaml.YAMLError):
+        data = _loads((Path(home) / "config.yaml").read_text(encoding="utf-8"))
+    except _PARSE_ERRORS:
         return None
     kanban = data.get("kanban") if isinstance(data, dict) else None
     value = kanban.get("default_reviewer_profile") if isinstance(kanban, dict) else None
@@ -355,10 +397,13 @@ def seed_default_reviewer(
     return reviewer, written
 
 
-def context_mismatch(workspace: Path) -> str | None:
-    """Return a deterministic error when a config belongs to another project."""
-    error = context_error(workspace)
-    return error if error and "workspace" in error else None
+def _atomic_write(path: Path, text: str) -> None:
+    temporary = path.with_name(path.name + ".tmp")
+    try:
+        temporary.write_text(text, encoding="utf-8")
+        os.replace(temporary, path)
+    finally:
+        temporary.unlink(missing_ok=True)
 
 
 def active_board(env: Mapping[str, str] | None = None) -> str | None:
@@ -403,7 +448,7 @@ def persist_context(workspace: Path, *, board: str | None) -> Path | None:
     if path.exists():
         return None
     path.parent.mkdir(parents=True, exist_ok=True)
-    payload = {"version": CONFIG_VERSION, "ginflow": {"board": board, "workspace": str(workspace)}}
+    payload = {"ginflow": {"board": board, "workspace": str(workspace)}}
     temporary = path.with_name(path.name + ".tmp")
     try:
         temporary.write_text(_dumps(payload), encoding="utf-8")
@@ -465,6 +510,21 @@ def persist_worker_defaults(
     return path
 
 
+def persist_reviewer(workspace: Path, profile: str) -> bool:
+    """Atomically set ginflow.reviewer.profile in a valid config; False on failure or no change."""
+    workspace = Path(workspace).expanduser().resolve()
+    profile = (profile or "").strip()
+    if not profile or context_error(workspace) or configured_reviewer(workspace) == profile:
+        return False
+    data = load_config(workspace)
+    data["ginflow"] = {**data["ginflow"], "reviewer": {"profile": profile}}
+    try:
+        _atomic_write(config_path(workspace), _dumps(data))
+    except OSError:
+        return False
+    return True
+
+
 def initialize_context(
     workspace: Path,
     *,
@@ -507,4 +567,4 @@ def initialize_context(
     return persisted
 
 
-__all__ = ["ReviewerConfigError", "configured_reviewer", "hermes_default_reviewer", "installed_profiles", "reviewer_error", "seed_default_reviewer", "CONFIG_RELATIVE_PATH", "CONFIG_VERSION", "WORKER_FIELDS", "ContextInitializationError", "WorkerDefaultsError", "active_board", "config_exists", "config_path", "configured_context", "configured_worker", "context_error", "context_mismatch", "initialize_context", "load_config", "persist_context", "persist_worker_defaults", "resolve_board", "resolve_worker_dispatch", "worker_error"]
+__all__ = ["ReviewerConfigError", "configured_reviewer", "configured_publish", "publish_error", "hermes_default_reviewer", "installed_profiles", "reviewer_error", "seed_default_reviewer", "CONFIG_RELATIVE_PATH", "WORKER_FIELDS", "ContextInitializationError", "WorkerDefaultsError", "active_board", "config_exists", "config_path", "configured_context", "configured_worker", "context_error", "initialize_context", "load_config", "persist_context", "persist_worker_defaults", "persist_reviewer", "resolve_board", "resolve_worker_dispatch", "worker_error"]

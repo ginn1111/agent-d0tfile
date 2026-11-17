@@ -21,14 +21,15 @@ def main():
     for repo in (main_tree, other):
         repo.mkdir()
         git(repo, "init", "-q")
-        (repo / ".ginflow.yaml").write_text(f"version: 1\nginflow:\n  board: b\n  workspace: {main_tree}\n")
+        (repo / ".ginflow.yaml").write_text(f"ginflow:\n  board: b\n  workspace: {main_tree}\n")
         git(repo, "add", ".")
         git(repo, "-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", "init")
     git(main_tree, "worktree", "add", "-q", "-b", "wt", str(worktree))
 
     assert pc.context_error(main_tree) is None
     assert pc.context_error(worktree) is None, pc.context_error(worktree)
-    assert pc.resolve_board(worktree) == "b"
+    # Empty env: Kanban workers export HERMES_KANBAN_BOARD, which outranks project config.
+    assert pc.resolve_board(worktree, env={}) == "b"
     # A different repository naming this workspace is still a mismatch.
     assert "does not match" in (pc.context_error(other) or "")
     # A plain directory (no git) is still a mismatch.

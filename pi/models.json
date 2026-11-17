@@ -1,0 +1,622 @@
+{
+  "$schema": "https://pi.dev/schemas/models.schema.json",
+  "providers": {
+    "local": {
+      "baseUrl": "http://localhost:20128/v1",
+      "apiKey": "${PI_API_KEY}",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "coding",
+          "contextWindow": 872000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "thinking",
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-6.1-sol",
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-6.1-terra",
+          "contextWindow": 500000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-6-astra",
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-6-astra[1m]",
+          "contextWindow": 872000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-6-sol",
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-6-sol[1m]",
+          "contextWindow": 872000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-6-luna",
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-6-luna[1m]",
+          "contextWindow": 872000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-5.6-sol",
+          "contextWindow": 372000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-5.6-sol[1m]",
+          "contextWindow": 872000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-5.6-sol-review",
+          "contextWindow": 372000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-5.6-terra",
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-5.6-terra[1m]",
+          "contextWindow": 872000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-5.6-terra-review",
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-5.6-luna",
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-5.6-luna[1m]",
+          "contextWindow": 872000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-5.6-luna-review",
+          "contextWindow": 272000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "cx/gpt-daybreak-blue-latest",
+          "contextWindow": 200000,
+          "maxTokens": 64000,
+          "reasoning": false
+        },
+        {
+          "id": "cx/gpt-reserve",
+          "contextWindow": 200000,
+          "maxTokens": 64000,
+          "reasoning": false
+        },
+        {
+          "id": "cx/codex-auto-review",
+          "contextWindow": 200000,
+          "maxTokens": 64000,
+          "reasoning": false
+        },
+        {
+          "id": "ag/gemini-4-carbon-high",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-4-carbon-medium",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-4-carbon-low",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-4-carbon",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-4-argon-high",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-4-argon-medium",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-4-argon-low",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.8-flash-high",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.8-flash-medium",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.8-flash-low",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.8-flash",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.7-flash-high",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.7-flash-medium",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.7-flash-low",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.6-flash-high",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.6-flash-medium",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.6-flash-low",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.1-pro-high",
+          "contextWindow": 1048576,
+          "maxTokens": 65535,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-pro-agent",
+          "contextWindow": 1048576,
+          "maxTokens": 64000,
+          "reasoning": false,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gemini-3.1-pro-low",
+          "contextWindow": 1048576,
+          "maxTokens": 65535,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/claude-sonnet-5-5-high",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/claude-sonnet-5-5-medium",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/claude-sonnet-5-5-low",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/claude-sonnet-5-5",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/claude-opus-5-5-high",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/claude-opus-5-5-medium",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/claude-opus-5-5-low",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/claude-opus-5-5",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/claude-sonnet-4-6",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/claude-opus-4-6-thinking",
+          "contextWindow": 200000,
+          "maxTokens": 64000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "ag/gpt-oss-120b-medium",
+          "contextWindow": 128000,
+          "maxTokens": 64000,
+          "reasoning": true
+        },
+        {
+          "id": "hihi/ag/gemini-3.8-flash-high",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-3.8-flash-medium",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-3.8-flash-low",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-3.8-flash",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-3.7-flash-high",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-3.7-flash-medium",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-3.7-flash-low",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-3.6-flash-high",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-3.6-flash-medium",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-3.6-flash-low",
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-3.1-pro-high",
+          "contextWindow": 1048576,
+          "maxTokens": 65535,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-pro-agent",
+          "contextWindow": 1048576,
+          "maxTokens": 64000,
+          "reasoning": false,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gemini-3.1-pro-low",
+          "contextWindow": 1048576,
+          "maxTokens": 65535,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/claude-sonnet-5-5-high",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/claude-sonnet-5-5-medium",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/claude-sonnet-5-5-low",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/claude-sonnet-5-5",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/claude-opus-5-5-high",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/claude-opus-5-5-medium",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/claude-opus-5-5-low",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/claude-opus-5-5",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/claude-sonnet-4-6",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/claude-opus-4-6-thinking",
+          "contextWindow": 200000,
+          "maxTokens": 64000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/ag/gpt-oss-120b-medium",
+          "contextWindow": 128000,
+          "maxTokens": 64000,
+          "reasoning": true
+        },
+        {
+          "id": "hihi/cc/claude-opus-5-5",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/cc/claude-opus-5",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/cc/claude-sonnet-5-5",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/cc/claude-sonnet-5",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/cc/claude-haiku-5-5",
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "hihi/cc/claude-haiku-4-5-20251001",
+          "contextWindow": 200000,
+          "maxTokens": 64000,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "mmf/mimo-auto",
+          "contextWindow": 262144,
+          "maxTokens": 131072,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "oc/muse-spark-1.2-contributor-free",
+          "contextWindow": 1048576,
+          "maxTokens": 131072,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "oc/muse-spark-1.3-contributor-free",
+          "contextWindow": 1048576,
+          "maxTokens": 131072,
+          "reasoning": true,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "oc/union-alpha",
+          "contextWindow": 262144,
+          "maxTokens": 131072,
+          "reasoning": false,
+          "input": ["text", "image"]
+        },
+        {
+          "id": "oc/jev-1.13-free",
+          "contextWindow": 200000,
+          "maxTokens": 64000,
+          "reasoning": false
+        }
+      ]
+    }
+  }
+}

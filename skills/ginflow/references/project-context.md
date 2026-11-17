@@ -7,7 +7,6 @@ collects the board choice. Runtime validation and persistence enforce the contra
 but no runtime hook or CLI silently initializes a project.
 
 ```yaml
-version: 1
 ginflow:
   board: <Kanban board slug>
   workspace: /absolute/path/to/project
@@ -16,7 +15,12 @@ ginflow:
     provider: <provider name>
     model: <model name>
   trace: false # optional; enables ginflow-trace function logging for this project
+  publish:     # optional; reviewer kanban_complete auto-opens MR/PR
+    provider: github   # github | gitlab
+    target: develop
 ```
+
+Only `ginflow` top-level key is allowed. Other keys, including stale `version:`, fail closed; delete them.
 
 The resolved workspace is the target directory passed to verification. Board precedence is:
 
@@ -32,7 +36,7 @@ and `workspace` are required; the worker block is recommended, not required.
 When a field is missing, `/ginflow` shows the resolved fallback and asks whether
 to configure the complete block before creating the card. Entered defaults are
 validated, then atomically merged into the existing config, preserving board,
-workspace, version, and unrelated keys. Skipping setup leaves the config
+workspace, and unrelated keys. Skipping setup leaves the config
 unchanged and uses the current Hermes profile, omitting provider/model
 overrides so the worker profile's own configuration applies.
 
@@ -59,3 +63,22 @@ Routing distinguishes a missing config from an invalid config. Both are mutation
 blockers: missing context directs the agent to run `/ginflow`, while invalid context
 directs it to repair `.ginflow.yaml`. A valid context with no cards for its workspace
 is reported as a normal no-card work-shaping route.
+
+## `ginflow init`
+
+One command sets up a project; `make install PROJECT=<path>` runs it once per installed profile (`GINFLOW_INIT_ARGS="--new-board b"` passes flags).
+
+```
+ginflow init [--project PATH] [--board NAME | --new-board NAME] [--worker PROFILE:PROVIDER:MODEL] [--reviewer PROFILE]
+```
+
+Each step prints `ok|set|fail <step>: <detail>`; exit 0 when no `fail`. A second run with nothing to change prints only `ok` and writes nothing. No prompts: `/ginflow` asks, then passes flags.
+
+1. `context`: valid `.ginflow.yaml` is ok. Missing: `initialize_context` with `--board` (existing board) or `--new-board` (`hermes kanban boards create --default-workdir <repo>`); neither flag fails. Invalid config fails and is never overwritten.
+2. `workdir`: board `default_workdir` equals repo root; unset is set via `hermes kanban boards set-default-workdir`; another path fails and nothing is rewritten.
+3. `reviewer`: `--reviewer` is recorded by `persist_reviewer`; `seed_default_reviewer` writes `kanban.default_reviewer_profile` when it differs from `hermes_default_reviewer`.
+4. `worker`: `--worker` stored by `persist_worker_defaults`; the `configured_worker`/`resolve_worker_dispatch` result is printed.
+5. `notify`: `ginflow.notify` valid.
+6. `auth`: `gh`/`glab auth status` when `ginflow.publish` is set.
+7. `main`: after `git fetch`, local target branch must not be behind `<remote>/<target>` (`fail main: behind origin/main by N`).
+8. `dispatcher`: `hermes gateway status` reports running.

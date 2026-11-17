@@ -3,7 +3,7 @@
 
 Runs the full ginflow flow as ONE flat sequence, reporting PASS/FAIL per
 step, using an isolated temp target workspace, the dedicated
-``gin-harness-testing`` board, and a temp ``HERMES_HOME`` for any live
+``ginflow-testing`` board, and a temp ``HERMES_HOME`` for any live
 Kanban interaction.
 
 Flow (each step is one row in the final report):
@@ -29,9 +29,14 @@ import sys
 import tempfile
 from pathlib import Path
 
+# Isolate from an outer Kanban worker: its pinned board DB and write fence would leak into live fixtures.
+for _key in [k for k in os.environ if k.startswith(("HERMES_KANBAN_", "HERMES_DELEGATED_"))]:
+    del os.environ[_key]
+
+
 ROOT = Path(__file__).resolve().parents[3]
 SCRIPT = ROOT / "skills/ginflow/scripts/validate-harness.py"
-TEST_BOARD = "gin-harness-testing"
+TEST_BOARD = "ginflow-testing"
 
 
 def _load(module_name, path):
@@ -167,7 +172,9 @@ def main():
     _syspath_insert()
     project_config = _load("lifecycle_project_config", ROOT / "skills/ginflow/lib/project_config.py")
     harness_core = _load("lifecycle_harness_core", ROOT / "skills/ginflow/lib/harness_core.py")
-    gate = _load("lifecycle_gate", ROOT / "plugins/ginflow-gate/gate.py")
+    if str(ROOT / "plugins") not in sys.path:
+        sys.path.insert(0, str(ROOT / "plugins"))
+    gate = importlib.import_module("ginflow-gate.gate")
 
     report = Report()
 
@@ -241,6 +248,8 @@ def main():
             assert gate_result["route"] == "ready_to_start", gate_result
             assert gate_result["valid"] is True
             assert gate_result["transition_required"] is True
+            worktree_card = {**card, "workspace": f"worktree:{target}"}
+            assert harness_core.startup_gate(worktree_card, target, target)["route"] == "ready_to_start"
             return "ready_to_start"
 
         # ---- 4. harness-validate ----
