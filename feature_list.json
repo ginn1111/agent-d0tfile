@@ -59,6 +59,16 @@
       "dependencies": [],
       "status": "done",
       "evidence": "./init.sh OK (17 tests); python3 -m unittest tests.test_install_theme_cindy tests.test_theme_cindy_palette OK; make theme-cindy-dry-run OK (would/ok/missing lines only); make theme-cindy-restore-dry-run rc=0; make help lists 4 theme-cindy lines; make theme-cindy installed 2026-11-12 (backups .pre-cindy.20261112-164309); herdr focus colors 12f686f, herdr config check ok + reload applied; nvim colors_name=bearded, bearded primary=#c62f52; kitty config loads; yazi/starship toml parse; d0t_file a4c519f (theme) + 15166ba (*.pre-cindy.* ignored); visual check: Gin ok"
+    },
+    {
+      "id": "feat-008",
+      "name": "Cindy Theme Registry",
+      "description": "themes/cindy/REGISTRY.md: Palette, Variants (cindy/ginb), Roles, one worked Target mapping per tool; drift test checks every listed Target (incl. ~/tools/d0t_file, ~/.config) for Stray Colours. Terms: GLOSSARY.md. Decision: docs/adr/0001-theme-registry-reference-not-generator.md",
+      "dependencies": [
+        "feat-007"
+      ],
+      "status": "done",
+      "evidence": "./init.sh exit 0 (27 tests OK); python3 -m unittest tests.test_theme_cindy_palette OK (4 tests; red on i3 #14191d/#ffffff before fix); 16 Targets listed, 0 missing on this machine; i3 -C -c ~/tools/d0t_file/i3/config exit 0; make theme-cindy-dry-run exit 0; baseline fix dba46ee (dropped obsolete install-tool-theme)"
     }
   ]
 }

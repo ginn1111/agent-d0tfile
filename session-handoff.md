@@ -2,34 +2,34 @@
 
 ## Current Objective
 
-- Goal: feat-007 Cindy Black & Ruby theme.
-- Current status: feat-007 done; installed live. Next: feat-004 token rotation.
+- Goal: feat-008 Cindy Theme Registry.
+- Current status: feat-008 done. Next: commit d0t_file `i3/config`; then feat-004 token rotation.
 - Branch / commit: `main` (see `git log -1`).
 
 ## Current State
 
-- [x] Committed tracked cleanup (plugins, skills, `paperclip/`, profile-map script).
-- [x] Removed orphaned Make targets (`hermes-profiles-config`, `hermes-health*`, `lmp*`) + `scripts/link-model-providers.sh`.
-- [x] Untracked `hermes/.make/hermes-profiles.mk` (held tokens); `.make/` gitignored.
-- [x] Fixed `init.sh` test discovery (`-t .` removed).
-- [x] README layout, skills catalog, plugins table synced to tree.
+- [x] Baseline repaired: obsolete `install-tool-theme` removed (dba46ee).
+- [x] `themes/cindy/REGISTRY.md`: Rules, Variants, Roles, Targets (16), worked mappings per tool.
+- [x] Palette +8 Colours (`fg_bright`, `shadow`, `card*`, `alert_*`).
+- [x] Drift test reads the Targets table; skips missing paths; block scope for herdr live config.
+- [x] `GLOSSARY.md` + ADR 0001.
+- [x] d0t_file `i3/config`: focused title `#ffffff`→`bg`, comment `#14191D`→`bg` (uncommitted there).
 
 ## Verification Evidence
 
 | Check | Command | Result | Notes |
 |---|---|---|---|
-| Tests + static | `./init.sh` | exit 0, 17 tests OK | incl. 4 installer tests |
-| Installer | `make theme-cindy-dry-run`, `make theme-cindy-restore-dry-run` | exit 0 | would/ok/missing lines only |
-| Real install | `make theme-cindy` | ok; herdr `config check` ok, reload applied; nvim `colors_name=bearded` | undo: `make theme-cindy-restore` |
-| Root Make | `make help`, `make us-dry-run` | exit 0 | |
-| Plugin link | `HERMES_HOME=~/.hermes make lvmlp-dry-run HERMES_PROFILE_NAME=gintary` | exit 0 | |
-| Hermes Make | `make -C hermes help` | exit 0 | failed before `-include .env` |
+| Tests + static | `./init.sh` | exit 0, 27 tests OK | |
+| Drift test | `python3 -m unittest tests.test_theme_cindy_palette` | 4 OK | red on i3 strays before fix |
+| i3 config | `i3 -C -c ~/tools/d0t_file/i3/config` | exit 0 | use running i3's `LD_LIBRARY_PATH` |
+| Installer | `make theme-cindy-dry-run` | exit 0 | |
 
 ## Blockers / Risks
 
 - Tokens for gindev/ginreview/gintary in pushed history (feat-004).
-- 41 untracked paths left as-is by request (feat-005).
-- d0t_file `starship.toml` theme edit uncommitted (tied to Gin's starship rewrite).
+- Untracked paths left as-is by request (feat-005).
+- `~/.config/dunst/dunstrc` not version-controlled (d0t_file `dunstrc` differs).
+- picom `dunst-rail.glsl` hard-codes card colours as `vec3(0x..)`; drift test cannot see them.
 
 ## Next Session Startup
 

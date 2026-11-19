@@ -35,6 +35,9 @@ agents-dotfile/
 │   └── superpowers/           # Superpowers skills (brainstorming, executing-plans, ...)
 ├── scripts/                   # Helper scripts (link plugins/skills, add cron)
 ├── tests/                     # unittest suite (run via init.sh)
+├── themes/cindy/              # Black & Ruby palette, Theme Registry (REGISTRY.md), theme files
+├── docs/adr/                  # Architecture decisions
+├── GLOSSARY.md                # Domain terms (theme vocabulary)
 └── 9router/                   # (gitignored) 9router operational data
 ```
 
@@ -135,6 +138,8 @@ make theme-cindy-dry-run         # preview theme links/edits without writing
 make theme-cindy-restore         # restore pre-cindy originals, remove theme links
 make theme-cindy-restore-dry-run # preview restore without writing
 ```
+
+Theme Registry: [`themes/cindy/REGISTRY.md`](themes/cindy/REGISTRY.md) is the one file to point an agent at when theming a new tool. It lists the Roles, the `cindy`/`ginb` Variants, one worked mapping per tool, and every Target path. `tests/test_theme_cindy_palette.py` fails when a listed Target uses a colour not in `black-ruby.palette`. Terms: `GLOSSARY.md`.
 
 Raw script still available:
 
