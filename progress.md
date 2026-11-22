@@ -3,7 +3,7 @@
 ## Current State
 
 **Last Updated:** 2026-11-22
-**Active Feature:** none (feat-009 done; Gin's visual OK pending)
+**Active Feature:** none (feat-009 done; Gin's visual OK 2026-11-22)
 
 ## Status
 
@@ -19,7 +19,7 @@
 - [ ] none
 
 ### What's Next
-0. Gin: visual check of Warm Dusk on i3 (open nvim, yazi, lazygit, rofi, new Hermes session). Then feat-011 (switch back to Black & Ruby on demand) and feat-010 (rename `black-ruby` identifiers).
+0. feat-011 (switch back to Black & Ruby on demand) and feat-010 (rename `black-ruby` identifiers).
 1. feat-004 Rotate leaked Hermes API tokens (was in `hermes/.make/hermes-profiles.mk`, pushed).
 2. feat-005 Triage untracked files.
 3. feat-006 Restore or drop `RULES.md` reference in `AGENTS.md`.

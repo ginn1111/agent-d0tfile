@@ -3,7 +3,7 @@
 ## Current Objective
 
 - Goal: feat-009 Warm Dusk palette rollout (all terminal + desktop Targets).
-- Current status: done and installed on i3; waiting for Gin's visual OK. Next: feat-011 (theme switch back to Black & Ruby), feat-010 (rename `black-ruby` identifiers).
+- Current status: done, installed on i3, visually approved by Gin (2026-11-22). Next: feat-011 (theme switch back to Black & Ruby), feat-010 (rename `black-ruby` identifiers).
 - Branch / commit: `main` (see `git log -3`); d0t_file `cca62bf`.
 
 ## Current State
