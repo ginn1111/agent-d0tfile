@@ -15,6 +15,7 @@ The Theme Registry for Gin's Warm Dusk look (low blue light, honey focus; picked
 6. Pick colours by Role, then read the Colour from the Role table. Use the tool's own variables where it has them (polybar `[colors]`, rofi `*{}`, starship `[palettes]`, shell vars) named after the Colour.
 7. Start each Target's colour section with a comment pointing to this file or the Palette.
 8. List every new Target in the Targets table in the same change.
+9. Shape: slight rounding. Desktop windows, panels and cards use a 6px radius (picom `corner-radius`, xborders `--border-radius`, polybar `radius`, dunst `corner_radius`, rofi `window`). Inner elements use 4px (rofi entries/buttons), progress bars 2px. Fullscreen, docks and the xborders overlay stay square. TUIs use their rounded box style: nvim `winborder = "rounded"`, lazygit `gui.border: rounded`. kitty is skipped unless Gin asks for it by name (RULES.md).
 
 ## Variants
 

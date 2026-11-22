@@ -1,5 +1,6 @@
 # Cindy Warm Dusk (themes/cindy/warm-dusk.palette); installed by `make theme-cindy`.
 gui:
+  border: rounded # slight rounded panels (matches desktop corner-radius)
   theme:
     activeBorderColor: ["#d9a05b", bold]
     inactiveBorderColor: ["#5c5447"]
