@@ -74,6 +74,7 @@ Spare hues with no Role yet: `pink` (media, marked), `purple` (numbers, branches
 | yazi | `themes/cindy/yazi-theme.toml` | file |
 | lazygit | `themes/cindy/lazygit.yml` | file |
 | starship | `themes/cindy/starship-palette.toml` | file |
+| starship (live) | `~/tools/d0t_file/starship.toml` | file |
 | i3 + xborders | `~/tools/d0t_file/i3/config` | file |
 | polybar | `~/tools/d0t_file/configs/polybar/config.ini` | file |
 | polybar workspaces | `~/tools/d0t_file/configs/polybar/scripts/i3-workspaces.py` | file |
@@ -163,9 +164,11 @@ cwd, selected marker, active tab, mode normal, borders of input/confirm: `accent
 
 Active border `accent`, inactive `ghost`, searching `yellow`, options `info`, selected line `rule`, inactive selected `surface`, cherry-picked `purple` on `surface`, marked base `info` on `yellow`, unstaged `err`, default text `fg`.
 
-### starship (`[palettes.black_ruby]` fragment)
+### starship
 
-`base01`=`dim`, `base0`=`sub`, `yellow`, `orange`=`warn`, `red`=`err`, `magenta`=`pink`, `violet`=`purple`, `blue`=`info`, `cyan`=`turquoise`, `green`=`ok`. The live `~/.config/starship.toml` still uses its own `vscode` palette (pending Gin's decision), so only the fragment is a Target.
+Fragment `[palettes.black_ruby]`: `base01`=`dim`, `base0`=`sub`, `yellow`, `orange`=`warn`, `red`=`err`, `magenta`=`pink`, `violet`=`purple`, `blue`=`info`, `cyan`=`turquoise`, `green`=`ok`.
+
+Live `~/tools/d0t_file/starship.toml` (linked from `~/.config/starship.toml`) uses `[palettes.cindy]`, keys named after Colours. Prompt `❯` `accent` (fail `err`); directory `info`; branch `purple`; detached hash / hostname `dim`; git state `yellow`; dirty status `warn` (staged `ok`, conflicts `err`); line metrics `ok`/`err`; jobs `turquoise`; exit code `err`; duration `yellow`. Runtimes use spare hues only (never `accent`/`err`).
 
 ### neofetch
 
