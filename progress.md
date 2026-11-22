@@ -2,8 +2,8 @@
 
 ## Current State
 
-**Last Updated:** 2026-11-19
-**Active Feature:** none (feat-008 done)
+**Last Updated:** 2026-11-22
+**Active Feature:** none (feat-009 done; Gin's visual OK pending)
 
 ## Status
 
@@ -12,13 +12,14 @@
 - [x] feat-002 Validated-mistery-loop plugin.
 - [x] feat-003 Reconcile working tree: tracked cleanup committed.
 - [x] feat-007 Cindy Black & Ruby theme: files, installer, make targets, real install, herdr focus colors.
+- [x] feat-009 Warm Dusk rollout: `warm-dusk.palette` active (Black & Ruby kept inactive in `black-ruby.palette` + tag `theme-black-ruby`); all 18 Targets rewritten; nvim bearded -> `mini.base16` (`nvim/colorscheme.lua`); comfort contrast test; installer keeps `[palettes.cindy]` starship + retires dangling links. Plan: `.hermes/plans/2026-11-22_111452-warm-dusk-rollout.md`.
 - [x] feat-008 Cindy Theme Registry: `themes/cindy/REGISTRY.md` (Roles, Variants, Targets, worked mappings), palette +8 Colours, drift test over all listed Targets, `GLOSSARY.md`, ADR 0001; i3 Stray Colours fixed in d0t_file.
 
 ### What's In Progress
 - [ ] none
 
 ### What's Next
-0. d0t_file: commit `i3/config` registry fix (focused title text `bg`, comment hex); live starship still on its own `vscode` palette, not a Target (Gin decides).
+0. Gin: visual check of Warm Dusk on i3 (open nvim, yazi, lazygit, rofi, new Hermes session). Then feat-011 (switch back to Black & Ruby on demand) and feat-010 (rename `black-ruby` identifiers).
 1. feat-004 Rotate leaked Hermes API tokens (was in `hermes/.make/hermes-profiles.mk`, pushed).
 2. feat-005 Triage untracked files.
 3. feat-006 Restore or drop `RULES.md` reference in `AGENTS.md`.
@@ -36,6 +37,8 @@
 - **ginb skin**: `black-ruby-ginb` = cindy base, turquoise `#38c7bd` accent, teal-tinted pane `#0e1314`/bars `#0f1a1a`, ▸ branding, ruby G on banner.
 - **herdr focus**: `active_row_bg=#1a0f14`, `selection_bg=#3a1a26`; `accent` keeps pane border ruby.
 - **Theme Registry is reference-only + drift test** (ADR 0001). Variants re-point Roles, never hex. Text on filled colour = `bg`. Tints/full transparency allowed; comments count. Drift test resolves `~` via login home (pwd), not `$HOME` (profile sessions override it).
+- **Warm Dusk replaces Black & Ruby** (Gin, 2026-11-22): rollout by name-keyed hex rewrite (throwaway script, not committed: ADR 0001). `black-ruby.palette` stays for a later switch; drift test ignores `*.palette` files as Targets.
+- **i3 reload does not restart xborders/picom with new env**: restart them via `i3-msg 'exec …'` so they inherit i3's `LD_LIBRARY_PATH` (picom needs `libev.so.4` from `~/.local/lib`).
 - **Dropped `install-tool-theme.sh`** + test + README section: `agent-tool-themes/` gone, `itt` target already removed; was failing baseline.
 
 ## Files Modified This Session

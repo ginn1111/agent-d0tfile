@@ -2,37 +2,44 @@
 
 ## Current Objective
 
-- Goal: feat-008 Cindy Theme Registry.
-- Current status: feat-008 done. Next: commit d0t_file `i3/config`; then feat-004 token rotation.
-- Branch / commit: `main` (see `git log -1`).
+- Goal: feat-009 Warm Dusk palette rollout (all terminal + desktop Targets).
+- Current status: done and installed on i3; waiting for Gin's visual OK. Next: feat-011 (theme switch back to Black & Ruby), feat-010 (rename `black-ruby` identifiers).
+- Branch / commit: `main` (see `git log -3`); d0t_file `cca62bf`.
 
 ## Current State
 
-- [x] Baseline repaired: obsolete `install-tool-theme` removed (dba46ee).
-- [x] `themes/cindy/REGISTRY.md`: Rules, Variants, Roles, Targets (16), worked mappings per tool.
-- [x] Palette +8 Colours (`fg_bright`, `shadow`, `card*`, `alert_*`).
-- [x] Drift test reads the Targets table; skips missing paths; block scope for herdr live config.
-- [x] `GLOSSARY.md` + ADR 0001.
-- [x] d0t_file `i3/config`: focused title `#ffffff`→`bg`, comment `#14191D`→`bg` (uncommitted there).
+- [x] `themes/cindy/warm-dusk.palette` active; `black-ruby.palette` kept, inactive.
+- [x] Comfort contrast test (`test_palette_is_comfortable`).
+- [x] Installer: `[palettes.cindy]` starship left alone; `bearded.lua` retired; `nvim/colorscheme.lua` (mini.base16) linked.
+- [x] All Targets rewritten (repo theme files, d0t_file, `~/.config/dunst/dunstrc`, picom `dunst-rail.glsl` by hand).
+- [x] Installed (`make theme-cindy`, backups `.pre-cindy.20261122-113933`); herdr/kitty/i3/picom/dunst/xborders reloaded on `:2`.
 
 ## Verification Evidence
 
-| Check | Command | Result | Notes |
-|---|---|---|---|
-| Tests + static | `./init.sh` | exit 0, 27 tests OK | |
-| Drift test | `python3 -m unittest tests.test_theme_cindy_palette` | 4 OK | red on i3 strays before fix |
-| i3 config | `i3 -C -c ~/tools/d0t_file/i3/config` | exit 0 | use running i3's `LD_LIBRARY_PATH` |
-| Installer | `make theme-cindy-dry-run` | exit 0 | |
+| Check | Command | Result |
+|---|---|---|
+| Tests + static | `./init.sh` | exit 0, 30 tests OK |
+| i3 config | `i3 -C -c ~/tools/d0t_file/i3/config` | rc=0 |
+| Installer | `HOME=/home/thuan-aioz make theme-cindy-dry-run` | starship `ok` |
+| nvim | headless `colors_name` + Normal bg | `cindy-warm-dusk #1d1a17` |
+| Screen | screenshot of `:2` | focused border honey, dunst cards warm |
+
+## Rollback
+
+```bash
+git checkout theme-black-ruby -- themes tests scripts
+git -C ~/tools/d0t_file checkout theme-black-ruby -- configs i3 starship.toml
+cp -p ~/.config/dunst/dunstrc.pre-warm-dusk ~/.config/dunst/dunstrc
+HOME=/home/thuan-aioz make theme-cindy   # then reload tools as in progress.md Decisions
+```
 
 ## Blockers / Risks
 
+- d0t_file `configs/herdr/config.toml` still has Gin's uncommitted annotate keybindings (left out of the theme commit on purpose).
 - Tokens for gindev/ginreview/gintary in pushed history (feat-004).
-- Untracked paths left as-is by request (feat-005).
-- `~/.config/dunst/dunstrc` not version-controlled (d0t_file `dunstrc` differs).
-- picom `dunst-rail.glsl` hard-codes card colours as `vec3(0x..)`; drift test cannot see them.
+- `~/.config/dunst/dunstrc` not version-controlled.
 
 ## Next Session Startup
 
-1. Read `AGENTS.md`.
-2. Read `feature_list.json` and `progress.md`.
-3. Run `./init.sh`.
+1. Read `AGENTS.md`, `feature_list.json`, `progress.md`.
+2. Run `./init.sh`.
