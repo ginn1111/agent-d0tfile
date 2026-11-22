@@ -19,6 +19,7 @@
 - Edit files with smallest change that solves task.
 - Do not touch secrets, profile runtime state, or generated cache files.
 - Do not assume Hermes profile paths; use existing script parameters and env vars.
+- Never edit kitty config (`~/.config/kitty/`, `themes/cindy/kitty.conf`) unless Gin asks for kitty by name; workspace-wide changes (fonts, themes, etc.) skip kitty.
 - Preserve existing user data when editing setup scripts. For cron sync, merge by stable key instead of overwriting runtime fields.
 
 ## Script conventions

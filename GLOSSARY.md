@@ -28,6 +28,10 @@ _Avoid_: usage, slot
 One tool's config (i3, polybar, rofi, xborders, kitty, Neovim, herdr, a Hermes skin, …) written by hand from Roles and Colours.
 _Avoid_: theme file, port
 
+**Workspace Font**:
+The one typeface the desktop chrome wears: window titles, bar, launcher and notifications (currently Terminess Nerd Font). kitty is not covered; it keeps the font Gin set by hand.
+_Avoid_: system font, global font
+
 **Tint**:
 A Palette Colour with transparency added; it counts as that Colour, not a new one.
 _Avoid_: shade, alpha colour
