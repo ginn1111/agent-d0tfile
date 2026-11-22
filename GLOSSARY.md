@@ -9,7 +9,7 @@ The single reference an agent reads before giving any tool Gin's look: it holds 
 _Avoid_: theme folder, colour config
 
 **Palette**:
-The fixed set of named Colours that make up the Black & Ruby look (Bearded Black & Ruby plus Cindy's ruby-tinted additions).
+The fixed set of named Colours that make up the Warm Dusk look (`themes/cindy/warm-dusk.palette`). The earlier Black & Ruby set is kept inactive in `black-ruby.palette`.
 _Avoid_: colour scheme, theme
 
 **Colour**:
@@ -17,7 +17,7 @@ One named entry in the Palette with a single solid hex value.
 _Avoid_: token, swatch
 
 **Variant**:
-A named flavour that points some Roles at different Colours (and may add its own Colours) for one agent's identity; it never changes a Colour's hex. `cindy` (ruby) is worn by the desktop and Cindy; `ginb` (turquoise) by Ginb.
+A named flavour that points some Roles at different Colours (and may add its own Colours) for one agent's identity; it never changes a Colour's hex. `cindy` (honey) is worn by the desktop and Cindy; `ginb` (turquoise) by Ginb.
 _Avoid_: theme, skin
 
 **Role**:

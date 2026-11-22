@@ -1,16 +1,16 @@
 # Cindy Theme Registry
 
-The Theme Registry for Gin's Black & Ruby look. Read this before giving any tool (a Target) its colours. Terms: `GLOSSARY.md` (Theme section). Why reference-only: `docs/adr/0001-theme-registry-reference-not-generator.md`.
+The Theme Registry for Gin's Warm Dusk look (low blue light, honey focus; picked from `sketches/005-warm-dusk`, 2026-11-22). Read this before giving any tool (a Target) its colours. Terms: `GLOSSARY.md` (Theme section). Why reference-only: `docs/adr/0001-theme-registry-reference-not-generator.md`.
 
-- **Palette**: `black-ruby.palette`, the only source of hex values. This file uses Colour names only.
+- **Palette**: `warm-dusk.palette`, the only source of hex values. `black-ruby.palette` is the previous look, kept inactive for a later switch (feat-011; tag `theme-black-ruby`); no Target may use it. This file uses Colour names only.
 - **Drift test**: `tests/test_theme_cindy_palette.py` reads the Targets table below and fails on any Stray Colour.
 
 ## Rules
 
-1. Every solid colour in a Target is a Palette Colour. A new colour gets a name in `black-ruby.palette` first; give it a Role here if it has a job.
+1. Every solid colour in a Target is a Palette Colour. A new colour gets a name in `warm-dusk.palette` first; give it a Role here if it has a job.
 2. A Tint (Palette Colour + alpha, e.g. `accent` at `e6` for xborders) counts as its Colour. Fully transparent (alpha `00`) is free.
 3. Comments count: an example hex in a comment is still a Stray Colour.
-4. `accent` (ruby) means focus only. Errors, urgency and critical states use `err`.
+4. `accent` (honey) means focus only. Errors, urgency and critical states use `err`.
 5. Text on any filled colour (accent, err, ok, …) is `bg`.
 6. Pick colours by Role, then read the Colour from the Role table. Use the tool's own variables where it has them (polybar `[colors]`, rofi `*{}`, starship `[palettes]`, shell vars) named after the Colour.
 7. Start each Target's colour section with a comment pointing to this file or the Palette.
@@ -66,6 +66,7 @@ Spare hues with no Role yet: `pink` (media, marked), `purple` (numbers, branches
 | Target | Path | Scope |
 |---|---|---|
 | kitty | `themes/cindy/kitty.conf` | file |
+| Neovim colorscheme | `themes/cindy/nvim/colorscheme.lua` | file |
 | Neovim lualine | `themes/cindy/nvim/lualine.lua` | file |
 | herdr (source) | `themes/cindy/herdr-theme.toml` | file |
 | herdr (live) | `~/tools/d0t_file/configs/herdr/config.toml` | block |
@@ -137,7 +138,7 @@ ANSI 0–7: `surface` `err` `ok` `yellow` `info` `purple` `turquoise` `sub`. 8�
 
 ### Neovim
 
-Colorscheme: `Ferouk/bearded-nvim` flavour `black-&-ruby` (upstream Bearded, same hex as the Palette). lualine: section c on `bar`; mode pills normal `accent`, insert `ok`, visual `purple`, replace `err`, command `yellow`, terminal `turquoise`, pill text `bg`; inactive `dim` on `bar`; diff ok/yellow/err; LSP name `turquoise`. The b-section pill uses bearded's `primaryalt` (not in the Palette, invisible to the drift test).
+Colorscheme: `mini.base16` (`nvim/colorscheme.lua`): base00 `bg`, 01 `surface`, 02 `rule`, 03 `dim`, 04 `sub`, 05 `fg`, 06/07 `fg_bright`, 08 `err`, 09 `warn`, 0A `yellow`, 0B `ok`, 0C `turquoise`, 0D `info`, 0E `purple`, 0F `pink`. lualine: section c on `bar`; b-section pill `surface`; mode pills normal `accent`, insert `ok`, visual `purple`, replace `err`, command `yellow`, terminal `turquoise`, pill text `bg`; inactive `dim` on `bar`; diff ok/yellow/err; LSP name `turquoise`.
 
 ### herdr (`[theme.custom]`)
 

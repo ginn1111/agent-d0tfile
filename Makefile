@@ -40,7 +40,7 @@ help:
 	  '  make lvmlp-dry-run              # preview validated-mistery-loop plugin symlink without writing' \
 	  '  make ahc / add-hermes-cron      # add repo cron jobs into Hermes profile cron/jobs.json' \
 	  '  make ahc-dry-run                # preview cron job files without writing' \
-	  '  make theme-cindy                # link cindy Black & Ruby theme into ~/.config + cindy profile (backs up originals)' \
+	  '  make theme-cindy                # link cindy Warm Dusk theme into ~/.config + cindy profile (backs up originals)' \
 	  '  make theme-cindy-dry-run        # preview theme links/edits without writing' \
 	  '  make theme-cindy-restore        # restore pre-cindy originals, remove theme links' \
 	  '  make theme-cindy-restore-dry-run # preview restore without writing' \

@@ -26,12 +26,13 @@ LINKS = [  # (repo source, target)
     (SRC / "kitty.conf", CFG / "kitty" / "black_ruby.conf"),
     (SRC / "yazi-theme.toml", CFG / "yazi" / "theme.toml"),
     (SRC / "lazygit.yml", CFG / "lazygit" / "config.yml"),
-    (SRC / "nvim" / "bearded.lua", CFG / "nvim" / "lua" / "plugins" / "bearded.lua"),
+    (SRC / "nvim" / "colorscheme.lua", CFG / "nvim" / "lua" / "plugins" / "colorscheme.lua"),
     (SRC / "nvim" / "lualine.lua", CFG / "nvim" / "lua" / "plugins" / "lualine.lua"),
     (SRC / "hermes-skin.yaml", PROFILE / "skins" / "black-ruby-cindy.yaml"),
     (SRC / "hermes-skin-ginb.yaml", GINB / "skins" / "black-ruby-ginb.yaml"),
 ]
-RETIRE = [CFG / "nvim" / "lua" / "plugins" / "solarized.lua"]
+RETIRE = [CFG / "nvim" / "lua" / "plugins" / "solarized.lua",
+          CFG / "nvim" / "lua" / "plugins" / "bearded.lua"]
 
 
 def swap(text, table, block):
@@ -59,7 +60,8 @@ EDITS = [  # (target, text -> text)
     (CFG / "herdr" / "config.toml",
      lambda t: swap(t, "[theme.custom]", frag("herdr-theme.toml"))),
     (CFG / "starship.toml",
-     lambda t: swap(sub_line(r"^palette = .*$", 'palette = "black_ruby"', t), "[palettes.solarized]", frag("starship-palette.toml"))),
+     lambda t: t if "[palettes.cindy]" in t else
+     swap(sub_line(r"^palette = .*$", 'palette = "black_ruby"', t), "[palettes.solarized]", frag("starship-palette.toml"))),
     (PROFILE / "config.yaml",
      lambda t: sub_line(r"^([ \t]*skin:[ \t]*).*$", r"\g<1>black-ruby-cindy", t)),
     (GINB / "config.yaml",
@@ -83,7 +85,7 @@ def act(dry, msg, fn):
 
 def install(dry):
     for p in RETIRE:
-        if p.exists():
+        if p.exists() or p.is_symlink():
             act(dry, f"retire {p} -> {backup(p).name}", lambda p=p: p.rename(backup(p)))
     for src, dst in LINKS:
         if dst.is_symlink() and dst.resolve() == src.resolve():

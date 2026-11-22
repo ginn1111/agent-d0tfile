@@ -28,7 +28,7 @@ LINKS = {
     ".config/kitty/black_ruby.conf": "kitty.conf",
     ".config/yazi/theme.toml": "yazi-theme.toml",
     ".config/lazygit/config.yml": "lazygit.yml",
-    ".config/nvim/lua/plugins/bearded.lua": "nvim/bearded.lua",
+    ".config/nvim/lua/plugins/colorscheme.lua": "nvim/colorscheme.lua",
     ".config/nvim/lua/plugins/lualine.lua": "nvim/lualine.lua",
     ".hermes/profiles/cindy/skins/black-ruby-cindy.yaml": "hermes-skin.yaml",
     ".hermes/profiles/ginb/skins/black-ruby-ginb.yaml": "hermes-skin-ginb.yaml",
@@ -87,7 +87,7 @@ class InstallThemeCindyTest(unittest.TestCase):
         self.assertIn("# include solarized_osaka_dark.conf", kitty)
         self.assertIn("\ninclude black_ruby.conf\n", kitty)
         herdr = tomllib.loads((self.home / ".config/herdr/config.toml").read_text())
-        self.assertEqual(herdr["theme"]["custom"]["accent"], "#c62f52")
+        self.assertEqual(herdr["theme"]["custom"]["accent"], "#d9a05b")
         self.assertEqual(herdr["terminal"]["shell_mode"], "auto")
         star_link = self.home / ".config/starship.toml"
         self.assertTrue(star_link.is_symlink(), "edit must write through the symlink")
@@ -96,6 +96,19 @@ class InstallThemeCindyTest(unittest.TestCase):
         self.assertEqual(set(star["palettes"]), {"black_ruby"})
         self.assertIn("  skin: black-ruby-cindy\n", (self.home / ".hermes/profiles/cindy/config.yaml").read_text())
         self.assertIn("  skin: black-ruby-ginb\n", (self.home / ".hermes/profiles/ginb/config.yaml").read_text())
+
+    def test_install_leaves_cindy_starship_palette_alone(self):
+        live = 'palette = "cindy"\n\n[palettes.cindy]\nfg = "#d6cbb8"\n'
+        (self.home / "dotfiles/starship.toml").write_text(live)
+        self.run_script()
+        self.assertEqual((self.home / "dotfiles/starship.toml").read_text(), live)
+
+    def test_install_retires_dangling_bearded_link(self):
+        plugins = self.home / ".config/nvim/lua/plugins"
+        (plugins / "bearded.lua").symlink_to(self.home / "gone/bearded.lua")
+        self.run_script()
+        self.assertFalse((plugins / "bearded.lua").is_symlink())
+        self.assertEqual(len(list(plugins.glob("bearded.lua.pre-cindy.*"))), 1)
 
     def test_second_run_is_noop(self):
         self.run_script()

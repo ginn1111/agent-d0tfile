@@ -31,7 +31,7 @@
 - Herdr Kanban changes: run `cargo test --locked --manifest-path herdr-plugins/hermes-kanban/Cargo.toml`, `cargo clippy --locked --manifest-path herdr-plugins/hermes-kanban/Cargo.toml --all-targets -- -D warnings`, and `bash -n herdr-plugins/hermes-kanban/herdr/{open,board}.sh` in addition to `./init.sh`. Rebuild with `make hkb` after Rust or reader changes; the reader is embedded in the binary. `make hkb-dry-run` previews the build.
 - Keep Kanban viewer read-only: no Hermes CLI list calls (they recompute readiness), schema migrations, or board-pointer writes. Use SQLite URI `mode=ro` with live WAL visibility; fixture writes belong only in temporary roots. Persist UI selection only in Herdr plugin state.
 - For docs-only changes, verify changed paths read clean and examples still match repo files.
-- Theme colour changes (any Target in `themes/cindy/REGISTRY.md`, incl. `~/tools/d0t_file`): use only `black-ruby.palette` Colours, list new Targets in REGISTRY.md, run `python3 -m unittest tests.test_theme_cindy_palette`.
+- Theme colour changes (any Target in `themes/cindy/REGISTRY.md`, incl. `~/tools/d0t_file`): use only `warm-dusk.palette` Colours, list new Targets in REGISTRY.md, run `python3 -m unittest tests.test_theme_cindy_palette`.
 - For script or Makefile changes, run relevant command in dry-run mode when possible.
 - For every new `Makefile` target, add and run at least one verification command that proves target behavior.
 - If new `Makefile` target touches Hermes profile state, test with isolated Hermes home so real config stays clean.

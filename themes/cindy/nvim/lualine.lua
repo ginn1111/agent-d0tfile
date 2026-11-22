@@ -1,22 +1,22 @@
--- Cindy theme: lualine pills on Bearded Black & Ruby (themes/cindy, `make theme-cindy`).
+-- Cindy theme: lualine pills on Warm Dusk (themes/cindy, `make theme-cindy`).
 return {
   "nvim-lualine/lualine.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons", "Ferouk/bearded-nvim" },
+  dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    local p = require("bearded").palette("black-&-ruby")
+    -- Palette: themes/cindy/warm-dusk.palette (Roles: REGISTRY.md "Neovim")
     local c = {
-      bar = "#1a0f14", -- palette `bar`: 004-hybrid ruby tint, not in bearded
-      dark = p.ui.uibackground,
-      fg = p.ui.default,
-      dim = p.ui.defaultalt,
-      accent = p.ui.primary,
-      green = p.colors.green,
-      purple = p.colors.purple,
-      red = p.colors.red,
-      yellow = p.colors.yellow,
-      cyan = p.colors.turquoize,
+      bar = "#26211c", -- bar
+      dark = "#1d1a17", -- bg: text on filled pills
+      fg = "#d6cbb8", -- fg
+      dim = "#807663", -- dim
+      accent = "#d9a05b", -- accent
+      green = "#a3b371", -- ok
+      purple = "#b896b8", -- purple
+      red = "#cf6b6b", -- err
+      yellow = "#d8c37a", -- yellow
+      cyan = "#86b8a0", -- turquoise
     }
-    local pill = p.ui.primaryalt
+    local pill = "#2a2520" -- surface
     local cap = { left = "", right = "" } -- rounded pill ends
 
     local function mode_theme(color)

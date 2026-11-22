@@ -7,7 +7,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 THEME = REPO / "themes" / "cindy"
 REGISTRY = THEME / "REGISTRY.md"
-PALETTE = THEME / "black-ruby.palette"
+PALETTE = THEME / "warm-dusk.palette"
 # 8-digit first so "#c62f52e6" is read as one Tint, not "#c62f52" + "e6".
 HEX = re.compile(r"#([0-9a-fA-F]{8}|[0-9a-fA-F]{6})\b")
 BEGIN, END = "# >>> cindy theme", "# <<< cindy theme"
@@ -22,6 +22,26 @@ def palette():
             name, value = line.split("=", 1)
             names[name.strip()] = value.strip().lower()
     return names
+
+
+def contrast(a, b):
+    """WCAG contrast ratio of two #rrggbb colours."""
+    def lum(h):
+        rgb = [int(h[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+        rgb = [c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4 for c in rgb]
+        return 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2]
+    hi, lo = sorted((lum(a), lum(b)), reverse=True)
+    return (hi + 0.05) / (lo + 0.05)
+
+
+# Eye comfort: readable everywhere, but no glare (body text capped at 12:1).
+SIGNALS = ("accent", "err", "warn", "ok", "info", "yellow", "purple", "pink", "turquoise", "green_alt")
+COMFORT = (
+    [("fg", "bg", 7.0, 12.0)]
+    + [("fg", b, 7.0, 99) for b in ("bg_agent", "bg_ginb", "surface", "rule", "rule_ginb")]
+    + [("sub", "bg", 4.5, 99), ("sub", "bar", 4.5, 99), ("dim", "bg", 3.0, 99)]
+    + [(h, "bg", 4.5, 99) for h in SIGNALS]
+)
 
 
 def section(title):
@@ -63,6 +83,14 @@ class ThemeCindyPaletteTest(unittest.TestCase):
         self.assertEqual(len(names), len(lines), "duplicate Colour name")
         self.assertEqual(len(set(names.values())), len(names), "two Colours share a hex")
 
+    def test_palette_is_comfortable(self):
+        p = palette()
+        for fg, bg, lo, hi in COMFORT:
+            with self.subTest(pair=f"{fg} on {bg}"):
+                r = round(contrast(p[fg], p[bg]), 2)
+                self.assertGreaterEqual(r, lo, f"{fg} on {bg}")
+                self.assertLessEqual(r, hi, f"{fg} on {bg}")
+
     def test_registry_names_only_palette_colours(self):
         names = palette()
         for title in ("Roles", "Variants"):
@@ -76,7 +104,7 @@ class ThemeCindyPaletteTest(unittest.TestCase):
     def test_theme_files_with_colours_are_listed_targets(self):
         listed = {p.resolve() for _, p, _ in targets()}
         for p in THEME.rglob("*"):
-            if p.is_file() and p != PALETTE and HEX.search(p.read_text()):
+            if p.is_file() and p.suffix != ".palette" and HEX.search(p.read_text()):
                 self.assertIn(p.resolve(), listed, f"{p} uses colours but is not in REGISTRY.md Targets")
 
     def test_targets_use_only_palette_colours(self):
