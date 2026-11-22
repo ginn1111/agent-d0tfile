@@ -42,6 +42,8 @@
 - **i3 reload does not restart xborders/picom with new env**: restart them via `i3-msg 'exec …'` so they inherit i3's `LD_LIBRARY_PATH` (picom needs `libev.so.4` from `~/.local/lib`).
 - **Dropped `install-tool-theme.sh`** + test + README section: `agent-tool-themes/` gone, `itt` target already removed; was failing baseline.
 
+- **Workspace Font = Terminess Nerd Font** (Gin, 2026-11-22): `make wsf` installs rootless on Linux + macOS. Edits i3/polybar/rofi/dunst or sketchybar `label.font` only; icon fonts + SF Symbols stay. kitty never touched (RULES.md). feat-012.
+
 ## Files Modified This Session
 - feat-008: `themes/cindy/REGISTRY.md` (new), `themes/cindy/black-ruby.palette`, `tests/test_theme_cindy_palette.py`, `GLOSSARY.md` (new), `docs/adr/0001-theme-registry-reference-not-generator.md` (new), `README.md`, `RULES.md`, `feature_list.json`
 - d0t_file: `i3/config`

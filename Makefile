@@ -17,6 +17,7 @@ SETUP_UNIVERSAL_SKILLS := scripts/setup-universal-skills.sh
 LINK_HERMES_PLUGIN := scripts/link-hermes-plugin.sh
 ADD_HERMES_CRON := scripts/add-hermes-cron.sh
 INSTALL_THEME_CINDY := scripts/install_theme_cindy.py
+INSTALL_WORKSPACE_FONT := scripts/install_workspace_font.py
 HERMES_PROFILE_NAME ?=
 PLUGIN_NAME ?=
 
@@ -25,7 +26,9 @@ PLUGIN_NAME ?=
 	link-english-tutor-plugin link-english-tutor-plugin-dry-run letp letp-dry-run \
 	link-validated-mistery-loop-plugin link-validated-mistery-loop-plugin-dry-run lvmlp lvmlp-dry-run \
 	add-hermes-cron add-hermes-cron-dry-run ahc ahc-dry-run \
-	theme-cindy theme-cindy-dry-run theme-cindy-restore theme-cindy-restore-dry-run
+	theme-cindy theme-cindy-dry-run theme-cindy-restore theme-cindy-restore-dry-run \
+	workspace-font workspace-font-dry-run workspace-font-restore workspace-font-restore-dry-run \
+	wsf wsf-dry-run wsf-restore wsf-restore-dry-run
 
 help:
 	@printf '%s\n' \
@@ -44,6 +47,10 @@ help:
 	  '  make theme-cindy-dry-run        # preview theme links/edits without writing' \
 	  '  make theme-cindy-restore        # restore pre-cindy originals, remove theme links' \
 	  '  make theme-cindy-restore-dry-run # preview restore without writing' \
+	  '  make wsf / workspace-font       # install Terminess Nerd Font + point i3/polybar/rofi/dunst (Linux) or sketchybar (macOS) at it; never kitty' \
+	  '  make wsf-dry-run                # preview font install/edits without writing' \
+	  '  make wsf-restore                # restore pre-wsfont originals, remove installed font files' \
+	  '  make wsf-restore-dry-run        # preview restore without writing' \
 	  '' \
 	  'Vars:' \
 	  '  AGENTS_SKILLS_DIR=$(HOME)/.agents/skills' \
@@ -101,3 +108,23 @@ theme-cindy-restore:
 
 theme-cindy-restore-dry-run:
 	@python3 '$(INSTALL_THEME_CINDY)' --restore --dry-run
+
+workspace-font:
+	@python3 '$(INSTALL_WORKSPACE_FONT)'
+
+wsf: workspace-font
+
+workspace-font-dry-run:
+	@python3 '$(INSTALL_WORKSPACE_FONT)' --dry-run
+
+wsf-dry-run: workspace-font-dry-run
+
+workspace-font-restore:
+	@python3 '$(INSTALL_WORKSPACE_FONT)' --restore
+
+wsf-restore: workspace-font-restore
+
+workspace-font-restore-dry-run:
+	@python3 '$(INSTALL_WORKSPACE_FONT)' --restore --dry-run
+
+wsf-restore-dry-run: workspace-font-restore-dry-run

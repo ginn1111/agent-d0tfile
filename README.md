@@ -141,6 +141,22 @@ make theme-cindy-restore-dry-run # preview restore without writing
 
 Theme Registry: [`themes/cindy/REGISTRY.md`](themes/cindy/REGISTRY.md) is the one file to point an agent at when theming a new tool. It lists the Roles, the `cindy`/`ginb` Variants, one worked mapping per tool, and every Target path. `tests/test_theme_cindy_palette.py` fails when a listed Target uses a colour not in `warm-dusk.palette`. Terms: `GLOSSARY.md`.
 
+Workspace Font (`scripts/install_workspace_font.py`, Linux + macOS, no root):
+
+```bash
+make wsf                 # install Terminess Nerd Font, point desktop Targets at it (backs up originals)
+make wsf-dry-run         # preview font install/edits without writing
+make wsf-restore         # restore .pre-wsfont.* originals, remove font files it installed
+make wsf-restore-dry-run # preview restore without writing
+```
+
+| OS | Font dir | Targets edited | Reload |
+|---|---|---|---|
+| Linux | `~/.local/share/fonts/terminess` (+ `fc-cache`) | i3 `font`, polybar `font-0/1`, rofi text fonts, dunst `font` | `i3-msg reload`, restart dunst |
+| macOS | `~/Library/Fonts` | sketchybar `label.font` (icons stay SF Symbols / app-font) | `sketchybar --reload` |
+
+kitty is never touched. Icon fonts (`feather`, `sketchybar-app-font`) and polybar glyph-fallback slots stay. Linux bitmap Terminus is not needed: Terminess is scalable. `WORKSPACE_FONT_ARCHIVE=<Terminus.tar.xz>` installs offline.
+
 Raw script still available:
 
 ```bash

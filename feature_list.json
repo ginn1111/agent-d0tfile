@@ -99,6 +99,14 @@
       ],
       "status": "not-started",
       "evidence": ""
+    },
+    {
+      "id": "feat-012",
+      "name": "Cross-platform Workspace Font installer",
+      "description": "One script + Make target that installs the Workspace Font (Terminess Nerd Font) rootless on Linux (~/.local/share/fonts) and macOS (~/Library/Fonts) and points existing Targets at it: i3, polybar, rofi, dunst (Linux); sketchybar (macOS). Never touches kitty. Dry-run and restore.",
+      "dependencies": [],
+      "status": "done",
+      "evidence": "python3 -m unittest tests.test_install_workspace_font: 4 OK (linux+macos: edits, kitty untouched, icon fonts kept, idempotent, restore exact). macOS sim on real d0t_file sketchybar in temp HOME: 2 label edits, restore identical. HOME=~ make wsf-dry-run: 190 ok, only 'would install' (font placed by hand, no manifest). ./init.sh: 34 tests, 1 pre-existing failure test_herdr_kanban_reader (fails without this change too)."
     }
   ]
 }

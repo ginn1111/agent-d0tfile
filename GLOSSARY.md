@@ -29,7 +29,7 @@ One tool's config (i3, polybar, rofi, xborders, kitty, Neovim, herdr, a Hermes s
 _Avoid_: theme file, port
 
 **Workspace Font**:
-The one typeface the desktop chrome wears: window titles, bar, launcher and notifications (currently Terminess Nerd Font). kitty is not covered; it keeps the font Gin set by hand.
+The one typeface the desktop chrome wears on Linux and macOS: window titles, bar, launcher and notifications (currently Terminess Nerd Font). Icon glyph fonts are not part of it, and kitty is not covered; it keeps the font Gin set by hand.
 _Avoid_: system font, global font
 
 **Tint**:
