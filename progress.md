@@ -12,6 +12,7 @@
 - [x] feat-002 Validated-mistery-loop plugin.
 - [x] feat-003 Reconcile working tree: tracked cleanup committed.
 - [x] feat-007 Cindy Black & Ruby theme: files, installer, make targets, real install, herdr focus colors.
+- [x] Shape: slight rounding (Gin, 2026-11-22). picom/xborders/polybar/dunst 6px, rofi launcher 6/4px, nvim `winborder=rounded`, lazygit `border: rounded`; rule 9 in REGISTRY. kitty skipped (RULES.md). herdr/yazi have no rounded option.
 - [x] feat-009 Warm Dusk rollout: `warm-dusk.palette` active (Black & Ruby kept inactive in `black-ruby.palette` + tag `theme-black-ruby`); all 18 Targets rewritten; nvim bearded -> `mini.base16` (`nvim/colorscheme.lua`); comfort contrast test; installer keeps `[palettes.cindy]` starship + retires dangling links. Plan: `.hermes/plans/2026-11-22_111452-warm-dusk-rollout.md`.
 - [x] feat-008 Cindy Theme Registry: `themes/cindy/REGISTRY.md` (Roles, Variants, Targets, worked mappings), palette +8 Colours, drift test over all listed Targets, `GLOSSARY.md`, ADR 0001; i3 Stray Colours fixed in d0t_file.
 
