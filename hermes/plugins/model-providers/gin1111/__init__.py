@@ -12,6 +12,6 @@ register_provider(
         auth_type="api_key",
         env_vars=("GIN1111_API_KEY", "GIN1111_BASE_URL"),
         base_url="http://localhost:20128/v1",
-        fallback_models=("coding",),
+        fallback_models=("builder",),
     )
 )

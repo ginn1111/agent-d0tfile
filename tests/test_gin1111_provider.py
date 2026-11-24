@@ -15,7 +15,7 @@ PLUGIN = Path(__file__).resolve().parents[1] / "hermes" / "plugins" / "model-pro
 
 
 class Gin1111ProviderTests(unittest.TestCase):
-    def test_registers_openai_compatible_profile_with_coding_fallback(self):
+    def test_registers_openai_compatible_profile_with_builder_fallback(self):
         registered = []
         providers = types.ModuleType("providers")
         base = types.ModuleType("providers.base")
@@ -35,7 +35,7 @@ class Gin1111ProviderTests(unittest.TestCase):
         self.assertEqual(registered[0]["auth_type"], "api_key")
         self.assertEqual(registered[0]["base_url"], "http://localhost:20128/v1")
         self.assertEqual(registered[0]["env_vars"], ("GIN1111_API_KEY", "GIN1111_BASE_URL"))
-        self.assertEqual(registered[0]["fallback_models"], ("coding",))
+        self.assertEqual(registered[0]["fallback_models"], ("builder",))
 
     def test_manifest_identifies_a_model_provider(self):
         manifest = (PLUGIN / "plugin.yaml").read_text()
@@ -49,7 +49,7 @@ class Gin1111ProviderTests(unittest.TestCase):
                 if self.path != "/v1/models" or self.headers.get("Authorization") != "Bearer test-key":
                     self.send_error(401)
                     return
-                payload = json.dumps({"data": [{"id": "fast"}, {"id": "coding"}]}).encode()
+                payload = json.dumps({"data": [{"id": "fast"}, {"id": "builder"}]}).encode()
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json")
                 self.end_headers()
@@ -78,18 +78,18 @@ class Gin1111ProviderTests(unittest.TestCase):
                         self.fail("gin1111 was not discovered")
                     self.assertEqual(profile.name, "gin1111")
                     self.assertTrue(any(p["id"] == "gin1111" for p in list_available_providers()))
-                    runtime = resolve_runtime_provider(requested="gin1111", target_model="coding")
+                    runtime = resolve_runtime_provider(requested="gin1111", target_model="builder")
                     self.assertEqual(runtime["api_mode"], "chat_completions")
                     self.assertEqual(runtime["api_key"], "test-key")
                     self.assertEqual(runtime["base_url"], env["GIN1111_BASE_URL"])
-                    self.assertEqual(_profile_live_catalog("gin1111"), ["coding", "fast"])
+                    self.assertEqual(_profile_live_catalog("gin1111"), ["builder", "fast"])
                     with patch.dict(os.environ, {"GIN1111_API_KEY": "bad-key"}):
                         # Upstream Hermes leaves urllib's 401 response for GC; suppress its warning.
                         with warnings.catch_warnings():
                             warnings.simplefilter("ignore", ResourceWarning)
-                            self.assertEqual(_profile_live_catalog("gin1111"), ["coding"])
+                            self.assertEqual(_profile_live_catalog("gin1111"), ["builder"])
                     with patch.dict(os.environ, {"GIN1111_API_KEY": ""}):
-                        self.assertEqual(_profile_live_catalog("gin1111"), ["coding"])
+                        self.assertEqual(_profile_live_catalog("gin1111"), ["builder"])
         finally:
             server.shutdown()
             server.server_close()
