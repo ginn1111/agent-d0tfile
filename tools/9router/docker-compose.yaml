@@ -1,5 +1,5 @@
 services:
-  agents_router:
+  9router:
     env_file:
       - .env
     container_name: 9router
@@ -7,8 +7,6 @@ services:
     ports:
       - 20128:20128
     restart: unless-stopped
-    volumes:
-      - ./data:/app/data
   cloudflared:
     container_name: cloudflared
     image: cloudflare/cloudflared
