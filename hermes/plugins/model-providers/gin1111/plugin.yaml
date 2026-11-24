@@ -1,0 +1,4 @@
+name: gin1111
+kind: model-provider
+version: 1.0.0
+description: Local OpenAI-compatible provider with coding fallback
