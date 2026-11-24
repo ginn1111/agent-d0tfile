@@ -1,0 +1,11 @@
+providers:
+  custom:
+    baseUrl: http://localhost:20128/v1
+    api: openai-completions
+    apiKey: PI_API_KEY
+    models:
+      - id: coding
+        name: Coding
+        reasoning: true
+        contextWindow: 128000
+        maxTokens: 16384

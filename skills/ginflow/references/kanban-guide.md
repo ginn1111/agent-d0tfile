@@ -34,6 +34,8 @@ Use a stable human-facing card key chosen before creation for linked artifacts; 
 
 Put the key in the task title and explicit `Links:` paths. The harness follows those links rather than deriving filenames from the generated task ID.
 
+For committed spec/plan pairs, prefer `ginflow cards create [--board B] [--project P] docs/specs/<KEY>.md ...`. Spec front matter supplies `card`, `assignee`, `blocked_by: [<KEY>...]`, optional `issue: owner/repo#n`. Preflight fails (exit 1, `fail <file>: <reason>`, nothing created) on: no board `default_workdir`, bad key, uninstalled assignee, missing plan, uncommitted spec/plan, malformed `issue`, unknown `blocked_by` key, cycle. Otherwise it creates one blocked card per spec (title `<KEY> — <title>`, body labels from the spec, Links incl. the Issue URL, idempotency key `gh:<owner>/<repo>#<n>:<KEY>` or `card:<board>:<KEY>`), links `blocked_by` edges, runs the harness candidate check, unblocks passing cards, and prints a JSON list `[{key, id, status, parents, created}]`. Rerun is safe: existing cards (title prefix `<KEY> — `) are reused. A failing card stays blocked with a comment.
+
 Draft card and artifact content before writing. Create the card assigned to the current profile, with its future links and `--initial-status blocked`. Write linked artifacts, then unblock once readiness passes. Current profile loads its canonical local Ginflow skill; do not force `--skill ginflow`.
 
 For a malformed existing body, keep the task blocked and have the human edit title/body in the Kanban dashboard before rerunning the harness. `hermes kanban edit` is only for completed-task recovery fields, not body edits. Do not invent a CLI `--body` repair command or acceptance criteria. If dashboard repair is unavailable, replacing the card requires human approval and an explicit backlink/comment.
@@ -122,7 +124,9 @@ Publish: exactly one parent with an open PR (`ginflow-publish: <url>` comment, `
 - new items = review bodies (incl. `CHANGES_REQUESTED`), issue comments and inline comments newer than the latest `[ginflow-pr] synced=<iso>` comment (default: card `completed_at`). Bodies starting with `[ginflow]` are ignored: Gin and ginflow share one GitHub account, so that prefix is the only author filter.
 - no open feedback card for the PR: create `<KEY>-fb<N> — PR #<n> feedback` on the PR head branch (`--branch`), assignee = parent assignee, Scope/Links copied from the parent, one Acceptance line per comment plus `make lint test` passes; linked parent → fb; unblocked to `ready`. A clean stale worktree holding the branch is removed first; a dirty one leaves the card `blocked needs_input`.
 - open feedback card exists: items are appended there as a `[ginflow-pr] new feedback:` comment.
-- parent gets `[ginflow-pr] synced=<now> items=<n>` whenever items were found. Merged/closed PR: parent gets `[ginflow-pr] merged|closed` and is no longer synced.
+- parent gets `[ginflow-pr] synced=<now> items=<n>` whenever items were found. Closed PR: `[ginflow-pr] closed`, no longer synced.
+- merged PR (PRFB-2): parent gets `[ginflow-pr] merged <sha>` and is no longer synced; each child card whose open PR base is the merged head branch gets `gh pr edit <child-url> --base <target>` (GitHub retargets only when the branch is deleted); once per run after a merge the `--project` checkout fast-forwards `<target>` (`git merge --ff-only`) when on it and clean, else prints `warn main: <reason>`.
+- silent when nothing happened (cron delivers only non-empty output). `ginflow init` installs the 10-minute cron job.
 - one `gh` failure is reported (`fail <id>: ...`), the rest continue, exit 1.
 
 Publish on a branch with an open PR pushes, comments `[ginflow] updated <sha> by <KEY>` on the PR and `ginflow-publish: <url> (updated)` on the card; no second PR.

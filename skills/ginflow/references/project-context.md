@@ -1,6 +1,6 @@
 # Canonical project context
 
-The first `/ginflow` skill load initializes `.ginflow.yaml` in the current project root:
+The first `/ginflow` skill load initializes `.ginflow.yaml` in the current project root. The file is local per clone and git-excluded (`ginflow init` step `exclude`); a card worktree without its own copy resolves to the main checkout's file via `config_path`, and writers update that file:
 
 First-load initialization is agent-procedural: `/ginflow` invokes the initializer and
 collects the board choice. Runtime validation and persistence enforce the contract,
@@ -57,7 +57,17 @@ explicit `GINFLOW_LOG` environment value overrides the flag for a single
 process: `GINFLOW_LOG=1` forces tracing on, any other value forces it off, and
 an unset variable falls back to `ginflow.trace`. Defaults to off when omitted.
 
-A valid existing config is used by Kanban reads when no override is supplied and is not overwritten during ordinary skill loading. If the file is missing, `/ginflow` asks whether to use the current/default board or create a new board. New-board selection requires a non-empty name and successful native board creation before persistence. Malformed, incomplete, or workspace-mismatched config fails closed and must be repaired or explicitly resolved by the user; it never causes a silent workspace or board switch. Verification reads this file but does not initialize or rewrite it.
+A valid existing config is used by Kanban reads when no override is supplied and is not overwritten during ordinary skill loading. On first `/ginflow` load, inspect `.ginflow.yaml` at repo root. If missing, show the resolved workspace and board, then ask whether to use the current/default board or create a new board. New-board selection requires a non-empty name and successful native board creation before persistence. Malformed, incomplete, or workspace-mismatched config fails closed and must be repaired or explicitly resolved by the user; it never causes a silent workspace or board switch. Verification reads this file but does not initialize or rewrite it.
+
+## Execution startup
+
+1. Confirm workspace is the real target repo. Read `.hermes.md`, then `AGENTS.md`.
+2. If the board is empty, route to shaping. Otherwise use `kanban_list`/`kanban_show` to resume the selected card.
+3. Execution requires a selected card. Confirm ID, title, objective, scope, acceptance, workspace, status, assignee, and links; stop if absent or incomplete.
+4. Read the linked spec/plan. For a completed card, run the linked-artifact gate in `completion.md` before using it.
+5. Inspect git state; run project baseline verification, then the external Ginflow harness against the target workspace and card. Report the two results separately.
+6. Follow routing context injected by `ginflow-gate`. Routing hints are advisory, not authorization: call `skill_view` yourself. Precedence: target rules, card contract, Ginflow matrix, selected skill, skill defaults.
+
 
 Routing distinguishes a missing config from an invalid config. Both are mutation
 blockers: missing context directs the agent to run `/ginflow`, while invalid context
@@ -75,10 +85,12 @@ ginflow init [--project PATH] [--board NAME | --new-board NAME] [--worker PROFIL
 Each step prints `ok|set|fail <step>: <detail>`; exit 0 when no `fail`. A second run with nothing to change prints only `ok` and writes nothing. No prompts: `/ginflow` asks, then passes flags.
 
 1. `context`: valid `.ginflow.yaml` is ok. Missing: `initialize_context` with `--board` (existing board) or `--new-board` (`hermes kanban boards create --default-workdir <repo>`); neither flag fails. Invalid config fails and is never overwritten.
+1a. `exclude`: `.ginflow.yaml` and `.hermes.md` are lines in `<git-common-dir>/info/exclude` (`set exclude: added ...` or `ok exclude: present`); a repo that tracks `.ginflow.yaml` fails with `fail exclude: .ginflow.yaml is tracked; run git rm --cached .ginflow.yaml` and nothing else changes.
 2. `workdir`: board `default_workdir` equals repo root; unset is set via `hermes kanban boards set-default-workdir`; another path fails and nothing is rewritten.
 3. `reviewer`: `--reviewer` is recorded by `persist_reviewer`; `seed_default_reviewer` writes `kanban.default_reviewer_profile` when it differs from `hermes_default_reviewer`.
 4. `worker`: `--worker` stored by `persist_worker_defaults`; the `configured_worker`/`resolve_worker_dispatch` result is printed.
 5. `notify`: `ginflow.notify` valid.
 6. `auth`: `gh`/`glab auth status` when `ginflow.publish` is set.
 7. `main`: after `git fetch`, local target branch must not be behind `<remote>/<target>` (`fail main: behind origin/main by N`).
-8. `dispatcher`: `hermes gateway status` reports running.
+8. `sync`: ensures one cron job `ginflow-pr-sync:<board>` (every 10m, `--no-agent`, `--deliver` = `ginflow.notify.target` or `origin`) running `~/.hermes/scripts/ginflow-pr-sync-<board>.sh` → `ginflow pr sync`. Same job present: ok; present with a different script: `fail`, never replaced. Empty stdout = no delivery.
+9. `dispatcher`: `hermes gateway status` reports running.

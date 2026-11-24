@@ -5,7 +5,9 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import os
 import re
+import shlex
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -24,6 +26,8 @@ def _load(name: str):
 pc = _load("project_config")
 publish = _load("publish")
 core = _load("harness_core")
+gh_app = _load("gh_app")
+sc = _load("spec_cards")
 
 
 def run(argv: list[str], cwd: Path | None = None) -> subprocess.CompletedProcess:
@@ -99,6 +103,27 @@ class Init:
             return None
         self.say("set", "context", f"wrote .ginflow.yaml with board {name}")
         return name
+
+    def exclude(self, repo: Path) -> None:
+        """Keep `.ginflow.yaml` and `.hermes.md` out of git via info/exclude; never touch `.gitignore`."""
+        names = (".ginflow.yaml", ".hermes.md")
+        if git(repo, "ls-files", "--error-unmatch", ".ginflow.yaml").returncode == 0:
+            return self.say("fail", "exclude", ".ginflow.yaml is tracked; run git rm --cached .ginflow.yaml")
+        common = git(repo, "rev-parse", "--path-format=absolute", "--git-common-dir")
+        if common.returncode != 0:
+            return self.say("fail", "exclude", "cannot resolve git common dir")
+        path = Path(common.stdout.strip()) / "info" / "exclude"
+        try:
+            text = path.read_text(encoding="utf-8") if path.exists() else ""
+            present = {line.strip().lstrip("/") for line in text.splitlines()}
+            missing = [n for n in names if n not in present]
+            if missing:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                prefix = "" if not text or text.endswith("\n") else "\n"
+                path.write_text(text + prefix + "".join(f"{n}\n" for n in missing), encoding="utf-8")
+        except OSError as exc:
+            return self.say("fail", "exclude", str(exc))
+        self.say("set" if missing else "ok", "exclude", f"added {' '.join(missing)}" if missing else "present")
 
     def workdir(self, board: str, repo: Path) -> None:
         state = self.workdir_state(board, repo)
@@ -176,6 +201,27 @@ class Init:
             return self.say("fail", "main", f"behind {ref} by {count}")
         self.say("ok", "main", f"{target} up to date with {ref}")
 
+    def sync(self, repo: Path, board: str | None) -> None:
+        if not board:
+            return
+        name, home = f"ginflow-pr-sync:{board}", Path(os.environ.get("HERMES_HOME") or Path.home() / ".hermes")
+        script = home / "scripts" / f"ginflow-pr-sync-{board}.sh"
+        want = (f"#!/bin/sh\nexec {shlex.quote(sys.executable)} {shlex.quote(str(Path(__file__).resolve()))} "
+                f"pr sync --board {shlex.quote(board)} --project {shlex.quote(str(repo))}\n")
+        try:
+            jobs = json.loads((home / "cron/jobs.json").read_text())["jobs"]
+        except (OSError, ValueError, KeyError):
+            jobs = []
+        if any(j.get("name") == name for j in jobs):
+            same = script.exists() and script.read_text() == want
+            return self.say("ok" if same else "fail", "sync", name if same else f"{name} exists with a different command")
+        script.parent.mkdir(parents=True, exist_ok=True)
+        script.write_text(want)
+        script.chmod(0o755)
+        target = pc.configured_notify_target(repo) or "origin"
+        made = run(["hermes", "cron", "create", "every 10m", "--name", name, "--script", script.name, "--no-agent", "--deliver", target])
+        self.say("set" if made.returncode == 0 else "fail", "sync", name if made.returncode == 0 else (made.stderr or made.stdout).strip())
+
     def dispatcher(self) -> None:
         out = run(["hermes", "gateway", "status"])
         running = out.returncode == 0 and "running" in out.stdout.lower() and "not running" not in out.stdout.lower()
@@ -189,6 +235,8 @@ class Init:
         repo = Path(top.stdout.strip()).resolve()
         board = self.context(repo, args)
         if board is not None and not self.failed:
+            self.exclude(repo)
+        if board is not None and not self.failed:
             self.workdir(board, repo)
         if not self.failed:  # nothing is rewritten after a failed context/workdir
             self.reviewer(repo, args.reviewer)
@@ -196,6 +244,7 @@ class Init:
         self.notify(repo) if pc.config_exists(repo) else None
         self.auth(repo) if pc.config_exists(repo) else None
         self.main_branch(repo)
+        self.sync(repo, board) if not self.failed else None
         self.dispatcher()
         return 1 if self.failed else 0
 
@@ -214,7 +263,7 @@ class PrSync:
     """`ginflow pr sync`: PR feedback becomes a follow-up card on the PR head branch (PRFB-1)."""
 
     def __init__(self, board: str | None, repo: Path) -> None:
-        self.board, self.repo, self.failed = board, repo, False
+        self.board, self.repo, self.failed, self.merged = board, repo, False, False
 
     def kb(self, *args: str):
         return core.kanban_json(self.board, *args)
@@ -232,7 +281,7 @@ class PrSync:
         return out.stdout
 
     def feedback(self, url: str, since: float) -> tuple[dict, list[str]]:
-        pr = json.loads(self.gh("pr", "view", url, "--json", "state,headRefName,reviews,comments"))
+        pr = json.loads(self.gh("pr", "view", url, "--json", "state,headRefName,mergeCommit,reviews,comments"))
         slug, number = PR_URL.match(url).groups()
         raw = []  # (when, who, where, text)
         for r in pr.get("reviews") or []:
@@ -285,11 +334,17 @@ class PrSync:
         if not PR_URL.match(url):
             return print(f"skip {url}: provider gitlab not supported yet")
         pr, lines = self.feedback(url, since)
-        if pr.get("state") in ("MERGED", "CLOSED"):
-            self.kb_run("comment", tid, f"[ginflow-pr] {pr['state'].lower()}")
+        if pr.get("state") == "MERGED":
+            sha = (pr.get("mergeCommit") or {}).get("oid", "")
+            self.retarget(data, pr["headRefName"])
+            self.kb_run("comment", tid, f"[ginflow-pr] merged {sha}".strip())
+            self.merged = True
+            return print(f"set {tid}: merged {sha[:7]}".strip())
+        if pr.get("state") == "CLOSED":
+            self.kb_run("comment", tid, "[ginflow-pr] closed")
             return
         if not lines:
-            return print(f"ok {tid}: no new feedback")
+            return
         number = PR_URL.match(url).group(2)
         open_id, count = self.open_fb(data, number)
         if open_id:
@@ -298,6 +353,35 @@ class PrSync:
         else:
             self.create_fb(task, pr["headRefName"], number, count + 1, lines)
         self.kb_run("comment", tid, f"[ginflow-pr] synced={datetime.now(timezone.utc):%Y-%m-%dT%H:%M:%SZ} items={len(lines)}")
+
+    def retarget(self, data: dict, head: str) -> None:
+        """Child PRs still based on the merged branch: GitHub only retargets when the branch is deleted."""
+        target = (pc.configured_publish(self.repo) or {}).get("target", "main")
+        for cid in data.get("children") or []:
+            urls = [m.group(1) for c in self.kb("show", cid, "--json").get("comments") or []
+                    if (m := PUBLISHED.match(str(c.get("body") or "")))]
+            if not urls or not PR_URL.match(urls[-1]):
+                continue
+            child = json.loads(self.gh("pr", "view", urls[-1], "--json", "state,baseRefName"))
+            if child.get("state") == "OPEN" and child.get("baseRefName") == head:
+                self.gh("pr", "edit", urls[-1], "--base", target)
+                print(f"set {cid}: base {head} -> {target}")
+
+    def fast_forward(self) -> None:
+        # ponytail: uses the --project checkout; same repo as board default_workdir after `ginflow init`.
+        settings = pc.configured_publish(self.repo) or {}
+        target, remote = settings.get("target", "main"), settings.get("remote", "origin")
+        if git(self.repo, "fetch", remote).returncode:
+            return print(f"warn {target}: fetch {remote} failed")
+        branch = git(self.repo, "rev-parse", "--abbrev-ref", "HEAD").stdout.strip()
+        if branch != target:
+            return print(f"warn {target}: on {branch}")
+        if git(self.repo, "status", "--porcelain").stdout.strip():
+            return print(f"warn {target}: dirty checkout")
+        if git(self.repo, "rev-list", "--count", f"{target}..{remote}/{target}").stdout.strip() in ("", "0"):
+            return
+        done = git(self.repo, "merge", "--ff-only", f"{remote}/{target}")
+        print(f"set {target}: fast-forwarded to {remote}/{target}" if done.returncode == 0 else f"warn {target}: not fast-forwardable")
 
     def create_fb(self, task: dict, head: str, number: str, n: int, lines: list[str]) -> None:
         fields = core.parse_card_body(task.get("body"))
@@ -326,6 +410,8 @@ class PrSync:
             except Exception as exc:  # one PR failing must not stop the rest
                 self.failed = True
                 print(f"fail {task['id']}: {exc}")
+        if self.merged:
+            self.fast_forward()
         return 1 if self.failed else 0
 
 
@@ -337,6 +423,162 @@ def pr_sync(args) -> int:
     repo = Path(top.stdout.strip()).resolve()
     ok = pc.config_exists(repo) and not pc.context_error(repo)
     return PrSync(args.board or (pc.configured_context(repo)["board"] if ok else None), repo).run()
+
+
+class CardsCreate:
+    """`ginflow cards create`: committed spec/plan pairs become linked, idempotent cards (CLOUD-1.4)."""
+
+    def __init__(self, board: str | None, repo: Path) -> None:
+        self.board, self.repo, self.problems = board, repo, []
+
+    def fail(self, where, reason: str) -> None:
+        self.problems.append(f"fail {where}: {reason}")
+
+    def kb(self, *args: str):
+        return core.kanban_json(self.board, *args)
+
+    def kb_run(self, *args: str) -> str:
+        out = core.kanban_run(self.board, *args)
+        if out.returncode:
+            raise RuntimeError(f"kanban {args[0]}: {(out.stderr or out.stdout).strip()}")
+        return out.stdout
+
+    def committed(self, path: Path) -> bool:
+        rel = str(path)
+        tracked = git(self.repo, "ls-files", "--error-unmatch", "--", rel).returncode == 0
+        return tracked and not git(self.repo, "status", "--porcelain", "--", rel).stdout.strip()
+
+    def existing(self) -> dict[str, dict]:
+        """Non-archived board cards by Card key (title prefix `<KEY> — `)."""
+        cards = {}
+        for task in self.kb("list", "--json"):
+            title = str(task.get("title", ""))
+            key = title.split(" — ", 1)[0]
+            if " — " in title and sc.KEY.match(key):
+                cards.setdefault(key, task)
+        return cards
+
+    def preflight(self, files: list[str]) -> tuple[list[dict], dict[str, dict]]:
+        if not self.board:
+            self.fail("board", "no board: pass --board, set HERMES_KANBAN_BOARD, or run `ginflow init`")
+            return [], {}
+        out = run(["hermes", "kanban", "boards", "list", "--json"])
+        try:
+            info = {b["slug"]: b for b in json.loads(out.stdout)}.get(self.board)
+        except (ValueError, KeyError, TypeError):
+            info = None
+        if info is None:
+            self.fail("board", f"board {self.board} does not exist")
+            return [], {}
+        if not info.get("default_workdir"):
+            self.fail("board", f"board {self.board} has no default_workdir; run `ginflow init`")
+            return [], {}
+        specs, seen = [], {}
+        profiles = pc.installed_profiles()
+        for name in files:
+            path = Path(name).expanduser().resolve()
+            try:
+                spec = sc.load_spec(path, self.repo)
+            except sc.SpecError as exc:
+                self.fail(name, str(exc))
+                continue
+            if spec["key"] in seen:
+                self.fail(name, f"duplicate card {spec['key']} (also {seen[spec['key']]})")
+                continue
+            seen[spec["key"]] = name
+            if spec["assignee"] not in profiles:
+                self.fail(name, f"assignee {spec['assignee']!r} is not an installed Hermes profile")
+            if not spec["plan_path"].is_file():
+                self.fail(name, f"missing plan {spec['plan_rel']}")
+            for p in (path, spec["plan_path"]):
+                if p.is_file() and not self.committed(p):
+                    self.fail(name, f"{p.name} is not committed (or has uncommitted changes)")
+            specs.append(spec)
+        existing = {}
+        try:
+            existing = self.existing()
+        except (RuntimeError, ValueError) as exc:
+            self.fail("board", str(exc))
+        try:
+            ordered = sc.order(specs, set(existing))
+        except sc.SpecError as exc:
+            self.fail("specs", str(exc))
+            ordered = specs
+        return ordered, existing
+
+    def create(self, spec: dict) -> str:
+        body = sc.body_text(spec)
+        fields = core.parse_card_body(body)
+        if not (fields["objective"] and fields["scope"] and fields["acceptance"] and fields["links"]):
+            raise RuntimeError(f"{spec['key']}: body does not round-trip through parse_card_body")
+        args = ["create", spec["title"], "--body", body, "--assignee", spec["assignee"], "--workspace", "worktree",
+                "--initial-status", "blocked", "--idempotency-key", sc.idempotency_key(spec, self.board), "--json"]
+        return json.loads(self.kb_run(*args))["id"]
+
+    def harness(self, tid: str) -> str | None:
+        """None when the candidate check passes, else the failed check."""
+        script = Path(__file__).resolve().parent / "validate-harness.py"
+        out = run([sys.executable, str(script), "--target", str(self.repo), "--board", self.board,
+                   "--kanban-task-id", tid, "--json"])
+        try:
+            data = json.loads(out.stdout)
+        except ValueError:
+            return "harness unavailable"
+        if data.get("status") != "blocker":
+            return None
+        for name, sub in data["subsystems"].items():
+            for row in sub.get("checks", []):
+                if not row.get("pass") and row.get("severity") == "blocker":
+                    return f"{name}: {row.get('message')}"
+        return "harness blocker"
+
+    def run(self, files: list[str]) -> int:
+        ordered, existing = self.preflight(files)
+        if self.problems:
+            print("\n".join(self.problems))
+            return 1
+        ids = {k: t["id"] for k, t in existing.items()}
+        result, new = [], []
+        try:
+            for spec in ordered:
+                key, is_new = spec["key"], spec["key"] not in existing
+                if is_new:
+                    ids[key] = self.create(spec)
+                    new.append(spec)
+                result.append({"key": key, "id": ids[key], "status": None, "parents": [], "created": is_new})
+            for spec, row in zip(ordered, result):
+                have = set(self.kb("show", row["id"], "--json").get("parents") or [])
+                for b in spec["blocked_by"]:
+                    if ids[b] not in have:
+                        self.kb_run("link", ids[b], row["id"])
+            for spec in new:
+                tid = ids[spec["key"]]
+                failed = self.harness(tid)
+                if failed:
+                    self.kb_run("comment", tid, f"[ginflow] cards create: left blocked, {failed}")
+                else:
+                    self.kb_run("unblock", tid)
+            for row in result:
+                data = self.kb("show", row["id"], "--json")
+                row["status"], row["parents"] = data["task"]["status"], list(data.get("parents") or [])
+        except (RuntimeError, ValueError, KeyError) as exc:
+            print(f"fail cards: {exc}")
+            print(json.dumps(result, indent=2))
+            return 1
+        print(json.dumps(result, indent=2))
+        return 0
+
+
+def cards_create(args) -> int:
+    top = git(Path(args.project).expanduser().resolve(), "rev-parse", "--show-toplevel")
+    if top.returncode:
+        print(f"fail context: {args.project} is not a git repository")
+        return 1
+    repo = Path(top.stdout.strip()).resolve()
+    if pc.config_exists(repo) and pc.context_error(repo):
+        print(f"fail context: {pc.context_error(repo)}")
+        return 1
+    return CardsCreate(pc.resolve_board(repo, args.board), repo).run(args.specs)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -352,7 +594,21 @@ def main(argv: list[str] | None = None) -> int:
     sync = pr.add_parser("sync", help="turn new PR review comments into follow-up cards")
     sync.add_argument("--project", default=".")
     sync.add_argument("--board")
+    gh = sub.add_parser("gh", help="GitHub App commands").add_subparsers(dest="gh_command", required=True)
+    tok = gh.add_parser("token", help="print a GitHub App installation token; `credential <op>` is a git credential helper")
+    tok.add_argument("--repo", help="OWNER/REPO")
+    tok.add_argument("--installation")
+    tok.add_argument("action", nargs="*")
+    cards = sub.add_parser("cards", help="card commands").add_subparsers(dest="cards_command", required=True)
+    create = cards.add_parser("create", help="create linked cards from committed spec/plan pairs")
+    create.add_argument("--project", default=".")
+    create.add_argument("--board")
+    create.add_argument("specs", nargs="+", metavar="SPEC")
     args = parser.parse_args(argv)
+    if args.command == "gh":
+        return gh_app.main(args.repo, args.installation, args.action)
+    if args.command == "cards":
+        return cards_create(args)
     return pr_sync(args) if args.command == "pr" else Init().run(args)
 
 
