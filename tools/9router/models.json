@@ -1,0 +1,2405 @@
+{
+  "object": "list",
+  "data": [
+    {
+      "id": "aux",
+      "object": "model",
+      "owned_by": "combo",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536
+    },
+    {
+      "id": "builder",
+      "object": "model",
+      "owned_by": "combo",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "contextWindow": 872000,
+        "maxOutput": 128000
+      },
+      "context_length": 872000,
+      "max_completion_tokens": 65536
+    },
+    {
+      "id": "orchestrator",
+      "object": "model",
+      "owned_by": "combo",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "contextWindow": 1000000,
+        "maxOutput": 128000
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 65536
+    },
+    {
+      "id": "ag/gemini-4-hydrogen-xhigh",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536,
+        "longDecode": true
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-hydrogen-high",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536,
+        "longDecode": true
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-hydrogen-medium",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536,
+        "longDecode": true
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-hydrogen-low",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536,
+        "longDecode": true
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-hydrogen",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536,
+        "longDecode": true
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-carbon-high",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-carbon-medium",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-carbon-low",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-carbon",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-argon-high",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-argon-medium",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-argon-low",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-argon",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-neon-xhigh",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-neon-high",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-neon-medium",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-neon-low",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "ag/gemini-4-neon",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "ag/gemini-3.8-flash-high",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-3.8-flash-medium",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-3.8-flash-low",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-3.8-flash",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-3.7-flash-high",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-3.7-flash-medium",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-3.7-flash-low",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-3.6-flash-high",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-3.6-flash-medium",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-3.6-flash-low",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65536
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-3.1-pro-high",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65535
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65535,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/gemini-pro-agent",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": false,
+        "thinkingFormat": null,
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 64000
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 64000
+    },
+    {
+      "id": "ag/gemini-3.1-pro-low",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": true,
+        "videoInput": true,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "gemini-level",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1048576,
+        "maxOutput": 65535
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65535,
+      "thinking_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "ag/claude-sonnet-5-5-max",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1000000,
+        "maxOutput": 128000,
+        "thinkingOffType": "between_tools",
+        "forcedToolChoice": false
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/claude-sonnet-5-5-high",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1000000,
+        "maxOutput": 128000,
+        "thinkingOffType": "between_tools",
+        "forcedToolChoice": false
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/claude-sonnet-5-5-medium",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1000000,
+        "maxOutput": 128000,
+        "thinkingOffType": "between_tools",
+        "forcedToolChoice": false
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/claude-sonnet-5-5-low",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1000000,
+        "maxOutput": 128000,
+        "thinkingOffType": "between_tools",
+        "forcedToolChoice": false
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/claude-sonnet-5-5",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1000000,
+        "maxOutput": 128000,
+        "thinkingOffType": "between_tools",
+        "forcedToolChoice": false
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/claude-opus-5-5-max",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1000000,
+        "maxOutput": 128000,
+        "forcedToolChoice": false
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/claude-opus-5-5-high",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1000000,
+        "maxOutput": 128000,
+        "forcedToolChoice": false
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/claude-opus-5-5-medium",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1000000,
+        "maxOutput": 128000,
+        "forcedToolChoice": false
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/claude-opus-5-5-low",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1000000,
+        "maxOutput": 128000,
+        "forcedToolChoice": false
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/claude-opus-5-5",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1000000,
+        "maxOutput": 128000,
+        "forcedToolChoice": false
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/claude-sonnet-4-6",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-adaptive",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1000000,
+        "maxOutput": 128000
+      },
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/claude-opus-4-6-thinking",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": true,
+        "pdf": true,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "claude-budget",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 200000,
+        "maxOutput": 64000
+      },
+      "context_length": 200000,
+      "max_completion_tokens": 64000,
+      "thinking_levels": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "ag/gpt-oss-120b-medium",
+      "object": "model",
+      "owned_by": "ag",
+      "capabilities": {
+        "vision": false,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": false,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 128000,
+        "maxOutput": 64000
+      },
+      "context_length": 128000,
+      "max_completion_tokens": 64000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "cx/gpt-6.2-sol",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1050000,
+        "maxOutput": 128000
+      },
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-6.2-sol[1m]",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1050000,
+        "maxOutput": 128000
+      },
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-6.2-astra",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1050000,
+        "maxOutput": 128000
+      },
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-6.2-astra[1m]",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 1050000,
+        "maxOutput": 128000
+      },
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-6.1-sol",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 272000,
+        "maxOutput": 128000
+      },
+      "context_length": 272000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-6.1-terra",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 500000,
+        "maxOutput": 128000
+      },
+      "context_length": 500000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-6-astra",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 272000,
+        "maxOutput": 128000
+      },
+      "context_length": 272000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-6-astra[1m]",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 872000,
+        "maxOutput": 128000
+      },
+      "context_length": 872000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-6-sol",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 272000,
+        "maxOutput": 128000
+      },
+      "context_length": 272000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-6-sol[1m]",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 872000,
+        "maxOutput": 128000
+      },
+      "context_length": 872000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-6-luna",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 272000,
+        "maxOutput": 128000
+      },
+      "context_length": 272000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-6-luna[1m]",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 872000,
+        "maxOutput": 128000
+      },
+      "context_length": 872000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-5.6-sol",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 372000,
+        "maxOutput": 128000
+      },
+      "context_length": 372000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ]
+    },
+    {
+      "id": "cx/gpt-5.6-sol[1m]",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 872000,
+        "maxOutput": 128000
+      },
+      "context_length": 872000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ]
+    },
+    {
+      "id": "cx/gpt-5.6-sol-review",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 372000,
+        "maxOutput": 128000
+      },
+      "context_length": 372000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ]
+    },
+    {
+      "id": "cx/gpt-5.6-terra",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 272000,
+        "maxOutput": 128000
+      },
+      "context_length": 272000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ]
+    },
+    {
+      "id": "cx/gpt-5.6-terra[1m]",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 872000,
+        "maxOutput": 128000
+      },
+      "context_length": 872000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ]
+    },
+    {
+      "id": "cx/gpt-5.6-terra-review",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 272000,
+        "maxOutput": 128000
+      },
+      "context_length": 272000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ]
+    },
+    {
+      "id": "cx/gpt-5.6-luna",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 272000,
+        "maxOutput": 128000
+      },
+      "context_length": 272000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-5.6-luna[1m]",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 872000,
+        "maxOutput": 128000
+      },
+      "context_length": 872000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-5.6-luna-review",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": true,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "openai",
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 272000,
+        "maxOutput": 128000
+      },
+      "context_length": 272000,
+      "max_completion_tokens": 128000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "cx/gpt-daybreak-blue-latest",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": false,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": false,
+        "tools": true,
+        "reasoning": false,
+        "thinkingFormat": null,
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 200000,
+        "maxOutput": 64000
+      },
+      "context_length": 200000,
+      "max_completion_tokens": 64000
+    },
+    {
+      "id": "cx/gpt-reserve",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": false,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": false,
+        "tools": true,
+        "reasoning": false,
+        "thinkingFormat": null,
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 200000,
+        "maxOutput": 64000
+      },
+      "context_length": 200000,
+      "max_completion_tokens": 64000
+    },
+    {
+      "id": "cx/codex-auto-review",
+      "object": "model",
+      "owned_by": "cx",
+      "capabilities": {
+        "vision": false,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": false,
+        "tools": true,
+        "reasoning": false,
+        "thinkingFormat": null,
+        "thinkingCanDisable": true,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 200000,
+        "maxOutput": 64000
+      },
+      "context_length": 200000,
+      "max_completion_tokens": 64000
+    },
+    {
+      "id": "mmf/mimo-auto",
+      "object": "model",
+      "owned_by": "mmf",
+      "capabilities": {
+        "vision": true,
+        "pdf": false,
+        "audioInput": false,
+        "videoInput": false,
+        "imageOutput": false,
+        "audioOutput": false,
+        "search": false,
+        "tools": true,
+        "reasoning": true,
+        "thinkingFormat": "deepseek",
+        "thinkingCanDisable": false,
+        "thinkingRange": null,
+        "thinkingEffortSupported": false,
+        "contextWindow": 262144,
+        "maxOutput": 131072
+      },
+      "context_length": 262144,
+      "max_completion_tokens": 131072,
+      "thinking_levels": [
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "oc/big-pickle",
+      "object": "model",
+      "owned_by": "oc",
+      "capabilities": {
+        "contextWindow": 200000,
+        "maxOutput": 32000,
+        "reasoning": true,
+        "tools": true
+      },
+      "context_length": 200000,
+      "max_completion_tokens": 32000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "oc/mimo-v2.6-flash-free",
+      "object": "model",
+      "owned_by": "oc",
+      "capabilities": {
+        "contextWindow": 200000,
+        "maxOutput": 32000,
+        "reasoning": true,
+        "tools": true
+      },
+      "context_length": 200000,
+      "max_completion_tokens": 32000,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "id": "oc/deepseek-v4.1-flash-free",
+      "object": "model",
+      "owned_by": "oc",
+      "capabilities": {
+        "contextWindow": 200000,
+        "maxOutput": 32000,
+        "reasoning": true,
+        "tools": true
+      },
+      "context_length": 200000,
+      "max_completion_tokens": 32000,
+      "thinking_levels": [
+        "low",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "id": "oc/iceman-free",
+      "object": "model",
+      "owned_by": "oc",
+      "capabilities": {
+        "contextWindow": 262144,
+        "maxOutput": 131072,
+        "reasoning": true,
+        "tools": true
+      },
+      "context_length": 262144,
+      "max_completion_tokens": 131072,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "oc/beam-free",
+      "object": "model",
+      "owned_by": "oc",
+      "capabilities": {
+        "contextWindow": 1048576,
+        "maxOutput": 131072,
+        "reasoning": true,
+        "tools": true
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "oc/flint-40b-free",
+      "object": "model",
+      "owned_by": "oc",
+      "capabilities": {
+        "contextWindow": 262144,
+        "maxOutput": 65536,
+        "reasoning": true,
+        "tools": true
+      },
+      "context_length": 262144,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "oc/nemotron-3.5-super-vl-free",
+      "object": "model",
+      "owned_by": "oc",
+      "capabilities": {
+        "contextWindow": 1048576,
+        "maxOutput": 131072,
+        "reasoning": true,
+        "tools": true
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "oc/jev-1.13-free",
+      "object": "model",
+      "owned_by": "oc",
+      "capabilities": {
+        "contextWindow": 64000
+      },
+      "context_length": 64000,
+      "max_completion_tokens": 32000
+    },
+    {
+      "id": "oc/nemotron-3.5-lightning-free",
+      "object": "model",
+      "owned_by": "oc",
+      "capabilities": {
+        "contextWindow": 262144,
+        "maxOutput": 262144,
+        "reasoning": true,
+        "tools": true
+      },
+      "context_length": 262144,
+      "max_completion_tokens": 262144,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "oc/hy4-flash-free",
+      "object": "model",
+      "owned_by": "oc",
+      "capabilities": {
+        "contextWindow": 1048576,
+        "maxOutput": 65536,
+        "reasoning": true,
+        "tools": true
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    },
+    {
+      "id": "oc/tidepool-alpha-free",
+      "object": "model",
+      "owned_by": "oc",
+      "capabilities": {
+        "contextWindow": 1048576,
+        "maxOutput": 131072,
+        "reasoning": true,
+        "tools": true
+      },
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
+      "thinking_levels": [
+        "none",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ]
+    }
+  ]
+}

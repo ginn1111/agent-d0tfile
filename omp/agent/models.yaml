@@ -4,8 +4,18 @@ providers:
     api: openai-completions
     apiKey: PI_API_KEY
     models:
-      - id: coding
-        name: Coding
+      - id: aux
+        name: Aux
         reasoning: true
-        contextWindow: 128000
-        maxTokens: 16384
+        contextWindow: 1048576
+        maxTokens: 65536
+      - id: builder
+        name: Builder
+        reasoning: true
+        contextWindow: 872000
+        maxTokens: 65536
+      - id: orchestrator
+        name: Orchestrator
+        reasoning: true
+        contextWindow: 1000000
+        maxTokens: 65536
