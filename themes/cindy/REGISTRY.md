@@ -1,17 +1,18 @@
 # Cindy Theme Registry
 
-The Theme Registry for Gin's Warm Dusk look (low blue light, honey focus; picked from `sketches/005-warm-dusk`, 2026-11-22). Read this before giving any tool (a Target) its colours. Terms: `GLOSSARY.md` (Theme section). Why reference-only: `docs/adr/0001-theme-registry-reference-not-generator.md`.
+The Theme Registry for Gin's VS Code Dark Modern look (picked from `sketches/006-vscode-faithful`, 2026-11-25). Read this before giving any tool (a Target) its colours. Terms: `GLOSSARY.md` (Theme section). Why reference-only: `docs/adr/0001-theme-registry-reference-not-generator.md`.
 
-- **Palette**: `warm-dusk.palette`, the only source of hex values. `black-ruby.palette` is the previous look, kept inactive for a later switch (feat-011; tag `theme-black-ruby`); no Target may use it. This file uses Colour names only.
+- **Palette**: `vscode-dark-modern.palette`, the only source of hex values (all taken from the sketch). A line `name=@other` is an alias: the same hex under a second Colour name, as VS Code reuses its greys. `warm-dusk.palette` is the previous look (honey focus, low blue light), now **inactive**: kept for a later switch (tag `theme-warm-dusk`); no Target may use it. `black-ruby.palette` is older and also inactive (tag `theme-black-ruby`). This file uses Colour names only.
+- **Warm Dusk (inactive)**: Targets recoloured to VS Code lose their Warm Dusk values; `git checkout theme-warm-dusk -- themes/cindy` brings them back. `kitty.conf` is still Warm Dusk and is not a Target (kitty is skipped unless Gin names it, RULES.md).
 - **Drift test**: `tests/test_theme_cindy_palette.py` reads the Targets table below and fails on any Stray Colour.
 
 ## Rules
 
-1. Every solid colour in a Target is a Palette Colour. A new colour gets a name in `warm-dusk.palette` first; give it a Role here if it has a job.
+1. Every solid colour in a Target is a Palette Colour. A new colour gets a name in `vscode-dark-modern.palette` first; give it a Role here if it has a job.
 2. A Tint (Palette Colour + alpha, e.g. `accent` at `e6` for xborders) counts as its Colour. Fully transparent (alpha `00`) is free.
 3. Comments count: an example hex in a comment is still a Stray Colour.
-4. `accent` (honey) means focus only. Errors, urgency and critical states use `err`.
-5. Text on any filled colour (accent, err, ok, …) is `bg`.
+4. `accent` (VS Code blue) means focus only, and is a fill-only Colour: at 3.6:1 on `bg` it is too dim for text. Focus text (prompt, active label, cursor line number) uses `accent_text`. Errors, urgency and critical states use `err`.
+5. Text on any filled colour (accent, err, ok, `mode_*`, …) is `fg_bright`. Exception: the `ginb` focus fill `turquoise` is light, so text on it is `bg`.
 6. Pick colours by Role, then read the Colour from the Role table. Use the tool's own variables where it has them (polybar `[colors]`, rofi `*{}`, starship `[palettes]`, shell vars) named after the Colour.
 7. Start each Target's colour section with a comment pointing to this file or the Palette.
 8. List every new Target in the Targets table in the same change.
@@ -44,21 +45,25 @@ A Variant re-points some Roles; a Colour's hex never changes.
 | secondary text | `sub` | `sub` |
 | hint / comment | `dim` | `dim` |
 | disabled / inactive / line number | `ghost` | `ghost` |
-| focus (border, cursor, prompt, active tab/workspace) | `accent` | `turquoise` |
-| text on filled colour | `bg` | `bg` |
+| focus fill (border, cursor, active tab/workspace) | `accent` | `turquoise` |
+| focus text (prompt, active label, current line number) | `accent_text` | `turquoise` |
+| text on filled colour | `fg_bright` | `bg` (on `turquoise`), else `fg_bright` |
 | error / urgent / critical | `err` | `err` |
 | warning | `warn` | `warn` |
 | success / added | `ok` | `ok` |
 | info / link / path / directory | `info` | `info` |
-| attention / search match | `yellow` | `yellow` |
-| mode: normal · insert · visual · replace · command · terminal | `accent` · `ok` · `purple` · `err` · `yellow` · `turquoise` | same, normal → `turquoise` |
+| attention | `yellow` | `yellow` |
+| search match: background · outline | `match_bg` · `match_edge` | same |
+| syntax: string · number · comment | `syn_string` · `syn_number` · `syn_comment` | same |
+| syntax: keyword · function · type · variable | `purple` · `yellow` · `turquoise` · `green_alt` | same |
+| mode (fill, text `fg_bright`): normal · insert · visual · replace · command · terminal | `accent` · `mode_insert` · `mode_visual` · `mode_replace` · `mode_command` · `mode_terminal` | same, normal → `turquoise` (text `bg`) |
 | diff background added · removed | `diff_add` · `diff_del` | same |
 | shadow | `shadow` (as Tint) | same |
 | notification card: low · normal · critical | `card` · `surface` · `alert_card` | same |
 | notification card: app-keyed · OSD | `card_raised` · `card_muted` | same |
 | notification card edge: normal · critical | `card_edge` · `alert_edge` | same |
 
-Spare hues with no Role yet: `pink` (media, marked), `purple` (numbers, branches), `turquoise` (types, symlinks), `green_alt`.
+Spare hues with no other Role: `pink` (media, marked), `purple` (branches), `turquoise` (symlinks), `green_alt`. Aliases (same hex, different Role name): `bg_agent`, `bar`, `bg_ginb`, `bar_ginb` = `bg_alt`; `card` = `bg_mid`; `rule`, `rule_ginb` = `border`.
 
 ## Targets
 
@@ -66,7 +71,6 @@ Spare hues with no Role yet: `pink` (media, marked), `purple` (numbers, branches
 
 | Target | Path | Scope |
 |---|---|---|
-| kitty | `themes/cindy/kitty.conf` | file |
 | Neovim colorscheme | `themes/cindy/nvim/colorscheme.lua` | file |
 | Neovim lualine | `themes/cindy/nvim/lualine.lua` | file |
 | herdr (source) | `themes/cindy/herdr-theme.toml` | file |

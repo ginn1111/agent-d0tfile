@@ -28,8 +28,8 @@ LINKS = [  # (repo source, target)
     (SRC / "lazygit.yml", CFG / "lazygit" / "config.yml"),
     (SRC / "nvim" / "colorscheme.lua", CFG / "nvim" / "lua" / "plugins" / "colorscheme.lua"),
     (SRC / "nvim" / "lualine.lua", CFG / "nvim" / "lua" / "plugins" / "lualine.lua"),
-    (SRC / "hermes-skin.yaml", PROFILE / "skins" / "black-ruby-cindy.yaml"),
-    (SRC / "hermes-skin-ginb.yaml", GINB / "skins" / "black-ruby-ginb.yaml"),
+    (SRC / "hermes-skin.yaml", PROFILE / "skins" / "vscode-cindy.yaml"),
+    (SRC / "hermes-skin-ginb.yaml", GINB / "skins" / "vscode-ginb.yaml"),
 ]
 RETIRE = [CFG / "nvim" / "lua" / "plugins" / "solarized.lua",
           CFG / "nvim" / "lua" / "plugins" / "bearded.lua"]
@@ -63,9 +63,9 @@ EDITS = [  # (target, text -> text)
      lambda t: t if "[palettes.cindy]" in t else
      swap(sub_line(r"^palette = .*$", 'palette = "black_ruby"', t), "[palettes.solarized]", frag("starship-palette.toml"))),
     (PROFILE / "config.yaml",
-     lambda t: sub_line(r"^([ \t]*skin:[ \t]*).*$", r"\g<1>black-ruby-cindy", t)),
+     lambda t: sub_line(r"^([ \t]*skin:[ \t]*).*$", r"\g<1>vscode-cindy", t)),
     (GINB / "config.yaml",
-     lambda t: sub_line(r"^([ \t]*skin:[ \t]*).*$", r"\g<1>black-ruby-ginb", t)),
+     lambda t: sub_line(r"^([ \t]*skin:[ \t]*).*$", r"\g<1>vscode-ginb", t)),
 ]
 
 

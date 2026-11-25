@@ -30,8 +30,8 @@ LINKS = {
     ".config/lazygit/config.yml": "lazygit.yml",
     ".config/nvim/lua/plugins/colorscheme.lua": "nvim/colorscheme.lua",
     ".config/nvim/lua/plugins/lualine.lua": "nvim/lualine.lua",
-    ".hermes/profiles/cindy/skins/black-ruby-cindy.yaml": "hermes-skin.yaml",
-    ".hermes/profiles/ginb/skins/black-ruby-ginb.yaml": "hermes-skin-ginb.yaml",
+    ".hermes/profiles/cindy/skins/vscode-cindy.yaml": "hermes-skin.yaml",
+    ".hermes/profiles/ginb/skins/vscode-ginb.yaml": "hermes-skin-ginb.yaml",
 }
 
 
@@ -94,8 +94,8 @@ class InstallThemeCindyTest(unittest.TestCase):
         star = tomllib.loads(star_link.read_text())
         self.assertEqual(star["palette"], "black_ruby")
         self.assertEqual(set(star["palettes"]), {"black_ruby"})
-        self.assertIn("  skin: black-ruby-cindy\n", (self.home / ".hermes/profiles/cindy/config.yaml").read_text())
-        self.assertIn("  skin: black-ruby-ginb\n", (self.home / ".hermes/profiles/ginb/config.yaml").read_text())
+        self.assertIn("  skin: vscode-cindy\n", (self.home / ".hermes/profiles/cindy/config.yaml").read_text())
+        self.assertIn("  skin: vscode-ginb\n", (self.home / ".hermes/profiles/ginb/config.yaml").read_text())
 
     def test_install_leaves_cindy_starship_palette_alone(self):
         live = 'palette = "cindy"\n\n[palettes.cindy]\nfg = "#d6cbb8"\n'

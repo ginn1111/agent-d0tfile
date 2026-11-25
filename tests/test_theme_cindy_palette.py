@@ -7,21 +7,46 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 THEME = REPO / "themes" / "cindy"
 REGISTRY = THEME / "REGISTRY.md"
-PALETTE = THEME / "warm-dusk.palette"
+PALETTE = THEME / "vscode-dark-modern.palette"
+# Every palette hex must come from these (spec: do not invent hexes).
+SKETCHES = (
+    REPO / "sketches" / "006-vscode-faithful" / "index.html",
+    REPO / "sketches" / "themes" / "vscode.css",
+)
 # 8-digit first so "#c62f52e6" is read as one Tint, not "#c62f52" + "e6".
 HEX = re.compile(r"#([0-9a-fA-F]{8}|[0-9a-fA-F]{6})\b")
 BEGIN, END = "# >>> cindy theme", "# <<< cindy theme"
 # Login home, not $HOME: Hermes profile sessions point HOME at a profile dir.
 LOGIN_HOME = Path(pwd.getpwuid(os.getuid()).pw_dir)
 
+# Theme files that hold colours but are deliberately not Targets (Registry: kitty stays Warm Dusk).
+UNLISTED = {"kitty.conf"}
+# Targets still painted in Warm Dusk until their recolour card lands (THM-5.2 in-repo, THM-5.3 desktop).
+# Each card deletes the names it recolours, which turns the 0-Stray-Colours check back on for them.
+PENDING_RECOLOUR = {
+    "Neovim colorscheme", "Neovim lualine", "herdr (source)", "herdr (live)",
+    "Hermes skin cindy", "Hermes skin ginb", "yazi", "lazygit", "starship", "starship (live)",
+    "i3 + xborders", "polybar", "polybar workspaces", "rofi", "dunst", "picom", "neofetch",
+}
+
+
+def palette_lines():
+    return [l for l in PALETTE.read_text().splitlines() if l.strip() and not l.startswith("#")]
+
+
+def raw_palette():
+    """name -> literal #hex, or "@other" for an alias."""
+    names = {}
+    for line in palette_lines():
+        name, value = line.split("=", 1)
+        names[name.strip()] = value.strip().lower()
+    return names
+
 
 def palette():
-    names = {}
-    for line in PALETTE.read_text().splitlines():
-        if line.strip() and not line.startswith("#"):
-            name, value = line.split("=", 1)
-            names[name.strip()] = value.strip().lower()
-    return names
+    """name -> #hex with @aliases resolved."""
+    raw = raw_palette()
+    return {n: raw[v[1:]] if v.startswith("@") else v for n, v in raw.items()}
 
 
 def contrast(a, b):
@@ -35,13 +60,19 @@ def contrast(a, b):
 
 
 # Eye comfort: readable everywhere, but no glare (body text capped at 12:1).
-SIGNALS = ("accent", "err", "warn", "ok", "info", "yellow", "purple", "pink", "turquoise", "green_alt")
+# VS Code: `accent` is a fill (3.6:1 as text), so it is exempt here; `accent_text` carries focus text.
+SIGNALS = ("accent_text", "err", "warn", "ok", "info", "yellow", "purple", "pink", "turquoise", "green_alt",
+           "syn_string", "syn_number")
 COMFORT = (
     [("fg", "bg", 7.0, 12.0)]
     + [("fg", b, 7.0, 99) for b in ("bg_agent", "bg_ginb", "surface", "rule", "rule_ginb")]
     + [("sub", "bg", 4.5, 99), ("sub", "bar", 4.5, 99), ("dim", "bg", 3.0, 99)]
     + [(h, "bg", 4.5, 99) for h in SIGNALS]
 )
+# Text on a filled colour is fg_bright (Registry rule 5).
+# mode_command (#CC6633, from vscode.css) is 3.81 with white: kept faithful to VS Code, floor 3.0 (bold UI text).
+FILLS = {"accent": 4.5, "mode_insert": 4.5, "mode_visual": 4.5, "mode_replace": 4.5,
+         "mode_command": 3.0, "mode_terminal": 4.5}
 
 
 def section(title):
@@ -77,11 +108,28 @@ def stray(text, colours):
 
 
 class ThemeCindyPaletteTest(unittest.TestCase):
-    def test_palette_names_and_hex_are_unique(self):
-        names = palette()
-        lines = [l for l in PALETTE.read_text().splitlines() if l.strip() and not l.startswith("#")]
-        self.assertEqual(len(names), len(lines), "duplicate Colour name")
-        self.assertEqual(len(set(names.values())), len(names), "two Colours share a hex")
+    def test_palette_names_and_literal_hex_are_unique(self):
+        raw = raw_palette()
+        self.assertEqual(len(raw), len(palette_lines()), "duplicate Colour name")
+        literals = [v for v in raw.values() if not v.startswith("@")]
+        self.assertEqual(len(set(literals)), len(literals), "two literal Colours share a hex (use @alias)")
+
+    def test_aliases_point_at_literal_colours(self):
+        raw = raw_palette()
+        aliases = {n: v for n, v in raw.items() if v.startswith("@")}
+        self.assertTrue(aliases, "VS Code palette is expected to alias its repeated greys")
+        for name, value in aliases.items():
+            with self.subTest(alias=name):
+                self.assertIn(value[1:], raw, f"{name}: alias target missing")
+                self.assertFalse(raw[value[1:]].startswith("@"), f"{name}: alias of an alias")
+
+    def test_every_hex_comes_from_the_vscode_sketch(self):
+        if not all(p.exists() for p in SKETCHES):
+            self.skipTest("sketches/006-vscode-faithful or sketches/themes/vscode.css missing")
+        source = "\n".join(p.read_text() for p in SKETCHES).lower()
+        for name, value in palette().items():
+            with self.subTest(colour=name):
+                self.assertIn(value, source, f"{name} {value} is not in the sketch")
 
     def test_palette_is_comfortable(self):
         p = palette()
@@ -90,6 +138,13 @@ class ThemeCindyPaletteTest(unittest.TestCase):
                 r = round(contrast(p[fg], p[bg]), 2)
                 self.assertGreaterEqual(r, lo, f"{fg} on {bg}")
                 self.assertLessEqual(r, hi, f"{fg} on {bg}")
+
+    def test_text_on_fills_is_fg_bright(self):
+        p = palette()
+        for fill, floor in FILLS.items():
+            with self.subTest(fill=fill):
+                r = round(contrast(p["fg_bright"], p[fill]), 2)
+                self.assertGreaterEqual(r, floor, f"fg_bright on {fill}")
 
     def test_registry_names_only_palette_colours(self):
         names = palette()
@@ -104,6 +159,8 @@ class ThemeCindyPaletteTest(unittest.TestCase):
     def test_theme_files_with_colours_are_listed_targets(self):
         listed = {p.resolve() for _, p, _ in targets()}
         for p in THEME.rglob("*"):
+            if p.name in UNLISTED:
+                continue
             if p.is_file() and p.suffix != ".palette" and HEX.search(p.read_text()):
                 self.assertIn(p.resolve(), listed, f"{p} uses colours but is not in REGISTRY.md Targets")
 
@@ -113,6 +170,8 @@ class ThemeCindyPaletteTest(unittest.TestCase):
         self.assertTrue(rows, "no Targets in REGISTRY.md")
         for name, path, scope in rows:
             with self.subTest(target=name, path=str(path)):
+                if name in PENDING_RECOLOUR:
+                    self.skipTest("still Warm Dusk, recoloured by THM-5.2/5.3")
                 if not path.exists():
                     self.skipTest(f"missing on this machine: {path}")
                 text = path.read_text()

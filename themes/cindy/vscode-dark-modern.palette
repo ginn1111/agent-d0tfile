@@ -1,0 +1,57 @@
+# Cindy VS Code Dark Modern palette (sketches/006-vscode-faithful, picked by Gin 2026-11-25).
+# Single source of truth for hex values; roles, variants and per-tool mappings
+# live in REGISTRY.md. Every Target listed there may use only these colours
+# (tests/test_theme_cindy_palette.py). Every hex comes from the sketch's :root
+# or sketches/themes/vscode.css; do not invent hexes.
+# `name=@other` is an alias: the same Colour under a second Role name (VS Code reuses its greys).
+# Warm Dusk: warm-dusk.palette (inactive, tag theme-warm-dusk). Black & Ruby: black-ruby.palette (inactive).
+bg=#1f1f1f
+bg_alt=#181818
+bg_mid=#202020
+bg_agent=@bg_alt
+bar=@bg_alt
+border=#2b2b2b
+surface=#2a2d2e
+rule=@border
+fg=#cccccc
+fg_bright=#ffffff
+sub=#9d9d9d
+dim=#6e7681
+ghost=#5a5a5a
+# accent is a FILL (3.64:1 on bg as text, below the 4.5 floor); text uses accent_text. Text on a fill is fg_bright.
+accent=#0078d4
+accent_text=#4daafc
+err=#f85149
+warn=#cca700
+ok=#2ea043
+info=#3794ff
+purple=#c586c0
+pink=#d16969
+yellow=#dcdcaa
+turquoise=#4ec9b0
+green_alt=#9cdcfe
+# Syntax (keyword=purple, function=yellow, type=turquoise, variable=green_alt)
+syn_string=#ce9178
+syn_number=#b5cea8
+syn_comment=#6a9955
+# Editor mode fills (VS Code status bar; white text)
+mode_insert=#16825d
+mode_visual=#68217a
+mode_replace=#c72e0f
+mode_command=#cc6633
+mode_terminal=#0e639c
+# Search match
+match_bg=#623315
+match_edge=#9e6a03
+diff_add=#213224
+diff_del=#4a2927
+shadow=#000000
+card=@bg_mid
+card_raised=#252526
+card_muted=#222222
+card_edge=#3c3c3c
+alert_card=#2d1f1f
+alert_edge=#5a1d1d
+bg_ginb=@bg_alt
+bar_ginb=@bg_alt
+rule_ginb=@border
