@@ -1,20 +1,20 @@
-# Cindy Warm Dusk (themes/cindy/warm-dusk.palette); managed by `make theme-cindy`.
+# Cindy VS Code Dark Modern (themes/cindy/vscode-dark-modern.palette); managed by `make theme-cindy`.
 [theme.custom]
-panel_bg = "#1d1a17"
-surface0 = "#2a2520"
-surface1 = "#3b332a"
-surface_dim = "#181614"
-active_row_bg = "#26211c"  # focused agent / active space row: warm-tinted bar
-selection_bg = "#3b332a"   # navigate-mode cursor row: warm rule
-overlay0 = "#5c5447"
-overlay1 = "#807663"
-text = "#d6cbb8"
-subtext0 = "#b3a894"
-mauve = "#b896b8"
-accent = "#d9a05b"
-green = "#a3b371"
-yellow = "#d8c37a"
-red = "#cf6b6b"
-blue = "#8fb3b0"
-teal = "#86b8a0"
-peach = "#e3876a"
+panel_bg = "#1f1f1f"       # bg
+surface0 = "#2a2d2e"       # surface
+surface1 = "#2b2b2b"       # rule
+surface_dim = "#181818"    # bg_alt
+active_row_bg = "#181818"  # bar
+selection_bg = "#2b2b2b"   # rule
+overlay0 = "#5a5a5a"       # ghost
+overlay1 = "#6e7681"       # dim
+text = "#cccccc"           # fg
+subtext0 = "#9d9d9d"       # sub
+mauve = "#c586c0"          # purple
+accent = "#0078d4"         # accent
+green = "#2ea043"          # ok
+yellow = "#dcdcaa"         # yellow
+red = "#f85149"            # err
+blue = "#3794ff"           # info
+teal = "#4ec9b0"           # turquoise
+peach = "#cca700"          # warn

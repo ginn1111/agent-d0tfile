@@ -1,16 +1,16 @@
-# Cindy Warm Dusk (themes/cindy/warm-dusk.palette); installed by `make theme-cindy`.
+# Cindy VS Code Dark Modern (themes/cindy/vscode-dark-modern.palette); installed by `make theme-cindy`.
 gui:
   border: rounded # slight rounded panels (matches desktop corner-radius)
   theme:
-    activeBorderColor: ["#d9a05b", bold]
-    inactiveBorderColor: ["#5c5447"]
-    searchingActiveBorderColor: ["#d8c37a", bold]
-    optionsTextColor: ["#8fb3b0"]
-    selectedLineBgColor: ["#3b332a"]
-    inactiveViewSelectedLineBgColor: ["#2a2520"]
-    cherryPickedCommitFgColor: ["#b896b8"]
-    cherryPickedCommitBgColor: ["#2a2520"]
-    markedBaseCommitFgColor: ["#8fb3b0"]
-    markedBaseCommitBgColor: ["#d8c37a"]
-    unstagedChangesColor: ["#cf6b6b"]
-    defaultFgColor: ["#d6cbb8"]
+    activeBorderColor: ["#0078d4", bold]
+    inactiveBorderColor: ["#5a5a5a"]
+    searchingActiveBorderColor: ["#dcdcaa", bold]
+    optionsTextColor: ["#3794ff"]
+    selectedLineBgColor: ["#2b2b2b"]
+    inactiveViewSelectedLineBgColor: ["#2a2d2e"]
+    cherryPickedCommitFgColor: ["#c586c0"]
+    cherryPickedCommitBgColor: ["#2a2d2e"]
+    markedBaseCommitFgColor: ["#3794ff"]
+    markedBaseCommitBgColor: ["#dcdcaa"]
+    unstagedChangesColor: ["#f85149"]
+    defaultFgColor: ["#cccccc"]

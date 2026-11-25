@@ -24,8 +24,6 @@ UNLISTED = {"kitty.conf"}
 # Targets still painted in Warm Dusk until their recolour card lands (THM-5.2 in-repo, THM-5.3 desktop).
 # Each card deletes the names it recolours, which turns the 0-Stray-Colours check back on for them.
 PENDING_RECOLOUR = {
-    "Neovim colorscheme", "Neovim lualine", "herdr (source)", "herdr (live)",
-    "Hermes skin cindy", "Hermes skin ginb", "yazi", "lazygit", "starship", "starship (live)",
     "i3 + xborders", "polybar", "polybar workspaces", "rofi", "dunst", "picom", "neofetch",
 }
 

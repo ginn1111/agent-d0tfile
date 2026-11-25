@@ -1,50 +1,50 @@
-# Warm Dusk skin for ginb worker: cindy base, turquoise accent on teal-tinted pane + bars.
-# Palette: themes/cindy/warm-dusk.palette
-name: black-ruby-ginb
-description: Warm Dusk builder skin for Ginb (worker)
+# VS Code Dark Modern skin for ginb worker: cindy base, turquoise focus (text on turquoise fills is bg).
+# Palette: themes/cindy/vscode-dark-modern.palette (Roles: REGISTRY.md "Hermes skins")
+name: vscode-ginb
+description: VS Code Dark Modern builder skin for Ginb (worker)
 
 colors:
-  background: "#191c1a"
-  ui_accent: "#86b8a0"
-  ui_label: "#a3b371"
-  banner_accent: "#86b8a0"
-  banner_title: "#86b8a0"
-  banner_text: "#d6cbb8"
-  banner_dim: "#807663"
-  banner_border: "#2f3d36"
-  ui_text: "#d6cbb8"
-  ui_border: "#2f3d36"
-  ui_ok: "#a3b371"
-  ui_warn: "#e3876a"
-  ui_error: "#cf6b6b"
-  prompt: "#86b8a0"
-  input_rule: "#2f3d36"
-  response_border: "#86b8a0"
-  status_bar_bg: "#1f2621"
-  status_bar_text: "#b3a894"
-  status_bar_strong: "#86b8a0"
-  status_bar_dim: "#807663"
-  status_bar_good: "#a3b371"
-  status_bar_warn: "#d8c37a"
-  status_bar_bad: "#e3876a"
-  status_bar_critical: "#cf6b6b"
-  session_label: "#86b8a0"
-  session_border: "#2f3d36"
-  shell_dollar: "#a3b371"
-  voice_status_bg: "#1f2621"
-  selection_bg: "#2f3d36"
-  completion_menu_bg: "#1f2621"
-  completion_menu_current_bg: "#2f3d36"
-  completion_menu_meta_bg: "#2a2520"
-  completion_menu_meta_current_bg: "#2f3d36"
-  diff_added: "#26301f"
-  diff_removed: "#3a2420"
-  diff_added_word: "#a3b371"
-  diff_removed_word: "#cf6b6b"
-  syntax_string: "#a3b371"
-  syntax_number: "#b896b8"
-  syntax_keyword: "#86b8a0"
-  syntax_comment: "#807663"
+  background: "#181818"
+  ui_accent: "#4ec9b0"
+  ui_label: "#2ea043"
+  banner_accent: "#4ec9b0"
+  banner_title: "#4ec9b0"
+  banner_text: "#cccccc"
+  banner_dim: "#6e7681"
+  banner_border: "#2b2b2b"
+  ui_text: "#cccccc"
+  ui_border: "#2b2b2b"
+  ui_ok: "#2ea043"
+  ui_warn: "#cca700"
+  ui_error: "#f85149"
+  prompt: "#4ec9b0"
+  input_rule: "#2b2b2b"
+  response_border: "#4ec9b0"
+  status_bar_bg: "#181818"
+  status_bar_text: "#9d9d9d"
+  status_bar_strong: "#4ec9b0"
+  status_bar_dim: "#6e7681"
+  status_bar_good: "#2ea043"
+  status_bar_warn: "#dcdcaa"
+  status_bar_bad: "#cca700"
+  status_bar_critical: "#f85149"
+  session_label: "#4ec9b0"
+  session_border: "#2b2b2b"
+  shell_dollar: "#2ea043"
+  voice_status_bg: "#181818"
+  selection_bg: "#2b2b2b"
+  completion_menu_bg: "#181818"
+  completion_menu_current_bg: "#2b2b2b"
+  completion_menu_meta_bg: "#2a2d2e"
+  completion_menu_meta_current_bg: "#2b2b2b"
+  diff_added: "#213224"
+  diff_removed: "#4a2927"
+  diff_added_word: "#2ea043"
+  diff_removed_word: "#f85149"
+  syntax_string: "#2ea043"
+  syntax_number: "#c586c0"
+  syntax_keyword: "#4ec9b0"
+  syntax_comment: "#6e7681"
 
 branding:
   agent_name: Ginb
@@ -66,9 +66,9 @@ spinner:
 tool_prefix: "│"
 
 banner_logo: |
-  [bold #d9a05b] ██████╗ ██╗███╗   ██╗██████╗ [/]
-  [bold #86b8a0]██╔════╝ ██║████╗  ██║██╔══██╗[/]
-  [bold #86b8a0]██║  ███╗██║██╔██╗ ██║██████╔╝[/]
-  [bold #86b8a0]██║   ██║██║██║╚██╗██║██╔══██╗[/]
-  [bold #86b8a0]╚██████╔╝██║██║ ╚████║██████╔╝[/]
-  [#5c5447] ╚═════╝ ╚═╝╚═╝  ╚═══╝╚═════╝ [/]
+  [bold #dcdcaa] ██████╗ ██╗███╗   ██╗██████╗ [/]
+  [bold #4ec9b0]██╔════╝ ██║████╗  ██║██╔══██╗[/]
+  [bold #4ec9b0]██║  ███╗██║██╔██╗ ██║██████╔╝[/]
+  [bold #4ec9b0]██║   ██║██║██║╚██╗██║██╔══██╗[/]
+  [bold #4ec9b0]╚██████╔╝██║██║ ╚████║██████╔╝[/]
+  [#5a5a5a] ╚═════╝ ╚═╝╚═╝  ╚═══╝╚═════╝ [/]

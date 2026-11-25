@@ -143,7 +143,7 @@ ANSI 0–7: `surface` `err` `ok` `yellow` `info` `purple` `turquoise` `sub`. 8�
 
 ### Neovim
 
-Colorscheme: `mini.base16` (`nvim/colorscheme.lua`): base00 `bg`, 01 `surface`, 02 `rule`, 03 `dim`, 04 `sub`, 05 `fg`, 06/07 `fg_bright`, 08 `err`, 09 `warn`, 0A `yellow`, 0B `ok`, 0C `turquoise`, 0D `info`, 0E `purple`, 0F `pink`. lualine: section c on `bar`; b-section pill `surface`; mode pills normal `accent`, insert `ok`, visual `purple`, replace `err`, command `yellow`, terminal `turquoise`, pill text `bg`; inactive `dim` on `bar`; diff ok/yellow/err; LSP name `turquoise`.
+Colorscheme: `mini.base16` (`nvim/colorscheme.lua`): base00 `bg`, 01 `surface`, 02 `rule`, 03 `dim`, 04 `sub`, 05 `fg`, 06/07 `fg_bright`, 08 `err`, 09 `warn`, 0A `yellow`, 0B `ok`, 0C `turquoise`, 0D `info`, 0E `purple`, 0F `pink`. VS Code syntax overrides are set after base16 (`nvim_set_hl`): keyword/statement/conditional/repeat/exception `purple`, function `yellow`, type `turquoise`, variable/identifier `green_alt`, string `syn_string`, number/float `syn_number`, comment `syn_comment` (italic). lualine: section c on `bar`; b-section pill `surface`; mode pills (text `fg_bright`) normal `accent`, insert `mode_insert`, visual `mode_visual`, replace `mode_replace`, command `mode_command`, terminal `mode_terminal`; inactive `dim` on `bar`; diff `ok`/`yellow`/`err`; LSP name `turquoise`.
 
 ### herdr (`[theme.custom]`)
 
@@ -154,17 +154,20 @@ Colorscheme: `mini.base16` (`nvim/colorscheme.lua`): base00 `bg`, 01 `surface`, 
 | Key group | `cindy` | `ginb` |
 |---|---|---|
 | `background` | `bg_agent` | `bg_ginb` |
-| `ui_accent`, `prompt`, `response_border`, `banner_title`, `status_bar_strong`, `session_label` | `accent` | `turquoise` |
+| `ui_accent`, `prompt`, `banner_accent`, `banner_title`, `status_bar_strong`, `session_label`, `shell_dollar` (focus text) | `accent_text` | `turquoise` (`shell_dollar`: `ok`) |
+| `response_border` (focus edge) | `accent` | `turquoise` |
 | `ui_border`, `banner_border`, `input_rule`, `selection_bg`, `session_border`, `completion_menu_current_bg` | `rule` | `rule_ginb` |
 | `status_bar_bg`, `voice_status_bg`, `completion_menu_bg` | `bar` | `bar_ginb` |
-| `ui_label`, `shell_dollar` | `sub`, `accent` | `ok`, `ok` |
+| `ui_label` | `sub` | `ok` |
 | `status_bar_good` · `_warn` · `_bad` · `_critical` | `ok` · `yellow` · `warn` · `err` | same |
-| syntax string · number · keyword · comment | `sub` · `fg` · `accent` · `dim` (muted) | `ok` · `purple` · `turquoise` · `dim` |
+| syntax string · number · keyword · comment | `sub` · `fg` · `accent_text` · `dim` (muted) | `ok` · `purple` · `turquoise` · `dim` |
+| `completion_menu_meta_bg` | `surface` | `surface` |
+| banner logo | `err` first line, `accent_text` rest, `ghost` shadow | `yellow` first line, `turquoise` rest, `ghost` shadow |
 | diff bg / word | `diff_add`/`diff_del`, `ok`/`err` | same |
 
 ### yazi
 
-cwd, selected marker, active tab, mode normal, borders of input/confirm: `accent` (text on it `bg`). Status/tab strip `bar`; borders `surface`; selection `rule`. Directories `info`, executables `ok`, symlinks `turquoise`, hidden `dim`, archives `warn`, media `pink`, images `yellow`, broken `err` on `diff_del`. Notify info/warn/error: `accent`/`yellow`/`err`.
+Fills (selected marker, active tab, mode normal, confirm yes, spot cell): `accent` with `fg_bright` text; fills in `ok`/`err` also take `fg_bright`, light fills (`pink`, `purple`, `turquoise`) take `bg`. Focus text (cwd, preview, titles, notify info, normal_alt): `accent_text`. Borders of input/confirm/cmp: `accent`. Status/tab strip `bar`; borders `surface`; selection `rule`. Directories `info`, executables `ok`, symlinks `turquoise`, hidden `dim`, archives `warn`, media `pink`, images `yellow`, broken `err` on `diff_del`. Notify warn/error: `yellow`/`err`.
 
 ### lazygit
 
@@ -174,7 +177,7 @@ Active border `accent`, inactive `ghost`, searching `yellow`, options `info`, se
 
 Fragment `[palettes.black_ruby]`: `base01`=`dim`, `base0`=`sub`, `yellow`, `orange`=`warn`, `red`=`err`, `magenta`=`pink`, `violet`=`purple`, `blue`=`info`, `cyan`=`turquoise`, `green`=`ok`.
 
-Live `~/tools/d0t_file/starship.toml` (linked from `~/.config/starship.toml`) uses `[palettes.cindy]`, keys named after Colours. Prompt `❯` `accent` (fail `err`); directory `info`; branch `purple`; detached hash / hostname `dim`; git state `yellow`; dirty status `warn` (staged `ok`, conflicts `err`); line metrics `ok`/`err`; jobs `turquoise`; exit code `err`; duration `yellow`. Runtimes use spare hues only (never `accent`/`err`).
+Live `~/tools/d0t_file/starship.toml` (linked from `~/.config/starship.toml`) uses `[palettes.cindy]`, keys named after Colours. The palette carries `accent` plus `accent_text`. Prompt `❯` `accent_text` (fail `err`); directory `info`; branch `purple`; detached hash / hostname `dim`; git state `yellow`; dirty status `warn` (staged `ok`, conflicts `err`); line metrics `ok`/`err`; jobs `turquoise`; exit code `err`; duration `yellow`. Runtimes use spare hues only (never `accent`/`accent_text`/`err`).
 
 ### neofetch
 

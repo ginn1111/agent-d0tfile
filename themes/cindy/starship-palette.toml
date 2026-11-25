@@ -1,12 +1,12 @@
-# Cindy Warm Dusk (themes/cindy/warm-dusk.palette); managed by `make theme-cindy`.
+# Cindy VS Code Dark Modern (themes/cindy/vscode-dark-modern.palette); managed by `make theme-cindy`.
 [palettes.black_ruby]
-base01 = "#807663"
-base0 = "#b3a894"
-yellow = "#d8c37a"
-orange = "#e3876a"
-red = "#cf6b6b"
-magenta = "#d39aa6"
-violet = "#b896b8"
-blue = "#8fb3b0"
-cyan = "#86b8a0"
-green = "#a3b371"
+base01 = "#6e7681"
+base0 = "#9d9d9d"
+yellow = "#dcdcaa"
+orange = "#cca700"
+red = "#f85149"
+magenta = "#d16969"
+violet = "#c586c0"
+blue = "#3794ff"
+cyan = "#4ec9b0"
+green = "#2ea043"

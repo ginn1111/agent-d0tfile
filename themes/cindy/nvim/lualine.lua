@@ -1,27 +1,31 @@
--- Cindy theme: lualine pills on Warm Dusk (themes/cindy, `make theme-cindy`).
+-- Cindy theme: lualine pills on VS Code Dark Modern (themes/cindy, `make theme-cindy`).
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    -- Palette: themes/cindy/warm-dusk.palette (Roles: REGISTRY.md "Neovim")
+    -- Palette: themes/cindy/vscode-dark-modern.palette (Roles: REGISTRY.md "Neovim")
     local c = {
-      bar = "#26211c", -- bar
-      dark = "#1d1a17", -- bg: text on filled pills
-      fg = "#d6cbb8", -- fg
-      dim = "#807663", -- dim
-      accent = "#d9a05b", -- accent
-      green = "#a3b371", -- ok
-      purple = "#b896b8", -- purple
-      red = "#cf6b6b", -- err
-      yellow = "#d8c37a", -- yellow
-      cyan = "#86b8a0", -- turquoise
+      bar = "#181818", -- bar
+      white = "#ffffff", -- fg_bright: text on filled pills
+      fg = "#cccccc", -- fg
+      dim = "#6e7681", -- dim
+      accent = "#0078d4", -- accent (normal mode fill)
+      insert = "#16825d", -- mode_insert
+      visual = "#68217a", -- mode_visual
+      replace = "#c72e0f", -- mode_replace
+      command = "#cc6633", -- mode_command
+      terminal = "#0e639c", -- mode_terminal
+      green = "#2ea043", -- ok
+      yellow = "#dcdcaa", -- yellow
+      red = "#f85149", -- err
+      cyan = "#4ec9b0", -- turquoise
     }
-    local pill = "#2a2520" -- surface
+    local pill = "#2a2d2e" -- surface
     local cap = { left = "", right = "" } -- rounded pill ends
 
     local function mode_theme(color)
       return {
-        a = { fg = c.dark, bg = color, gui = "bold" },
+        a = { fg = c.white, bg = color, gui = "bold" },
         b = { fg = c.fg, bg = pill },
         c = { fg = c.fg, bg = c.bar },
       }
@@ -29,11 +33,11 @@ return {
 
     local theme = {
       normal = mode_theme(c.accent),
-      insert = mode_theme(c.green),
-      visual = mode_theme(c.purple),
-      replace = mode_theme(c.red),
-      command = mode_theme(c.yellow),
-      terminal = mode_theme(c.cyan),
+      insert = mode_theme(c.insert),
+      visual = mode_theme(c.visual),
+      replace = mode_theme(c.replace),
+      command = mode_theme(c.command),
+      terminal = mode_theme(c.terminal),
       inactive = {
         a = { fg = c.dim, bg = c.bar },
         b = { fg = c.dim, bg = c.bar },

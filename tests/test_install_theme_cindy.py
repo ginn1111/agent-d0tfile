@@ -87,7 +87,7 @@ class InstallThemeCindyTest(unittest.TestCase):
         self.assertIn("# include solarized_osaka_dark.conf", kitty)
         self.assertIn("\ninclude black_ruby.conf\n", kitty)
         herdr = tomllib.loads((self.home / ".config/herdr/config.toml").read_text())
-        self.assertEqual(herdr["theme"]["custom"]["accent"], "#d9a05b")
+        self.assertEqual(herdr["theme"]["custom"]["accent"], "#0078d4")
         self.assertEqual(herdr["terminal"]["shell_mode"], "auto")
         star_link = self.home / ".config/starship.toml"
         self.assertTrue(star_link.is_symlink(), "edit must write through the symlink")

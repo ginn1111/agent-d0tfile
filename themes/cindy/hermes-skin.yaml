@@ -1,51 +1,51 @@
-# Warm Dusk skin for cindy (warm-tinted pane + bars).
-# Palette: themes/cindy/warm-dusk.palette
-name: black-ruby-cindy
-description: Warm Dusk secretary skin for Cindy
+# VS Code Dark Modern skin for cindy (agent pane bg_agent, bars bar).
+# Palette: themes/cindy/vscode-dark-modern.palette (Roles: REGISTRY.md "Hermes skins")
+name: vscode-cindy
+description: VS Code Dark Modern secretary skin for Cindy
 
 colors:
-  background: "#1f1a18"
-  ui_accent: "#d9a05b"
-  ui_label: "#b3a894"
-  banner_accent: "#d9a05b"
-  banner_title: "#d9a05b"
-  banner_text: "#d6cbb8"
-  banner_dim: "#807663"
-  banner_border: "#3b332a"
-  ui_text: "#d6cbb8"
-  ui_border: "#3b332a"
-  ui_ok: "#a3b371"
-  ui_warn: "#e3876a"
-  ui_error: "#cf6b6b"
-  prompt: "#d9a05b"
-  input_rule: "#3b332a"
-  response_border: "#d9a05b"
-  status_bar_bg: "#26211c"
-  status_bar_text: "#b3a894"
-  status_bar_strong: "#d9a05b"
-  status_bar_dim: "#807663"
-  status_bar_good: "#a3b371"
-  status_bar_warn: "#d8c37a"
-  status_bar_bad: "#e3876a"
-  status_bar_critical: "#cf6b6b"
-  session_label: "#d9a05b"
-  session_border: "#3b332a"
-  shell_dollar: "#d9a05b"
-  voice_status_bg: "#26211c"
-  selection_bg: "#3b332a"
-  completion_menu_bg: "#26211c"
-  completion_menu_current_bg: "#3b332a"
-  completion_menu_meta_bg: "#2a2520"
-  completion_menu_meta_current_bg: "#3b332a"
-  diff_added: "#26301f"
-  diff_removed: "#3a2420"
-  diff_added_word: "#a3b371"
-  diff_removed_word: "#cf6b6b"
-  # Muted markdown/code: honey keywords, warm grey ladder for the rest.
-  syntax_string: "#b3a894"
-  syntax_number: "#d6cbb8"
-  syntax_keyword: "#d9a05b"
-  syntax_comment: "#807663"
+  background: "#181818"
+  ui_accent: "#4daafc"
+  ui_label: "#9d9d9d"
+  banner_accent: "#4daafc"
+  banner_title: "#4daafc"
+  banner_text: "#cccccc"
+  banner_dim: "#6e7681"
+  banner_border: "#2b2b2b"
+  ui_text: "#cccccc"
+  ui_border: "#2b2b2b"
+  ui_ok: "#2ea043"
+  ui_warn: "#cca700"
+  ui_error: "#f85149"
+  prompt: "#4daafc"
+  input_rule: "#2b2b2b"
+  response_border: "#0078d4"
+  status_bar_bg: "#181818"
+  status_bar_text: "#9d9d9d"
+  status_bar_strong: "#4daafc"
+  status_bar_dim: "#6e7681"
+  status_bar_good: "#2ea043"
+  status_bar_warn: "#dcdcaa"
+  status_bar_bad: "#cca700"
+  status_bar_critical: "#f85149"
+  session_label: "#4daafc"
+  session_border: "#2b2b2b"
+  shell_dollar: "#4daafc"
+  voice_status_bg: "#181818"
+  selection_bg: "#2b2b2b"
+  completion_menu_bg: "#181818"
+  completion_menu_current_bg: "#2b2b2b"
+  completion_menu_meta_bg: "#2a2d2e"
+  completion_menu_meta_current_bg: "#2b2b2b"
+  diff_added: "#213224"
+  diff_removed: "#4a2927"
+  diff_added_word: "#2ea043"
+  diff_removed_word: "#f85149"
+  # Muted markdown/code: focus-blue keywords, grey ladder for the rest.
+  syntax_string: "#9d9d9d"
+  syntax_number: "#cccccc"
+  syntax_keyword: "#4daafc"
+  syntax_comment: "#6e7681"
 
 branding:
   agent_name: Cindy
@@ -67,9 +67,9 @@ spinner:
 tool_prefix: "│"
 
 banner_logo: |
-  [bold #cf6b6b] ██████╗██╗███╗   ██╗██████╗ ██╗   ██╗[/]
-  [bold #d9a05b]██╔════╝██║████╗  ██║██╔══██╗╚██╗ ██╔╝[/]
-  [bold #d9a05b]██║     ██║██╔██╗ ██║██║  ██║ ╚████╔╝ [/]
-  [bold #d9a05b]██║     ██║██║╚██╗██║██║  ██║  ╚██╔╝  [/]
-  [bold #d9a05b]╚██████╗██║██║ ╚████║██████╔╝   ██║   [/]
-  [#5c5447] ╚═════╝╚═╝╚═╝  ╚═══╝╚═════╝    ╚═╝   [/]
+  [bold #f85149] ██████╗██╗███╗   ██╗██████╗ ██╗   ██╗[/]
+  [bold #4daafc]██╔════╝██║████╗  ██║██╔══██╗╚██╗ ██╔╝[/]
+  [bold #4daafc]██║     ██║██╔██╗ ██║██║  ██║ ╚████╔╝ [/]
+  [bold #4daafc]██║     ██║██║╚██╗██║██║  ██║  ╚██╔╝  [/]
+  [bold #4daafc]╚██████╗██║██║ ╚████║██████╔╝   ██║   [/]
+  [#5a5a5a] ╚═════╝╚═╝╚═╝  ╚═══╝╚═════╝    ╚═╝   [/]
