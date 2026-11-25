@@ -1,0 +1,20 @@
+# Cindy Warm Dusk (themes/cindy/warm-dusk.palette); managed by `make theme-cindy`.
+[theme.custom]
+panel_bg = "#1d1a17"
+surface0 = "#2a2520"
+surface1 = "#3b332a"
+surface_dim = "#181614"
+active_row_bg = "#26211c"  # focused agent / active space row: warm-tinted bar
+selection_bg = "#3b332a"   # navigate-mode cursor row: warm rule
+overlay0 = "#5c5447"
+overlay1 = "#807663"
+text = "#d6cbb8"
+subtext0 = "#b3a894"
+mauve = "#b896b8"
+accent = "#d9a05b"
+green = "#a3b371"
+yellow = "#d8c37a"
+red = "#cf6b6b"
+blue = "#8fb3b0"
+teal = "#86b8a0"
+peach = "#e3876a"

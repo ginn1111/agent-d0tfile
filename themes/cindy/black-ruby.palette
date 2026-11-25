@@ -1,0 +1,42 @@
+# Cindy Black & Ruby palette. Source: BeardedBear src/variations/black.ts
+# blackAndRuby + 004-hybrid tokens. Single source of truth for hex values;
+# roles, variants and per-tool mappings live in REGISTRY.md.
+# Every Target listed in REGISTRY.md may use only these colours
+# (tests/test_theme_cindy_palette.py).
+bg=#111418
+bg_alt=#0c0f11
+bg_mid=#0f1215
+bg_agent=#130e11
+bar=#1a0f14
+border=#040506
+surface=#1c2027
+rule=#3a1a26
+fg=#bec6d0
+fg_bright=#e3e8ee
+sub=#a0acbb
+dim=#6b7686
+ghost=#475262
+accent=#c62f52
+err=#e35535
+warn=#d4770c
+ok=#00a884
+info=#11b7d4
+purple=#a85ff1
+pink=#d46ec0
+yellow=#c7910c
+turquoise=#38c7bd
+green_alt=#3585bb
+diff_add=#0f2a24
+diff_del=#2a0f12
+shadow=#000000
+# notification cards (dunst + picom dunst-rail shader)
+card=#171b21
+card_raised=#1b2029
+card_muted=#1a1e25
+card_edge=#2d333d
+alert_card=#24151a
+alert_edge=#4a2530
+# ginb worker variant: same base, turquoise accent on teal-tinted pane/bars
+bg_ginb=#0e1314
+bar_ginb=#0f1a1a
+rule_ginb=#1a3a37
