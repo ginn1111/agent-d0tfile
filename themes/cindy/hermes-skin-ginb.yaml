@@ -4,7 +4,7 @@ name: vscode-ginb
 description: VS Code Dark Modern builder skin for Ginb (worker)
 
 colors:
-  background: "#181818"
+  background: "#00000000"
   ui_accent: "#4ec9b0"
   ui_label: "#2ea043"
   banner_accent: "#4ec9b0"

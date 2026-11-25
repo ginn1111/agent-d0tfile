@@ -4,7 +4,7 @@ name: vscode-cindy
 description: VS Code Dark Modern secretary skin for Cindy
 
 colors:
-  background: "#181818"
+  background: "#00000000"
   ui_accent: "#4daafc"
   ui_label: "#9d9d9d"
   banner_accent: "#4daafc"
