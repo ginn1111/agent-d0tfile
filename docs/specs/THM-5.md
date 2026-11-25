@@ -1,10 +1,11 @@
 ---
-status: approved
+status: completed
 card: THM-5
 assignee: ginb
 blocked_by: []
 scope: Make VS Code Dark Modern (sketch 006-vscode-faithful) the active Cindy theme across TUIs, Hermes skins and desktop; Warm Dusk kept inactive
 owner: Gin
+tracking: shaping complete; delivery tracked per card in THM-5.1/5.2/5.3 docs
 ---
 
 # Spec — VS Code Dark Modern theme (THM-5)

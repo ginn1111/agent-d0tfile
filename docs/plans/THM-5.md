@@ -1,7 +1,8 @@
 ---
-status: approved
+status: completed
 scope: Execution order for THM-5 (VS Code Dark Modern theme), split into 3 cards
 owner: Gin
+tracking: shaping complete; delivery tracked per card in THM-5.1/5.2/5.3 docs
 ---
 
 # Plan — THM-5 VS Code Dark Modern theme
