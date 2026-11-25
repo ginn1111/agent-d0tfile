@@ -84,7 +84,7 @@ Spare hues with no other Role: `pink` (media, marked), `purple` (branches), `tur
 | i3 + xborders | `~/tools/d0t_file/i3/config` | file |
 | polybar | `~/tools/d0t_file/configs/polybar/config.ini` | file |
 | polybar workspaces | `~/tools/d0t_file/configs/polybar/scripts/i3-workspaces.py` | file |
-| rofi | `~/tools/d0t_file/configs/rofi/colors/black-ruby.rasi` | file |
+| rofi | `~/tools/d0t_file/configs/rofi/colors/vscode-dark-modern.rasi` | file |
 | dunst | `~/.config/dunst/dunstrc` | file |
 | picom | `~/tools/d0t_file/configs/picom/picom.conf` | file |
 | neofetch | `~/tools/d0t_file/configs/neofetch/config.conf` | file |
@@ -99,10 +99,10 @@ One mapping per existing Target: tool setting → Role (Colour). Copy the closes
 
 | Class | Colours |
 |---|---|
-| focused | `accent` · `accent` · `bg` · `err` · `accent` |
+| focused | `accent` · `accent` · `fg_bright` · `err` · `accent` |
 | focused_inactive | `surface` · `surface` · `sub` · `surface` · `surface` |
 | unfocused | `bg_alt` · `bg_alt` · `ghost` · `bg_alt` · `bg_alt` |
-| urgent | `err` · `err` · `bg` · `err` · `err` |
+| urgent | `err` · `err` · `fg_bright` · `err` · `err` |
 | placeholder | `bg_alt` · `bg` · `fg` · `bg_alt` · `bg` |
 | `client.background` | `bg` |
 
@@ -112,10 +112,10 @@ One mapping per existing Target: tool setting → Role (Colour). Copy the closes
 
 ### polybar
 
-`[colors]`: `background`=`bg`, `background-alt`=`bar`, `surface`, `rule`, `foreground`=`fg`, `sub`, `dim`, `ghost`, `primary`=`accent`, `ok`, `warn`, `info`, `alert`=`err`, `disabled`=`ghost`. Bar border is fully transparent. Inline `%{F…}` icons: focus icons `accent`, offline `ghost`, IPs `dim`/`sub`.
-Workspaces script: focused = `rule` background + `fg` text + `accent` underline; occupied `sub`; icons `dim`; urgent `err` background + `bg` text.
+`[colors]`: `background`=`bg`, `background-alt`=`bar`, `surface`, `rule`, `foreground`=`fg`, `sub`, `dim`, `ghost`, `primary`=`accent`, `ok`, `warn`, `info`, `alert`=`err`, `fg_bright` (text on `alert`), `disabled`=`ghost`. Bar border is fully transparent. Inline `%{F…}` icons: focus icons `accent`, offline `ghost`, IPs `dim`/`sub`.
+Workspaces script: focused = `rule` background + `fg` text + `accent` underline; occupied `sub`; icons `dim`; urgent `err` background + `fg_bright` text.
 
-### rofi (`colors/black-ruby.rasi`, imported by launcher + applets)
+### rofi (`colors/vscode-dark-modern.rasi`, imported by launcher + applets; `black-ruby.rasi` stays, inactive)
 
 `background`=`bg`, `background-alt`=`surface`, `foreground`=`fg`, `selected`=`accent`, `active`=`sub`, `urgent`=`err`.
 
@@ -181,4 +181,4 @@ Live `~/tools/d0t_file/starship.toml` (linked from `~/.config/starship.toml`) us
 
 ### neofetch
 
-Shell variables named after Colours (`ruby`=`accent`, `fg`, `sub`, `dim`, `ghost`, `rule`, `info_c`=`info`, `turq`=`turquoise`, `purple`, `pink`, `yellow`, `ok`); frame lines `rule`.
+Shell variables named after Colours (`ruby`=`accent_text` for title/section text, `disc`=`accent` for the logo fill, `fg`, `sub`, `dim`, `ghost`, `rule`, `info_c`=`info`, `turq`=`turquoise`, `purple`, `pink`, `yellow`, `ok`); frame lines `rule`.

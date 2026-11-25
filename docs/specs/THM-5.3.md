@@ -1,5 +1,5 @@
 ---
-status: approved
+status: completed
 card: THM-5.3
 assignee: ginb
 blocked_by: [THM-5.1]

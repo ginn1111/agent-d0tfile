@@ -1,5 +1,5 @@
 ---
-status: approved
+status: completed
 scope: THM-5.3 execution order
 owner: Gin
 ---
